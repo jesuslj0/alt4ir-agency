@@ -1,3 +1,4 @@
+import { DottedSurface } from "@/components/ui/dotted-surface"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import Hero from "@/components/sections/Hero"
@@ -13,6 +14,7 @@ import CTABanner from "@/components/sections/CTABanner"
 export default function Home() {
   return (
     <>
+      <DottedSurface />
       <Navbar />
       <main>
         <Hero />
