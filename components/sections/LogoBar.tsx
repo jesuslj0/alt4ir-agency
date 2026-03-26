@@ -9,7 +9,7 @@ const companies = [
 
 export default function LogoBar() {
   return (
-    <section className="py-12 border-y border-border/50">
+    <section id="logo-bar" className="py-12 border-y border-border/50">
       <div className="max-w-6xl mx-auto px-4">
         <p className="text-center text-sm text-muted-foreground mb-8 tracking-wide uppercase">
           Empresas que confían en nosotros

@@ -1,7 +1,7 @@
 'use client';
 import { cn } from '@/lib/utils';
 import { useTheme } from 'next-themes';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 
 type DottedSurfaceProps = Omit<React.ComponentProps<'div'>, 'ref'>;
@@ -9,6 +9,20 @@ type DottedSurfaceProps = Omit<React.ComponentProps<'div'>, 'ref'>;
 export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
   const { resolvedTheme } = useTheme();
   const containerRef = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(true);
+
+  // Hide when #logo-bar ("Empresas que confían en nosotros") enters the viewport
+  useEffect(() => {
+    const target = document.getElementById('logo-bar');
+    if (!target) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setVisible(!entry.isIntersecting),
+      { threshold: 0 }
+    );
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, []);
+
   const sceneRef = useRef<{
     scene: THREE.Scene;
     camera: THREE.PerspectiveCamera;
@@ -89,7 +103,8 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
   return (
     <div
       ref={containerRef}
-      className={cn('pointer-events-none fixed inset-0 -z-10', className)}
+      className={cn('pointer-events-none fixed inset-0 -z-20 transition-opacity duration-700', className)}
+      style={{ opacity: visible ? 1 : 0 }}
       {...props}
     />
   );
