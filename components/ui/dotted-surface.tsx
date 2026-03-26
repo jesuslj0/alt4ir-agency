@@ -11,16 +11,16 @@ export function DottedSurface({ className, ...props }: DottedSurfaceProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(true);
 
-  // Hide when #logo-bar ("Empresas que confían en nosotros") enters the viewport
+  // Hide once #logo-bar reaches the viewport — only visible while hero is in view
   useEffect(() => {
-    const target = document.getElementById('logo-bar');
-    if (!target) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => setVisible(!entry.isIntersecting),
-      { threshold: 0 }
-    );
-    observer.observe(target);
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      const target = document.getElementById('logo-bar');
+      if (!target) return;
+      setVisible(target.getBoundingClientRect().top > window.innerHeight);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const sceneRef = useRef<{
