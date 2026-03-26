@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-violet-50/60 via-background to-background dark:from-violet-950/20 dark:via-background" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-violet-50/40 via-background/70 to-background/90 dark:from-violet-950/20 dark:via-background/70 dark:to-background/90" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -z-10 w-[600px] h-[400px] rounded-full bg-violet-400/10 dark:bg-violet-600/10 blur-3xl" />
 
       <div className="max-w-6xl mx-auto px-4">

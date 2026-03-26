@@ -14,13 +14,16 @@ import CTABanner from "@/components/sections/CTABanner"
 export default function Home() {
   return (
     <>
+      <DottedSurface />
       <Navbar />
       <main>
-        <div className="relative overflow-hidden">
-          <DottedSurface />
-          <Hero />
-          <LogoBar />
+        <Hero />
+        {/* Transition divider */}
+        <div className="relative h-px">
+          <div className="absolute inset-x-0 -top-8 h-16 bg-gradient-to-b from-transparent via-violet-500/10 to-transparent" />
+          <div className="absolute inset-x-1/4 top-0 h-px bg-gradient-to-r from-transparent via-violet-500/40 to-transparent" />
         </div>
+        <LogoBar />
         <Stats />
         <Features />
         <HowItWorks />
