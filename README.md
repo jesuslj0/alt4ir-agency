@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alt4ir Agency
 
-## Getting Started
+Landing page de **Alt4ir**, agencia especializada en desarrollo de aplicaciones con IA, automatización de procesos de negocio e integración de agentes conversacionales inteligentes. Construida con Next.js 16, TailwindCSS 4 y shadcn.
 
-First, run the development server:
+---
+
+## Stack
+
+- **Next.js 16** — App Router, Server Components
+- **React 19**
+- **TailwindCSS 4** — configuración CSS-first, sin `tailwind.config.js`
+- **shadcn 4** — componentes como paquete npm
+- **TypeScript 5**
+- **Geist** — tipografía
+
+## Requisitos
+
+- Node.js 20+
+- npm 10+
+
+## Instalación
+
+```bash
+npm install
+```
+
+## Desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Comandos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Comando | Descripción |
+|---|---|
+| `npm run dev` | Servidor de desarrollo con Turbopack |
+| `npm run build` | Build de producción |
+| `npm run start` | Servidor de producción |
+| `npm run lint` | Lint con ESLint |
 
-## Learn More
+## Agregar componentes UI
 
-To learn more about Next.js, take a look at the following resources:
+Este proyecto usa shadcn v4 (modelo de paquete). Para añadir un componente:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npx shadcn add <componente>
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Los componentes se generan en `components/ui/`.
 
-## Deploy on Vercel
+## Estructura del proyecto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+app/
+  layout.tsx        # Layout raíz, metadatos, fuentes
+  page.tsx          # Landing page
+  globals.css       # Tema global (TailwindCSS v4 + shadcn)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+components/
+  ui/               # Componentes shadcn (CLI)
+  sections/         # Secciones de la landing (Hero, Services, CTA…)
+
+lib/
+  utils.ts          # Utilidades (cn, etc.)
+
+public/             # Assets estáticos
+```
+
+## Deploy
+
+El proyecto está listo para desplegarse en [Vercel](https://vercel.com). Conecta el repositorio y despliega con un clic.
+
+Para otros proveedores, genera el build estático o de servidor con `npm run build`.
+
+---
+
+**Alt4ir** · Agencia de IA y Desarrollo · [alt4ir.com](https://alt4ir.com)
