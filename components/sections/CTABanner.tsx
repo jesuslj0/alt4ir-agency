@@ -13,7 +13,10 @@ export default function CTABanner() {
 
           <div className="relative">
             <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-              ¿Listo para automatizar tu negocio?
+              ¿Listo para automatizar{" "}
+              <span className="bg-gradient-to-r from-fuchsia-300 to-cyan-300 bg-clip-text text-transparent">
+                tu negocio?
+              </span>
             </h2>
             <p className="mt-4 text-violet-100 max-w-xl mx-auto">
               Agenda una llamada gratuita y descubre en 30 minutos cómo la IA puede transformar tus procesos más críticos.

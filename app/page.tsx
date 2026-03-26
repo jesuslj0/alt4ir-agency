@@ -14,11 +14,13 @@ import CTABanner from "@/components/sections/CTABanner"
 export default function Home() {
   return (
     <>
-      <DottedSurface />
       <Navbar />
       <main>
-        <Hero />
-        <LogoBar />
+        <div className="relative overflow-hidden">
+          <DottedSurface />
+          <Hero />
+          <LogoBar />
+        </div>
         <Stats />
         <Features />
         <HowItWorks />

@@ -46,7 +46,10 @@ export default function Features() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-            Todo lo que necesitas para automatizar
+            Todo lo que necesitas{" "}
+            <span className="bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
+              para automatizar
+            </span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
             Desde la estrategia hasta la implementación, cubrimos todo el ciclo para que tu empresa opere con IA de forma efectiva.

@@ -22,7 +22,7 @@ export default function Hero() {
 
           <h1 className="text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl max-w-4xl leading-[1.1]">
             Automatiza tu negocio{" "}
-            <span className="text-violet-600 dark:text-violet-400">
+            <span className="bg-gradient-to-r from-blue-500 via-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
               con inteligencia artificial
             </span>
           </h1>

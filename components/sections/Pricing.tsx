@@ -61,7 +61,10 @@ export default function Pricing() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-            Planes que se adaptan a tu negocio
+            Planes que se adaptan{" "}
+            <span className="bg-gradient-to-r from-blue-500 to-violet-600 bg-clip-text text-transparent">
+              a tu negocio
+            </span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
             Desde un diagnóstico gratuito hasta transformación digital completa. Empieza donde tenga más sentido para tu empresa.
