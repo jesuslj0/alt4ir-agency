@@ -4,7 +4,7 @@ import { BotIcon, CodeIcon, PlugIcon, ShieldCheckIcon, BarChart3Icon, RefreshCwI
 const features = [
   {
     icon: BotIcon,
-    title: "Automatización de procesos",
+    title: "Implementación de Sistemas Inteligentes",
     description:
       "Eliminamos tareas manuales con agentes de IA que trabajan 24/7, reduciendo errores y costos operativos hasta un 80%.",
   },
