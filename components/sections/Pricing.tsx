@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
+import { GlowCard } from "@/components/ui/glow-card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { CheckIcon } from "lucide-react"
@@ -73,13 +74,9 @@ export default function Pricing() {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {plans.map((plan) => (
+            <GlowCard key={plan.name} glowColor="purple" className={plan.highlighted ? "ring-2 ring-violet-500" : ""}>
             <Card
-              key={plan.name}
-              className={
-                plan.highlighted
-                  ? "relative border-violet-500 shadow-xl shadow-violet-500/15 dark:border-violet-500"
-                  : ""
-              }
+              className="border-0 bg-transparent shadow-none"
             >
               <CardHeader>
                 <div className="flex items-center justify-between mb-1">
@@ -124,6 +121,7 @@ export default function Pricing() {
                 </Button>
               </CardFooter>
             </Card>
+            </GlowCard>
           ))}
         </div>
       </div>

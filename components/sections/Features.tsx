@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { GlowCard } from "@/components/ui/glow-card"
 import { BotIcon, CodeIcon, PlugIcon, ShieldCheckIcon, BarChart3Icon, RefreshCwIcon } from "lucide-react"
 
 const features = [
@@ -60,15 +60,15 @@ export default function Features() {
           {features.map((feature) => {
             const Icon = feature.icon
             return (
-              <Card key={feature.title} className="hover:shadow-md transition-shadow">
-                <CardHeader>
-                  <div className="size-10 rounded-xl bg-violet-100 dark:bg-violet-900/40 flex items-center justify-center mb-2">
-                    <Icon className="size-5 text-violet-600 dark:text-violet-400" />
-                  </div>
-                  <CardTitle>{feature.title}</CardTitle>
-                  <CardDescription>{feature.description}</CardDescription>
-                </CardHeader>
-              </Card>
+              <GlowCard key={feature.title} glowColor="purple" className="p-6 flex flex-col gap-4">
+                <div className="size-10 rounded-xl bg-violet-100 dark:bg-violet-900/40 flex items-center justify-center">
+                  <Icon className="size-5 text-violet-600 dark:text-violet-400" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">{feature.title}</h3>
+                  <p className="text-sm text-muted-foreground">{feature.description}</p>
+                </div>
+              </GlowCard>
             )
           })}
         </div>

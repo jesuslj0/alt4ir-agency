@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card"
+import { GlowCard } from "@/components/ui/glow-card"
 
 const testimonials = [
   {
@@ -45,26 +45,24 @@ export default function Testimonials() {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {testimonials.map((t) => (
-            <Card key={t.name} className="flex flex-col">
-              <CardContent className="flex flex-col gap-6 pt-6 h-full">
-                <p className="text-sm leading-relaxed text-muted-foreground flex-1">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="size-10 rounded-full bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center shrink-0">
-                    <span className="text-xs font-semibold text-violet-700 dark:text-violet-300">
-                      {t.initials}
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold">{t.name}</p>
-                    <p className="text-xs text-muted-foreground">
-                      {t.role} · {t.company}
-                    </p>
-                  </div>
+            <GlowCard key={t.name} glowColor="purple" className="flex flex-col p-6 h-full">
+              <p className="text-sm leading-relaxed text-muted-foreground flex-1">
+                &ldquo;{t.quote}&rdquo;
+              </p>
+              <div className="flex items-center gap-3 mt-6">
+                <div className="size-10 rounded-full bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center shrink-0">
+                  <span className="text-xs font-semibold text-violet-700 dark:text-violet-300">
+                    {t.initials}
+                  </span>
                 </div>
-              </CardContent>
-            </Card>
+                <div>
+                  <p className="text-sm font-semibold">{t.name}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {t.role} · {t.company}
+                  </p>
+                </div>
+              </div>
+            </GlowCard>
           ))}
         </div>
       </div>
