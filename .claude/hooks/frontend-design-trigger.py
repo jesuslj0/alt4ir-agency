@@ -18,16 +18,26 @@ pattern = re.compile(
 if not pattern.search(msg):
     sys.exit(0)
 
-skill_path = os.path.join(os.path.dirname(__file__), "../skills/frontend-design/SKILL.md")
-try:
-    with open(skill_path) as f:
-        skill = f.read()
-except Exception:
+base = os.path.dirname(__file__)
+context_parts = []
+
+for skill_file in [
+    "../skills/frontend-design/SKILL.md",
+    "../skills/ui-ux-pro-max/SKILL.md",
+]:
+    path = os.path.join(base, skill_file)
+    try:
+        with open(path) as f:
+            context_parts.append(f.read())
+    except Exception:
+        pass
+
+if not context_parts:
     sys.exit(0)
 
 print(json.dumps({
     "hookSpecificOutput": {
         "hookEventName": "UserPromptSubmit",
-        "additionalContext": skill
+        "additionalContext": "\n\n---\n\n".join(context_parts)
     }
 }))
