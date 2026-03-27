@@ -89,10 +89,11 @@ export function GlowCard({ children, className }: GlowCardProps) {
       <div
         ref={cardRef}
         data-glow
-        className={cn("relative rounded-2xl backdrop-blur-[5px]", className)}
+        className={cn("relative backdrop-blur-[5px]", className)}
         style={
           {
             "--radius": "16",
+            borderRadius: "calc(var(--radius) * 1px)",
             "--border": "2",
             "--outer": "1",
             "--border-size": "calc(var(--border, 2) * 1px)",
@@ -114,7 +115,9 @@ export function GlowCard({ children, className }: GlowCardProps) {
         }
       >
         <div data-glow />
-        {children}
+        <div className="relative overflow-hidden rounded-[inherit]">
+          {children}
+        </div>
       </div>
     </>
   );

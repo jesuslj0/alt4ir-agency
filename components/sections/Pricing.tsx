@@ -76,7 +76,7 @@ export default function Pricing() {
           {plans.map((plan) => (
             <GlowCard key={plan.name} className={plan.highlighted ? "ring-2 ring-violet-500" : ""}>
             <Card
-              className="border-0 bg-transparent shadow-none"
+              className="border-0 bg-transparent shadow-none ring-0 rounded-none"
             >
               <CardHeader>
                 <div className="flex items-center justify-between mb-1">
