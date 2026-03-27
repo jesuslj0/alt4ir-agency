@@ -59,6 +59,7 @@ function SheetContent({
     <SheetPortal>
       <SheetOverlay />
       <SheetPrimitive.Content
+        
         data-slot="sheet-content"
         data-side={side}
         className={cn(
@@ -67,6 +68,8 @@ function SheetContent({
         )}
         {...props}
       >
+        <SheetTitle title="sr-only">
+        </SheetTitle>
         {children}
         {showCloseButton && (
           <SheetPrimitive.Close data-slot="sheet-close" asChild>
