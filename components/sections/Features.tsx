@@ -60,7 +60,7 @@ export default function Features() {
           {features.map((feature) => {
             const Icon = feature.icon
             return (
-              <GlowCard key={feature.title} glowColor="purple" className="p-6 flex flex-col gap-4">
+              <GlowCard key={feature.title} className="p-6 flex flex-col gap-4">
                 <div className="size-10 rounded-xl bg-violet-100 dark:bg-violet-900/40 flex items-center justify-center">
                   <Icon className="size-5 text-violet-600 dark:text-violet-400" />
                 </div>

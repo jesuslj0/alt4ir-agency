@@ -1,4 +1,3 @@
-import { DottedSurface } from "@/components/ui/dotted-surface"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import Hero from "@/components/sections/Hero"
@@ -14,9 +13,8 @@ import CTABanner from "@/components/sections/CTABanner"
 export default function Home() {
   return (
     <>
-      <DottedSurface />
       <Navbar />
-      <main>
+      <main className="relative z-10">
         <Hero />
         {/* Transition divider */}
         <div className="relative h-px">
@@ -24,15 +22,13 @@ export default function Home() {
           <div className="absolute inset-x-1/4 top-0 h-px bg-gradient-to-r from-transparent via-violet-500/40 to-transparent" />
         </div>
         <LogoBar />
-        <div className="bg-gradient-to-br from-slate-950 via-violet-950/20 to-slate-950">
-          <Movement />
-          <Features />
-          <HowItWorks />
-          <Pricing />
-          <CaseStudies />
-          <FAQ />
-          <CTABanner />
-        </div>
+        <Movement />
+        <Features />
+        <HowItWorks />
+        <Pricing />
+        <CaseStudies />
+        <FAQ />
+        <CTABanner />
       </main>
       <Footer />
     </>

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "next-themes"
+import ParticleBackground from "@/components/ui/particle-background"
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-sans">
         <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
+          <ParticleBackground />
           {children}
         </ThemeProvider>
       </body>

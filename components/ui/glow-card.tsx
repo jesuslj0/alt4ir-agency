@@ -5,16 +5,7 @@ import { cn } from "@/lib/utils";
 interface GlowCardProps {
   children: ReactNode;
   className?: string;
-  glowColor?: "blue" | "purple" | "green" | "red" | "orange";
 }
-
-const glowColorMap = {
-  blue:   { base: 220, spread: 200 },
-  purple: { base: 280, spread: 300 },
-  green:  { base: 120, spread: 200 },
-  red:    { base: 0,   spread: 200 },
-  orange: { base: 30,  spread: 200 },
-};
 
 const beforeAfterStyles = `
   [data-glow]::before,
@@ -33,21 +24,27 @@ const beforeAfterStyles = `
     mask-clip: padding-box, border-box;
     mask-composite: intersect;
   }
+
   [data-glow]::before {
     background-image: radial-gradient(
       calc(var(--spotlight-size) * 0.75) calc(var(--spotlight-size) * 0.75) at
       calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px),
-      hsl(var(--hue, 210) calc(var(--saturation, 100) * 1%) calc(var(--lightness, 50) * 1%) / var(--border-spot-opacity, 1)), transparent 100%
+      hsl(var(--hue, 285) 100% 55% / 1),
+      hsl(var(--hue-secondary, 260) 100% 45% / 0.6),
+      transparent 100%
     );
-    filter: brightness(2);
+    filter: brightness(2.5) saturate(1.8);
   }
+
   [data-glow]::after {
     background-image: radial-gradient(
       calc(var(--spotlight-size) * 0.5) calc(var(--spotlight-size) * 0.5) at
       calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px),
-      hsl(0 100% 100% / var(--border-light-opacity, 1)), transparent 100%
+      hsl(var(--hue, 285) 100% 65% / 0.5),
+      transparent 100%
     );
   }
+
   [data-glow] [data-glow] {
     position: absolute;
     inset: 0;
@@ -60,23 +57,26 @@ const beforeAfterStyles = `
     pointer-events: none;
     border: none;
   }
+
   [data-glow] > [data-glow]::before {
     inset: -10px;
     border-width: 10px;
   }
 `;
 
-export function GlowCard({ children, className, glowColor = "purple" }: GlowCardProps) {
+export function GlowCard({ children, className }: GlowCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
-  const { base, spread } = glowColorMap[glowColor];
 
   useEffect(() => {
     const syncPointer = (e: PointerEvent) => {
       if (cardRef.current) {
+        const xp = e.clientX / window.innerWidth;
+        const hue = 320 - xp * 105;
+        const hueSecondary = hue - 25;
         cardRef.current.style.setProperty("--x", e.clientX.toFixed(2));
-        cardRef.current.style.setProperty("--xp", (e.clientX / window.innerWidth).toFixed(2));
         cardRef.current.style.setProperty("--y", e.clientY.toFixed(2));
-        cardRef.current.style.setProperty("--yp", (e.clientY / window.innerHeight).toFixed(2));
+        cardRef.current.style.setProperty("--hue", hue.toFixed(1));
+        cardRef.current.style.setProperty("--hue-secondary", hueSecondary.toFixed(1));
       }
     };
     document.addEventListener("pointermove", syncPointer);
@@ -92,27 +92,23 @@ export function GlowCard({ children, className, glowColor = "purple" }: GlowCard
         className={cn("relative rounded-2xl backdrop-blur-[5px]", className)}
         style={
           {
-            "--base": base,
-            "--spread": spread,
-            "--radius": "14",
+            "--radius": "16",
             "--border": "2",
-            "--backdrop": "hsl(0 0% 60% / 0.12)",
-            "--backup-border": "var(--backdrop)",
-            "--size": "200",
             "--outer": "1",
             "--border-size": "calc(var(--border, 2) * 1px)",
-            "--spotlight-size": "calc(var(--size, 150) * 1px)",
-            "--hue": "calc(var(--base) + (var(--xp, 0) * var(--spread, 0)))",
+            "--spotlight-size": "380px",
             backgroundImage: `radial-gradient(
-              var(--spotlight-size) var(--spotlight-size) at
+              380px 380px at
               calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px),
-              hsl(var(--hue, 210) calc(var(--saturation, 100) * 1%) calc(var(--lightness, 70) * 1%) / var(--bg-spot-opacity, 0.1)), transparent
+              hsl(var(--hue, 285) 90% 50% / 0.12),
+              hsl(var(--hue-secondary, 260) 100% 55% / 0.06),
+              transparent
             )`,
-            backgroundColor: "var(--backdrop, transparent)",
+            backgroundColor: "hsl(0 0% 60% / 0.08)",
             backgroundSize: "calc(100% + (2 * var(--border-size))) calc(100% + (2 * var(--border-size)))",
             backgroundPosition: "50% 50%",
             backgroundAttachment: "fixed",
-            border: "var(--border-size) solid var(--backup-border)",
+            border: "var(--border-size) solid hsl(270 50% 40% / 0.25)",
             touchAction: "none",
           } as React.CSSProperties
         }

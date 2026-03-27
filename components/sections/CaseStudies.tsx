@@ -75,8 +75,7 @@ export default function CaseStudies() {
             return (
               <GlowCard
                 key={metric.value}
-                glowColor="purple"
-                className="p-8 flex flex-col items-center text-center gap-4 bg-slate-900/80 border border-slate-800"
+                                className="p-8 flex flex-col items-center text-center gap-4 bg-slate-900/80 border border-slate-800"
               >
                 <div className="size-12 rounded-xl bg-violet-500/10 flex items-center justify-center">
                   <Icon className="size-6 text-violet-400" />
@@ -95,8 +94,7 @@ export default function CaseStudies() {
           {cases.map((c) => (
             <GlowCard
               key={c.sector}
-              glowColor="purple"
-              className="p-8 flex flex-col gap-6 bg-slate-900/80 border border-slate-800"
+                            className="p-8 flex flex-col gap-6 bg-slate-900/80 border border-slate-800"
             >
               {/* Badge sector */}
               <span className="self-start inline-flex items-center rounded-full border border-violet-500/40 bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-400">

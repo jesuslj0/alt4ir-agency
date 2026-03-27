@@ -74,7 +74,7 @@ export default function Pricing() {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {plans.map((plan) => (
-            <GlowCard key={plan.name} glowColor="purple" className={plan.highlighted ? "ring-2 ring-violet-500" : ""}>
+            <GlowCard key={plan.name} className={plan.highlighted ? "ring-2 ring-violet-500" : ""}>
             <Card
               className="border-0 bg-transparent shadow-none"
             >
