@@ -1,6 +1,30 @@
 "use client"
 
 import { GlowCard } from "@/components/ui/glow-card"
+import { ClockIcon, TrendingUpIcon, FileTextIcon, SmileIcon } from "lucide-react"
+
+const metrics = [
+  {
+    icon: ClockIcon,
+    value: "20h+",
+    label: "Horas ahorradas por semana de media",
+  },
+  {
+    icon: TrendingUpIcon,
+    value: "40%",
+    label: "Mejora en eficiencia operativa",
+  },
+  {
+    icon: FileTextIcon,
+    value: "1.000+",
+    label: "Documentos procesados automáticamente",
+  },
+  {
+    icon: SmileIcon,
+    value: "100%",
+    label: "Clientes satisfechos",
+  },
+]
 
 const cases = [
   {
@@ -42,6 +66,28 @@ export default function CaseStudies() {
             Casos reales de empresas que automatizaron con Alt4ir y transformaron
             su operación en semanas.
           </p>
+        </div>
+
+        {/* Grid de 4 métricas */}
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-10">
+          {metrics.map((metric) => {
+            const Icon = metric.icon
+            return (
+              <GlowCard
+                key={metric.value}
+                glowColor="purple"
+                className="p-8 flex flex-col items-center text-center gap-4 bg-slate-900/80 border border-slate-800"
+              >
+                <div className="size-12 rounded-xl bg-violet-500/10 flex items-center justify-center">
+                  <Icon className="size-6 text-violet-400" />
+                </div>
+                <span className="text-4xl font-bold bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent">
+                  {metric.value}
+                </span>
+                <span className="text-sm text-slate-400 leading-snug">{metric.label}</span>
+              </GlowCard>
+            )
+          })}
         </div>
 
         {/* Grid de casos */}
