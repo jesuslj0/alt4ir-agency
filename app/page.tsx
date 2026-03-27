@@ -3,11 +3,11 @@ import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import Hero from "@/components/sections/Hero"
 import LogoBar from "@/components/sections/LogoBar"
-import Stats from "@/components/sections/Stats"
+import Movement from "@/components/sections/Movement"
 import Features from "@/components/sections/Features"
 import HowItWorks from "@/components/sections/HowItWorks"
 import Pricing from "@/components/sections/Pricing"
-import Testimonials from "@/components/sections/Testimonials"
+import CaseStudies from "@/components/sections/CaseStudies"
 import FAQ from "@/components/sections/FAQ"
 import CTABanner from "@/components/sections/CTABanner"
 
@@ -24,11 +24,11 @@ export default function Home() {
           <div className="absolute inset-x-1/4 top-0 h-px bg-gradient-to-r from-transparent via-violet-500/40 to-transparent" />
         </div>
         <LogoBar />
-        <Stats />
+        <Movement />
         <Features />
         <HowItWorks />
         <Pricing />
-        <Testimonials />
+        <CaseStudies />
         <FAQ />
         <CTABanner />
       </main>
