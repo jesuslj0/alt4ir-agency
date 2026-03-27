@@ -48,7 +48,7 @@ const cases = [
 
 export default function CaseStudies() {
   return (
-    <section className="py-20 md:py-28 bg-slate-950">
+    <section className="py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-4">
 
         {/* Cabecera */}

@@ -11,7 +11,7 @@ const stats = [
 
 export default function Movement() {
   return (
-    <section className="py-24 md:py-36 bg-gradient-to-br from-slate-950 via-violet-950/20 to-slate-950">
+    <section className="py-24 md:py-36">
       <div className="max-w-4xl mx-auto px-4 flex flex-col items-center text-center gap-10">
 
         {/* Pill */}

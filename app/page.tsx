@@ -24,13 +24,15 @@ export default function Home() {
           <div className="absolute inset-x-1/4 top-0 h-px bg-gradient-to-r from-transparent via-violet-500/40 to-transparent" />
         </div>
         <LogoBar />
-        <Movement />
-        <Features />
-        <HowItWorks />
-        <Pricing />
-        <CaseStudies />
-        <FAQ />
-        <CTABanner />
+        <div className="bg-gradient-to-br from-slate-950 via-violet-950/20 to-slate-950">
+          <Movement />
+          <Features />
+          <HowItWorks />
+          <Pricing />
+          <CaseStudies />
+          <FAQ />
+          <CTABanner />
+        </div>
       </main>
       <Footer />
     </>
