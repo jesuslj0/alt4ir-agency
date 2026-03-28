@@ -69,6 +69,7 @@ export function GlowCard({ children, className }: GlowCardProps) {
 
   useEffect(() => {
     const syncPointer = (e: PointerEvent) => {
+      if (e.pointerType === "touch") return;
       if (cardRef.current) {
         const xp = e.clientX / window.innerWidth;
         const hue = 320 - xp * 105;
@@ -110,7 +111,6 @@ export function GlowCard({ children, className }: GlowCardProps) {
             backgroundPosition: "50% 50%",
             backgroundAttachment: "fixed",
             border: "var(--border-size) solid hsl(270 50% 40% / 0.25)",
-            touchAction: "none",
           } as React.CSSProperties
         }
       >

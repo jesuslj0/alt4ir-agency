@@ -83,7 +83,8 @@ const ParticleBackground = () => {
 
     function init() {
       particleArray = [];
-      const numberOfParticles = (canvas!.height * canvas!.width) / 9300;
+      const density = window.innerWidth < 768 ? 22000 : 9300;
+      const numberOfParticles = (canvas!.height * canvas!.width) / density;
       for (let i = 0; i < numberOfParticles; i++) {
         const size = (Math.random() * 2.5) + 1.2;
         const x = Math.random() * (canvas!.width - size * 2) + size;
@@ -132,7 +133,7 @@ const ParticleBackground = () => {
       canvas!.height = window.innerHeight;
       mouse.x = -9999;
       mouse.y = -9999;
-      init();
+      init(); // density recalculated inside init() based on new window.innerWidth
     }
 
     function handleMouseMove(e: MouseEvent) {
