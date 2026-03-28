@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
@@ -21,8 +22,9 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-md">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="font-bold text-xl tracking-tight">
-          <span className="text-violet-600 dark:text-violet-400">Alt</span>4ir
+        <Link href="/" className="flex items-center gap-2 font-bold text-[1.375rem] tracking-tight">
+          <Image src="/favicons/favicon-32x32.png" alt="Alt4ir logo" width={22} height={22} />
+          <span>Alt<span className="bg-gradient-to-br from-blue-400 to-violet-600 bg-clip-text text-transparent">4</span>ir</span>
         </Link>
 
         {/* Desktop nav */}
@@ -61,8 +63,9 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent side="right" className="w-72 flex flex-col">
             <div className="pt-4">
-              <Link href="/" className="font-bold text-xl tracking-tight">
-                <span className="text-violet-600 dark:text-violet-400">Alt</span>4ir
+              <Link href="/" className="flex items-center gap-2 font-bold text-[1.375rem] tracking-tight">
+                <Image src="/favicons/favicon-32x32.png" alt="Alt4ir logo" width={22} height={22} />
+                <span>Alt<span className="bg-gradient-to-br from-blue-400 to-violet-600 bg-clip-text text-transparent">4</span>ir</span>
               </Link>
             </div>
             <nav className="flex flex-col gap-4 mt-8">

@@ -19,6 +19,14 @@ export const metadata: Metadata = {
   title: "Alt4ir AI Solutions — Automatización e IA para tu negocio",
   description:
     "Automatizamos tareas repetitivas y damos valor a los negocios con la ayuda de la IA. Desarrollo de aplicaciones, automatización de procesos e integración de agentes inteligentes.",
+  icons: {
+    icon: "/favicons/favicon.ico",
+    apple: "/favicons/apple-touch-icon.png",
+    other: [
+      { rel: "icon", url: "/favicons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { rel: "icon", url: "/favicons/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
+  },
 }
 
 export default function RootLayout({
