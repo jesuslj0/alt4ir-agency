@@ -41,9 +41,6 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="outline" size="sm" asChild>
-            <Link href="#contacto">Iniciar sesión</Link>
-          </Button>
           <Button
             size="sm"
             className="bg-violet-600 hover:bg-violet-700 text-white dark:bg-violet-500 dark:hover:bg-violet-600"
@@ -81,9 +78,6 @@ export default function Navbar() {
               ))}
             </nav>
             <div className="flex flex-col gap-3 mt-auto pb-4">
-              <Button variant="outline" asChild>
-                <Link href="#contacto">Iniciar sesión</Link>
-              </Button>
               <Button
                 className="bg-violet-600 hover:bg-violet-700 text-white"
                 asChild

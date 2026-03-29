@@ -28,19 +28,19 @@ const metrics = [
 
 const cases = [
   {
-    sector: "Taller automovilístico",
+    sector: "Talleres Collado",
     problema:
-      "Procesaban 200+ facturas al mes de forma manual con 2 personas dedicadas.",
+      "Procesaban +100 facturas al mes con 1 persona dedicada.",
     solucion:
-      "Sistema de clasificación automática de facturas, albaranes y abonos con extracción de datos.",
+      "Sistema de gestión y clasificación automática de facturas via pdf e imagen y aplicación de contabilidad y fiscalidad completa.",
     resultado:
       "80% de reducción en tiempo de procesamiento con revisión manual ocasional.",
   },
   {
-    sector: "Clínica dental",
+    sector: "Clínica dental y fisioterapia",
     problema: "Perdían leads por no responder mensajes fuera de horario.",
     solucion:
-      "Agente de IA conversacional 24/7 conectado a WhatsApp y agenda de citas.",
+      "Agente de IA conversacional 24/7 en WhatsApp con envío de recordatorios, soporte al cliente y agenda de citas.",
     resultado:
       "35% más citas agendadas. Respuesta inmediata a cada consulta.",
   },
@@ -102,7 +102,7 @@ export default function CaseStudies() {
               </span>
 
               {/* Bloques Problema / Solución / Resultado */}
-              <div className="flex flex-col gap-5">
+              <div className="flex flex-col gap-5 mt-2">
                 <div className="flex flex-col gap-1">
                   <span className="text-sm font-semibold text-red-400">Problema</span>
                   <p className="text-sm text-slate-300 leading-relaxed">{c.problema}</p>

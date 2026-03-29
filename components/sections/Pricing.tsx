@@ -59,7 +59,7 @@ const plans: Plan[] = [
       "SLA garantizado",
       "Equipo dedicado",
     ],
-    cta: "Hablar con ventas",
+    cta: "Hablar con un profesional",
     href: "#contacto",
     highlighted: false,
   },

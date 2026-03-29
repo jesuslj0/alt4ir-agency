@@ -7,19 +7,19 @@ import {
 
 const faqs = [
   {
-    question: "¿Cuánto tiempo tarda implementar una automatización?",
+    question: "¿Cuánto tardamos en implementar y desplegar los sistemas inteligentes?",
     answer:
-      "Depende de la complejidad del proceso. Una automatización estándar (como procesamiento de documentos o integración de datos) puede estar en producción en 2 a 4 semanas. Proyectos más complejos con múltiples sistemas pueden tomar de 6 a 10 semanas.",
+      "Depende de la complejidad del proceso. Una automatización estándar (como procesamiento de documentos o integración de datos) puede estar en producción en 2 a 4 semanas. Proyectos más complejos con múltiples sistemas pueden tomar de 4 a 8 semanas.",
   },
   {
-    question: "¿Necesito conocimientos técnicos para trabajar con ustedes?",
+    question: "¿Necesito conocimientos técnicos para trabajar con Alt4ir?",
     answer:
       "No. Nuestro proceso está diseñado para que puedas participar sin conocimientos técnicos. Nos encargamos de toda la parte tecnológica. Solo necesitas conocer bien tu negocio y tus procesos, que es lo más valioso.",
   },
   {
     question: "¿Pueden integrarse con mis sistemas actuales?",
     answer:
-      "Sí. Trabajamos con los sistemas más comunes: HubSpot, Salesforce, SAP, Monday, Notion, Google Workspace, Microsoft 365, y prácticamente cualquier herramienta que tenga API. Si no la tiene, buscamos alternativas.",
+      "Sí. Trabajamos con todo tipo de sistemas comunes siempre y cuando dispongan de clave API y nos permita realizar las funciones requeridas.",
   },
   {
     question: "¿Cómo garantizan la seguridad de mis datos?",
@@ -34,7 +34,7 @@ const faqs = [
   {
     question: "¿Ofrecen soporte después de la implementación?",
     answer:
-      "Sí. Todos los planes incluyen soporte post-implementación. El plan de Automatización incluye 3 meses de soporte prioritario. Para proyectos enterprise ofrecemos SLA garantizado con tiempo de respuesta definido.",
+      "Sí. Todos los planes incluyen soporte post-implementación. El plan de Automatización incluye 1 mes de soporte prioritario. Para proyectos enterprise ofrecemos SLA garantizado con tiempo de respuesta definido.",
   },
 ]
 
@@ -43,7 +43,7 @@ export default function FAQ() {
     <section id="faq" className="py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
-          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
             Preguntas{" "}
             <span className="bg-gradient-to-r from-fuchsia-500 to-cyan-400 bg-clip-text text-transparent">
               frecuentes
