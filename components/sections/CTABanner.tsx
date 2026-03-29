@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ArrowRightIcon } from "lucide-react"
@@ -22,20 +23,17 @@ export default function CTABanner() {
               Agenda una llamada gratuita y descubre en 30 minutos cómo la IA puede transformar tus procesos más críticos.
             </p>
 
-            <form className="mt-10 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <Input
-                type="email"
-                placeholder="tu@empresa.com"
-                className="bg-white/10 border-white/20 text-white placeholder:text-violet-200 focus-visible:border-white focus-visible:ring-white/30 h-10"
-              />
+            <div className="mt-10 flex justify-center">
               <Button
-                type="submit"
-                className="bg-white text-violet-700 hover:bg-violet-50 gap-2 shrink-0 h-10 px-5 font-semibold"
+                className="bg-white text-violet-700 hover:bg-violet-50 gap-2 h-11 px-8 font-semibold text-base"
+                asChild
               >
-                Agendar llamada
-                <ArrowRightIcon className="size-4" />
+                <Link href="https://calendar.app.google/nheqxfUw8Q8sP4cF7" target="_blank" rel="noopener noreferrer">
+                  Agendar llamada
+                  <ArrowRightIcon className="size-4" />
+                </Link>
               </Button>
-            </form>
+            </div>
 
             <p className="mt-4 text-xs text-violet-200">
               Sin compromiso. Respondemos en menos de 24 horas.
