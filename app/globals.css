@@ -128,3 +128,40 @@
     @apply font-sans;
   }
 }
+
+.rainbow-border {
+  position: relative;
+  isolation: isolate;
+}
+/* Border-only rainbow usando mask: solo pinta el área del borde (2px), el interior queda vacío */
+.rainbow-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+  background-size: 400%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: rainbow-anim 20s linear infinite;
+}
+/* Glow exterior difuminado */
+.rainbow-border::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.35;
+  animation: rainbow-anim 20s linear infinite;
+}
+@keyframes rainbow-anim {
+  0%   { background-position: 0 0; }
+  50%  { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}

@@ -12,7 +12,7 @@ const features = [
     icon: CodeIcon,
     title: "Desarrollo con IA integrada",
     description:
-      "Construimos aplicaciones con inteligencia artificial desde el primer día, listas para escalar con el crecimiento de tu negocio.",
+      "Escuchamos tus necesidades y desarrollamos todo tipo de aplicaciones impulsadas con IA que se adaptan a las necesidades de tu negocio.",
   },
   {
     icon: PlugIcon,
@@ -45,7 +45,7 @@ export default function Features() {
     <section id="servicios" className="py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
-          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
             Todo lo que necesitas{" "}
             <span className="bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
               para automatizar

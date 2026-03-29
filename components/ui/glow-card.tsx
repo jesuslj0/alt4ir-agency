@@ -115,7 +115,7 @@ export function GlowCard({ children, className }: GlowCardProps) {
         }
       >
         <div data-glow />
-        <div className="relative overflow-hidden rounded-[inherit]">
+        <div className="relative rounded-[inherit]">
           {children}
         </div>
       </div>

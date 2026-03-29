@@ -29,7 +29,7 @@ export default function HowItWorks() {
     <section id="proceso" className="py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
-          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
             Cómo{" "}
             <span className="bg-gradient-to-r from-fuchsia-500 to-cyan-400 bg-clip-text text-transparent">
               trabajamos
@@ -41,27 +41,25 @@ export default function HowItWorks() {
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          {steps.map((step, index) => {
+          {steps.map((step) => {
             const Icon = step.icon
             return (
-              <div key={step.number} className="flex flex-col gap-4 relative">
-                {/* Connector line (hidden on mobile, visible between cards) */}
-                {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-7 left-[calc(100%+1rem)] w-[calc(2rem-2px)] h-0.5 bg-violet-200 dark:bg-violet-800" />
-                )}
-                <div className="flex items-center gap-4">
-                  <div className="size-14 rounded-2xl bg-violet-600 dark:bg-violet-500 flex items-center justify-center shrink-0 shadow-lg shadow-violet-500/20">
-                    <Icon className="size-6 text-white" />
+              <div key={step.number} className="relative">
+                <div className="flex flex-col gap-4 rounded-2xl border border-violet-500/20 bg-violet-500/5 backdrop-blur-sm px-6 py-6 transition-colors duration-200 hover:bg-violet-500/10 hover:border-violet-500/40 h-full">
+                  <div className="flex items-center gap-4">
+                    <div className="size-14 rounded-2xl bg-violet-600 dark:bg-violet-500 flex items-center justify-center shrink-0 shadow-lg shadow-violet-500/20">
+                      <Icon className="size-6 text-white" />
+                    </div>
+                    <span className="text-3xl font-bold text-violet-200 dark:text-violet-800 select-none">
+                      {step.number}
+                    </span>
                   </div>
-                  <span className="text-3xl font-bold text-violet-200 dark:text-violet-800 select-none">
-                    {step.number}
-                  </span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {step.description}
-                  </p>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             )
