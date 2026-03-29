@@ -29,18 +29,17 @@ const footerLinks: FooterSection[] = [
   {
     label: 'Empresa',
     links: [
-      { href: '#nosotros', label: 'Sobre nosotros' },
-      { href: '#blog', label: 'Blog' },
-      { href: '#equipo', label: 'Equipo' },
-      { href: '#trabaja', label: 'Trabaja con nosotros' },
+      { href: '/sobre-nosotros', label: 'Sobre nosotros' },
+      { href: '/blog', label: 'Blog' },
+      { href: '/sobre-nosotros#equipo', label: 'Equipo' },
     ],
   },
   {
     label: 'Legal',
     links: [
-      { href: '/privacidad', label: 'Privacidad' },
-      { href: '/terminos', label: 'Términos' },
-      { href: '/cookies', label: 'Cookies' },
+      { href: '/legal/privacidad', label: 'Privacidad' },
+      { href: '/legal/terminos', label: 'Términos' },
+      { href: '/legal/cookies', label: 'Cookies' },
     ],
   },
   {

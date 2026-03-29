@@ -9,13 +9,25 @@ import {
   SheetClose,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import { MenuIcon } from "lucide-react"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { MenuIcon, ChevronDown } from "lucide-react"
 
 const navLinks = [
   { href: "#servicios", label: "Servicios" },
   { href: "#proceso", label: "Proceso" },
   { href: "#precios", label: "Precios" },
   { href: "#faq", label: "FAQ" },
+]
+
+const infoLinks = [
+  { href: "/sobre-nosotros", label: "Sobre nosotros" },
+  { href: "/blog", label: "Blog" },
+  { href: "/legal/privacidad", label: "Legal" },
 ]
 
 export default function Navbar() {
@@ -38,6 +50,20 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground outline-none">
+              Info
+              <ChevronDown className="size-3.5" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              {infoLinks.map((link) => (
+                <DropdownMenuItem key={link.href} asChild>
+                  <Link href={link.href}>{link.label}</Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
@@ -65,6 +91,20 @@ export default function Navbar() {
             </Link>
             <nav className="flex flex-col gap-5 mt-8">
               {navLinks.map((link) => (
+                <SheetClose key={link.href} asChild>
+                  <Link
+                    href={link.href}
+                    className="text-base text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </SheetClose>
+              ))}
+
+              <span className="mt-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground/60">
+                Más
+              </span>
+              {infoLinks.map((link) => (
                 <SheetClose key={link.href} asChild>
                   <Link
                     href={link.href}
