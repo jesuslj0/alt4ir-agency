@@ -115,7 +115,7 @@ export function GlowCard({ children, className }: GlowCardProps) {
         }
       >
         <div data-glow />
-        <div className="relative rounded-[inherit]">
+        <div className="relative rounded-[inherit] h-full">
           {children}
         </div>
       </div>

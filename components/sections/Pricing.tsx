@@ -5,32 +5,42 @@ import { Badge } from "@/components/ui/badge"
 import { CheckIcon } from "lucide-react"
 import Link from "next/link"
 
-const plans = [
+type Plan = {
+  name: string
+  price: string
+  priceNote?: string
+  description: string
+  features: string[]
+  cta: string
+  href: string
+  highlighted: boolean
+  badge?: string
+}
+
+const plans: Plan[] = [
   {
-    name: "Diagnóstico",
+    name: "Consultoría",
     price: "Gratis",
     description: "Descubre el potencial de automatización de tu negocio sin compromiso.",
     features: [
       "Auditoría de procesos (1 área)",
       "Reporte de oportunidades de IA",
       "Llamada de estrategia 30 min",
-      "Demo de automatización en vivo",
+      "Estudiamos tu caso paso por paso",
     ],
-    cta: "Agendar diagnóstico",
+    cta: "Agendar consultoría",
     href: "#contacto",
     highlighted: false,
   },
   {
     name: "Automatización",
-    price: "Desde $3,000",
-    priceNote: "por proyecto",
+    price: "",
     description: "Implementación completa de automatizaciones con soporte y seguimiento.",
     features: [
-      "Todo en Diagnóstico",
-      "Hasta 3 automatizaciones",
+      "Todos los sistemas que necesites",
       "Integración con tus herramientas",
       "Dashboard de métricas",
-      "Soporte prioritario 3 meses",
+      "Soporte prioritario 1 mes",
       "Sesiones de revisión mensuales",
     ],
     cta: "Comenzar proyecto",
@@ -41,10 +51,9 @@ const plans = [
   {
     name: "Transformación Digital",
     price: "A medida",
-    description: "Para empresas que buscan una transformación profunda con IA en toda su operación.",
+    description: "Para emprendedores que buscan ser referentes tecnológicos en su nicho.",
     features: [
       "Todo en Automatización",
-      "Automatizaciones ilimitadas",
       "Agentes IA personalizados",
       "Integraciones enterprise",
       "SLA garantizado",
@@ -61,7 +70,7 @@ export default function Pricing() {
     <section id="precios" className="py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
-          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
             Planes que se adaptan{" "}
             <span className="bg-gradient-to-r from-blue-500 to-violet-600 bg-clip-text text-transparent">
               a tu negocio
@@ -74,25 +83,27 @@ export default function Pricing() {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {plans.map((plan) => (
-            <GlowCard key={plan.name} className={plan.highlighted ? "ring-2 ring-violet-500" : ""}>
+            <GlowCard key={plan.name} className={plan.highlighted ? "h-full ring-2 ring-violet-500" : "h-full"}>
             <Card
-              className="border-0 bg-transparent shadow-none ring-0 rounded-none"
+              className="border-0 bg-transparent shadow-none ring-0 rounded-none flex flex-col h-full"
             >
               <CardHeader>
                 <div className="flex items-center justify-between mb-1">
-                  <CardTitle className="text-base">{plan.name}</CardTitle>
+                  <CardTitle className={plan.highlighted ? "text-2xl" : "text-base"}>{plan.name}</CardTitle>
                   {plan.badge && (
                     <Badge className="bg-violet-600 text-white dark:bg-violet-500">
                       {plan.badge}
                     </Badge>
                   )}
                 </div>
-                <div className="mt-1">
-                  <span className="text-3xl font-bold">{plan.price}</span>
-                  {plan.priceNote && (
-                    <span className="text-sm text-muted-foreground ml-1">{plan.priceNote}</span>
-                  )}
-                </div>
+                {plan.price && (
+                  <div className="mt-1">
+                    <span className="text-3xl font-bold">{plan.price}</span>
+                    {plan.priceNote && (
+                      <span className="text-sm text-muted-foreground ml-1">{plan.priceNote}</span>
+                    )}
+                  </div>
+                )}
                 <CardDescription className="mt-2">{plan.description}</CardDescription>
               </CardHeader>
 
@@ -112,7 +123,7 @@ export default function Pricing() {
                   className={
                     plan.highlighted
                       ? "w-full bg-violet-600 hover:bg-violet-700 text-white dark:bg-violet-500 dark:hover:bg-violet-600"
-                      : "w-full"
+                      : "w-full border-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.45)] hover:shadow-[0_0_20px_rgba(59,130,246,0.75)] hover:border-blue-400 transition-shadow duration-300"
                   }
                   variant={plan.highlighted ? "default" : "outline"}
                   asChild

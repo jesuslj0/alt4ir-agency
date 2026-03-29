@@ -165,3 +165,11 @@
   50%  { background-position: 400% 0; }
   100% { background-position: 0 0; }
 }
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes orbit-spin-reverse {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
