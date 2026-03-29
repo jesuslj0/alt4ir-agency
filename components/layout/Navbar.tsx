@@ -24,7 +24,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-bold text-[1.375rem] tracking-tight">
           <Image src="/favicons/favicon-32x32.png" alt="Alt4ir logo" width={22} height={22} />
-          <span>Alt<span className="bg-gradient-to-br from-blue-400 to-violet-600 bg-clip-text text-transparent">4</span>ir</span>
+          <span>ALT<span className="bg-gradient-to-br from-blue-400 to-violet-600 bg-clip-text text-transparent">4</span>IR</span>
         </Link>
 
         {/* Desktop nav */}
@@ -65,7 +65,7 @@ export default function Navbar() {
             <div className="pt-4">
               <Link href="/" className="flex items-center gap-2 font-bold text-[1.375rem] tracking-tight">
                 <Image src="/favicons/favicon-32x32.png" alt="Alt4ir logo" width={22} height={22} />
-                <span>Alt<span className="bg-gradient-to-br from-blue-400 to-violet-600 bg-clip-text text-transparent">4</span>ir</span>
+                <span>ALT<span className="bg-gradient-to-br from-blue-400 to-violet-600 bg-clip-text text-transparent">4</span>IR</span>
               </Link>
             </div>
             <nav className="flex flex-col gap-4 mt-8">
