@@ -58,14 +58,12 @@ export default function Navbar() {
               <span className="sr-only">Abrir menú</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-72 flex flex-col">
-            <div className="pt-4">
-              <Link href="/" className="flex items-center gap-2 font-bold text-[1.375rem] tracking-tight">
-                <Image src="/favicons/favicon-32x32.png" alt="Alt4ir logo" width={22} height={22} />
-                <span>ALT<span className="bg-gradient-to-br from-blue-400 to-violet-600 bg-clip-text text-transparent">4</span>IR</span>
-              </Link>
-            </div>
-            <nav className="flex flex-col gap-4 mt-8">
+          <SheetContent side="right" className="w-72 flex flex-col px-6 py-6">
+            <Link href="/" className="flex items-center gap-2 font-bold text-[1.375rem] tracking-tight">
+              <Image src="/favicons/favicon-32x32.png" alt="Alt4ir logo" width={22} height={22} />
+              <span>ALT<span className="bg-gradient-to-br from-blue-400 to-violet-600 bg-clip-text text-transparent">4</span>IR</span>
+            </Link>
+            <nav className="flex flex-col gap-5 mt-8">
               {navLinks.map((link) => (
                 <SheetClose key={link.href} asChild>
                   <Link
@@ -77,13 +75,15 @@ export default function Navbar() {
                 </SheetClose>
               ))}
             </nav>
-            <div className="flex flex-col gap-3 mt-auto pb-4">
-              <Button
-                className="bg-violet-600 hover:bg-violet-700 text-white"
-                asChild
-              >
-                <Link href="#contacto">Agendar llamada</Link>
-              </Button>
+            <div className="mt-auto">
+              <SheetClose asChild>
+                <Button
+                  className="w-full bg-violet-600 hover:bg-violet-700 text-white"
+                  asChild
+                >
+                  <Link href="#contacto">Agendar llamada</Link>
+                </Button>
+              </SheetClose>
             </div>
           </SheetContent>
         </Sheet>

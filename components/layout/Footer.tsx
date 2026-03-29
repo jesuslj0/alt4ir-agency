@@ -57,7 +57,7 @@ export default function Footer() {
     <footer className="relative w-full flex flex-col items-center justify-center border-t border-border bg-black px-6 py-12 lg:py-16">
       <div className="bg-foreground/20 absolute top-0 right-1/2 left-1/2 h-px w-1/3 -translate-x-1/2 -translate-y-1/2 rounded-full blur" />
 
-      <div className="grid w-full gap-8 xl:grid-cols-3 xl:gap-8">
+      <div className="grid w-full max-w-6xl mx-auto gap-8 xl:grid-cols-3 xl:gap-8">
         {/* Brand */}
         <AnimatedContainer className="space-y-4">
           <Link href="/" className="font-bold text-xl tracking-tight w-fit block">
