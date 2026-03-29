@@ -9,6 +9,7 @@ interface FooterLink {
   label: string;
   href: string;
   icon?: React.ComponentType<{ className?: string }>;
+  external?: boolean;
 }
 
 interface FooterSection {
@@ -23,7 +24,6 @@ const footerLinks: FooterSection[] = [
       { href: '#servicios', label: 'Servicios' },
       { href: '#proceso', label: 'Proceso' },
       { href: '#precios', label: 'Precios' },
-      { href: '#casos', label: 'Casos de uso' },
     ],
   },
   {
@@ -46,8 +46,8 @@ const footerLinks: FooterSection[] = [
   {
     label: 'Redes sociales',
     links: [
-      { href: '#', label: 'Instagram' },
-      { href: '#', label: 'Facebook' },
+      { href: 'https://www.instagram.com/alt4ir.ai/', label: 'Instagram', external: true },
+      { href: 'https://www.facebook.com/profile.php?id=61587772027579&locale=es_ES', label: 'Facebook', external: true },
     ],
   },
 ];
@@ -83,6 +83,7 @@ export default function Footer() {
                       <Link
                         href={link.href}
                         className="hover:text-foreground inline-flex items-center transition-all duration-300"
+                        {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                       >
                         {link.icon && <link.icon className="me-1 size-4" />}
                         {link.label}
