@@ -62,24 +62,24 @@ export default function Hero() {
               </div>
               <div className="relative flex-1 flex items-center justify-center p-6 md:p-10 overflow-hidden">
                 <GradientDots duration={20} className="rounded-b-2xl" />
-                <div className="relative z-10 grid grid-cols-3 gap-4 md:gap-6 w-full">
-                  <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-border p-4 md:p-6 shadow-sm">
+                <div className="relative z-10 grid grid-cols-3 gap-2 md:gap-6 w-full">
+                  <div className="flex flex-col items-center gap-2 md:gap-3 rounded-xl bg-background border border-border p-2.5 md:p-6 shadow-sm">
                     <div className="size-10 md:size-12 rounded-xl bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center">
                       <BotIcon className="size-5 md:size-6 text-violet-600 dark:text-violet-400" />
                     </div>
-                    <span className="text-xs md:text-sm font-medium text-center leading-tight">Agente IA</span>
+                    <span className="text-xs md:text-sm font-medium text-center leading-tight hyphens-auto">Agente IA</span>
                   </div>
-                  <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-border p-4 md:p-6 shadow-sm">
+                  <div className="flex flex-col items-center gap-2 md:gap-3 rounded-xl bg-background border border-border p-2.5 md:p-6 shadow-sm">
                     <div className="size-10 md:size-12 rounded-xl bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center">
                       <ZapIcon className="size-5 md:size-6 text-violet-600 dark:text-violet-400" />
                     </div>
-                    <span className="text-xs md:text-sm font-medium text-center leading-tight">Automatización</span>
+                    <span className="text-xs md:text-sm font-medium text-center leading-tight hyphens-auto">Automatización</span>
                   </div>
-                  <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-border p-4 md:p-6 shadow-sm">
+                  <div className="flex flex-col items-center gap-2 md:gap-3 rounded-xl bg-background border border-border p-2.5 md:p-6 shadow-sm">
                     <div className="size-10 md:size-12 rounded-xl bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center">
                       <TrendingUpIcon className="size-5 md:size-6 text-violet-600 dark:text-violet-400" />
                     </div>
-                    <span className="text-xs md:text-sm font-medium text-center leading-tight">Resultados</span>
+                    <span className="text-xs md:text-sm font-medium text-center leading-tight hyphens-auto">Resultados</span>
                   </div>
                 </div>
               </div>
