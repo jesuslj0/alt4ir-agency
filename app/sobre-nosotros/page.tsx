@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Brain, Cpu, Workflow, Zap, MapPin, TrendingUp, Code, Handshake, Users, Rocket } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { GlowCard } from "@/components/ui/glow-card"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema"
@@ -125,12 +126,11 @@ export default function SobreNosotrosPage() {
             <div className="flex items-center justify-center">
               <div className="grid grid-cols-2 gap-6">
                 {[Brain, Cpu, Workflow, Zap].map((Icon, i) => (
-                  <div
-                    key={i}
-                    className="flex size-24 items-center justify-center rounded-2xl border border-border bg-violet-600/5"
-                  >
-                    <Icon className="size-10 text-violet-400" />
-                  </div>
+                  <GlowCard key={i} className="size-24">
+                    <div className="flex h-full items-center justify-center">
+                      <Icon className="size-10 text-violet-400" />
+                    </div>
+                  </GlowCard>
                 ))}
               </div>
             </div>
@@ -140,17 +140,20 @@ export default function SobreNosotrosPage() {
         {/* Qué nos diferencia */}
         <section className="px-4 py-20 md:py-28">
           <div className="mx-auto max-w-6xl">
-            <h2 className="mb-12 text-center text-2xl font-bold tracking-tight md:text-3xl">
-              Qué nos diferencia
+            <h2 className="mb-12 text-center text-3xl font-bold tracking-tight md:text-4xl">
+              Qué nos{" "}
+              <span className="bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
+                diferencia
+              </span>
             </h2>
             <div className="grid gap-6 md:grid-cols-3">
               {differentiators.map((item) => (
                 <Card
                   key={item.title}
-                  className="border-border bg-card transition-shadow hover:shadow-lg"
+                  className="group border-border bg-card transition-all duration-300 hover:scale-105 hover:border-violet-500/60 hover:bg-gradient-to-br hover:from-violet-500/20 hover:to-fuchsia-500/20"
                 >
                   <CardContent className="pt-6">
-                    <item.icon className="mb-4 size-8 text-violet-400" />
+                    <item.icon className="mb-4 size-8 text-violet-400 transition-colors duration-300 group-hover:text-white" />
                     <h3 className="mb-2 text-lg font-semibold">
                       {item.title}
                     </h3>
@@ -168,8 +171,11 @@ export default function SobreNosotrosPage() {
         <section id="equipo" className="px-4 py-20 md:py-28">
           <div className="mx-auto max-w-5xl">
             <div className="mb-12 text-center">
-              <h2 className="mb-4 text-2xl font-bold tracking-tight md:text-3xl">
-                El equipo detrás de Alt4ir
+              <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
+                El equipo detrás{" "}
+                <span className="bg-gradient-to-r from-blue-400 to-violet-500 bg-clip-text text-transparent">
+                  de Alt4ir
+                </span>
               </h2>
               <p className="mx-auto max-w-2xl text-muted-foreground leading-relaxed">
                 Somos 4 emprendedores unidos por una misma misión: traer el
