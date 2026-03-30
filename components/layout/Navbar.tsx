@@ -72,7 +72,7 @@ export default function Navbar() {
             className="bg-violet-600 hover:bg-violet-700 text-white dark:bg-violet-500 dark:hover:bg-violet-600"
             asChild
           >
-            <Link href="#contacto">Agendar llamada</Link>
+            <Link href="/#contacto">Agendar llamada</Link>
           </Button>
         </div>
 
@@ -121,7 +121,7 @@ export default function Navbar() {
                   className="w-full bg-violet-600 hover:bg-violet-700 text-white"
                   asChild
                 >
-                  <Link href="#contacto">Agendar llamada</Link>
+                  <Link href="/#contacto">Agendar llamada</Link>
                 </Button>
               </SheetClose>
             </div>
