@@ -75,15 +75,17 @@ export default function CaseStudies() {
             return (
               <GlowCard
                 key={metric.value}
-                                className="p-8 flex flex-col items-center text-center gap-4 bg-slate-900/80"
+                className="p-6 flex flex-col gap-3 bg-slate-900/80 sm:items-center sm:text-center sm:p-8"
               >
-                <div className="size-12 rounded-xl bg-violet-500/10 flex items-center justify-center">
-                  <Icon className="size-6 text-violet-400" />
+                <div className="flex items-center justify-center gap-3 sm:flex-col sm:gap-4 md:flex-row md:mb-4">
+                  <div className="size-12 shrink-0 rounded-xl bg-violet-500/10 flex items-center justify-center">
+                    <Icon className="size-6 text-violet-400" />
+                  </div>
+                  <span className="text-3xl font-bold bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent sm:text-4xl">
+                    {metric.value}
+                  </span>
                 </div>
-                <span className="text-4xl font-bold bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent">
-                  {metric.value}
-                </span>
-                <span className="text-sm text-slate-400 leading-snug">{metric.label}</span>
+                <p className="text-sm text-slate-400 leading-snug text-center">{metric.label}</p>
               </GlowCard>
             )
           })}
@@ -102,19 +104,19 @@ export default function CaseStudies() {
               </span>
 
               {/* Bloques Problema / Solución / Resultado */}
-              <div className="flex flex-col gap-5 mt-2">
-                <div className="flex flex-col gap-1">
-                  <span className="text-sm font-semibold text-red-400">Problema</span>
+              <div className="grid grid-cols-1 gap-4 mt-2 sm:grid-cols-3 sm:gap-3">
+                <div className="flex flex-col gap-1.5 rounded-lg bg-slate-800/50 p-3 sm:p-4">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-red-400">Problema</span>
                   <p className="text-sm text-slate-300 leading-relaxed">{c.problema}</p>
                 </div>
 
-                <div className="flex flex-col gap-1">
-                  <span className="text-sm font-semibold text-blue-400">Solución</span>
+                <div className="flex flex-col gap-1.5 rounded-lg bg-slate-800/50 p-3 sm:p-4">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-blue-400">Solución</span>
                   <p className="text-sm text-slate-300 leading-relaxed">{c.solucion}</p>
                 </div>
 
-                <div className="flex flex-col gap-1">
-                  <span className="text-sm font-semibold text-blue-300">Resultado</span>
+                <div className="flex flex-col gap-1.5 rounded-lg bg-violet-500/10 border border-violet-500/20 p-3 sm:p-4">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-violet-400">Resultado</span>
                   <p className="text-sm font-bold text-white leading-relaxed">{c.resultado}</p>
                 </div>
               </div>

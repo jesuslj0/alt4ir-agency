@@ -9,7 +9,6 @@ import Pricing from "@/components/sections/Pricing"
 import CaseStudies from "@/components/sections/CaseStudies"
 import FAQ from "@/components/sections/FAQ"
 import CTABanner from "@/components/sections/CTABanner"
-import { ScrollReveal } from "@/components/ui/scroll-reveal"
 
 export default function Home() {
   return (
@@ -22,14 +21,14 @@ export default function Home() {
           <div className="absolute inset-x-0 -top-8 h-16 bg-gradient-to-b from-transparent via-violet-500/10 to-transparent" />
           <div className="absolute inset-x-1/4 top-0 h-px bg-gradient-to-r from-transparent via-violet-500/40 to-transparent" />
         </div>
-        <ScrollReveal><LogoBar /></ScrollReveal>
-        <ScrollReveal><Movement /></ScrollReveal>
-        <ScrollReveal><Features /></ScrollReveal>
-        <ScrollReveal><HowItWorks /></ScrollReveal>
-        <ScrollReveal><Pricing /></ScrollReveal>
-        <ScrollReveal><CaseStudies /></ScrollReveal>
-        <ScrollReveal><FAQ /></ScrollReveal>
-        <ScrollReveal><CTABanner /></ScrollReveal>
+        <Movement />
+        <Features />
+        <HowItWorks />
+        <LogoBar />
+        <Pricing />
+        <CaseStudies />
+        <FAQ />
+        <CTABanner />
       </main>
       <Footer />
     </>
