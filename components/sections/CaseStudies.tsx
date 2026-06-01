@@ -28,15 +28,6 @@ const metrics = [
 
 const cases = [
   {
-    sector: "Talleres Collado",
-    problema:
-      "Procesaban +100 facturas al mes con 1 persona dedicada.",
-    solucion:
-      "Sistema de gestión y clasificación automática de facturas via pdf e imagen y aplicación de contabilidad y fiscalidad completa.",
-    resultado:
-      "80% de reducción en tiempo de procesamiento con revisión manual ocasional.",
-  },
-  {
     sector: "Clínica dental y fisioterapia",
     problema: "Perdían leads por no responder mensajes fuera de horario.",
     solucion:
