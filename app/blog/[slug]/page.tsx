@@ -109,7 +109,7 @@ export default async function BlogPostPage({
           <div dangerouslySetInnerHTML={{ __html: post.content }} />
 
           {/* CTA */}
-          <div className="mt-16 rounded-2xl border border-border bg-violet-600/5 p-8 text-center">
+          <div className="mt-16 rounded-2xl border border-border bg-brand-teal/5 p-8 text-center">
             <h2 className="mb-3 text-xl font-semibold">
               ¿Quieres automatizar tu negocio?
             </h2>
@@ -119,7 +119,7 @@ export default async function BlogPostPage({
             </p>
             <Button
               size="lg"
-              className="bg-violet-600 text-white hover:bg-violet-700 dark:bg-violet-500 dark:hover:bg-violet-600"
+              className="bg-brand-emerald text-background font-semibold hover:bg-brand-teal"
               asChild
             >
               <Link href="/#contacto">Agendar llamada</Link>

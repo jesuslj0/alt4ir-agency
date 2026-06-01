@@ -45,7 +45,7 @@ export default function FAQ() {
         <div className="text-center mb-14">
           <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
             Preguntas{" "}
-            <span className="bg-gradient-to-r from-fuchsia-500 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-green to-brand-teal bg-clip-text text-transparent">
               frecuentes
             </span>
           </h2>
@@ -60,7 +60,7 @@ export default function FAQ() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="rounded-xl border border-violet-500/20 bg-violet-500/5 backdrop-blur-sm px-5 overflow-hidden"
+                className="rounded-xl border border-brand-teal/20 bg-brand-teal/5 backdrop-blur-sm px-5 overflow-hidden"
               >
                 <AccordionTrigger className="text-left text-base font-medium py-4 hover:no-underline">
                   {faq.question}

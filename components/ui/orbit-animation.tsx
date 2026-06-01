@@ -36,7 +36,7 @@ function OrbitRing({
 }) {
   return (
     <div
-      className="absolute rounded-full border border-dashed border-violet-400/20"
+      className="absolute rounded-full border border-dashed border-brand-teal/20"
       style={{ width: diameter, height: diameter, animation: `orbit-spin ${duration}s linear infinite` }}
     >
       {icons.map((cfg, i) => {
@@ -66,8 +66,8 @@ export default function OrbitAnimation() {
   return (
     <div className="relative w-[36rem] h-[36rem] flex items-center justify-center">
       {/* Center icon */}
-      <div className="relative z-10 size-16 rounded-full bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center shadow-lg shadow-violet-500/30">
-        <FaRobot className="size-8 text-violet-600 dark:text-violet-400" />
+      <div className="relative z-10 size-16 rounded-full bg-brand-teal/15 flex items-center justify-center shadow-lg shadow-brand-teal/30">
+        <FaRobot className="size-8 text-brand-teal" />
       </div>
 
       <OrbitRing diameter="14rem" duration={10} icons={innerIcons} />

@@ -72,7 +72,7 @@ export default function Pricing() {
         <div className="text-center mb-14">
           <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
             Planes que se adaptan{" "}
-            <span className="bg-gradient-to-r from-blue-500 to-violet-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-sky to-brand-emerald bg-clip-text text-transparent">
               a tu negocio
             </span>
           </h2>
@@ -83,7 +83,7 @@ export default function Pricing() {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {plans.map((plan) => (
-            <GlowCard key={plan.name} className={plan.highlighted ? "h-full ring-2 ring-violet-500" : "h-full"}>
+            <GlowCard key={plan.name} className={plan.highlighted ? "h-full ring-2 ring-brand-teal" : "h-full"}>
             <Card
               className="border-0 bg-transparent shadow-none ring-0 rounded-none flex flex-col h-full"
             >
@@ -91,7 +91,7 @@ export default function Pricing() {
                 <div className="flex items-center justify-between mb-1">
                   <CardTitle className={plan.highlighted ? "text-2xl" : "text-base"}>{plan.name}</CardTitle>
                   {plan.badge && (
-                    <Badge className="bg-violet-600 text-white dark:bg-violet-500">
+                    <Badge className="bg-brand-emerald text-background font-semibold">
                       {plan.badge}
                     </Badge>
                   )}
@@ -111,7 +111,7 @@ export default function Pricing() {
                 <ul className="flex flex-col gap-2.5">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2 text-sm">
-                      <CheckIcon className="size-4 text-violet-600 dark:text-violet-400 mt-0.5 shrink-0" />
+                      <CheckIcon className="size-4 text-brand-teal mt-0.5 shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -122,8 +122,8 @@ export default function Pricing() {
                 <Button
                   className={
                     plan.highlighted
-                      ? "w-full bg-violet-600 hover:bg-violet-700 text-white dark:bg-violet-500 dark:hover:bg-violet-600"
-                      : "w-full border-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.45)] hover:shadow-[0_0_20px_rgba(59,130,246,0.75)] hover:border-blue-400 transition-shadow duration-300"
+                      ? "w-full bg-brand-emerald hover:bg-brand-teal text-background font-semibold"
+                      : "w-full border-brand-sky shadow-[0_0_10px_rgba(0,172,253,0.4)] hover:shadow-[0_0_20px_rgba(0,253,202,0.7)] hover:border-brand-teal transition-shadow duration-300"
                   }
                   variant={plan.highlighted ? "default" : "outline"}
                   asChild

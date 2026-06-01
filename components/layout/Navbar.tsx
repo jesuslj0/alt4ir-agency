@@ -36,7 +36,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-bold text-[1.375rem] tracking-tight">
           <Image src="/favicons/noBGpropus1024.png" alt="Propus logo" width={32} height={32} />
-          <span className="bg-gradient-to-r from-teal-400 to-lime-400 bg-clip-text text-transparent">PROPUS</span>
+          <span className="bg-gradient-to-r from-brand-teal to-brand-lime bg-clip-text text-transparent">PROPUS</span>
         </Link>
 
         {/* Desktop nav */}
@@ -69,7 +69,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <Button
             size="sm"
-            className="bg-violet-600 hover:bg-violet-700 text-white dark:bg-violet-500 dark:hover:bg-violet-600"
+            className="bg-brand-emerald hover:bg-brand-teal text-background font-semibold"
             asChild
           >
             <Link href="/#contacto">Agendar llamada</Link>
@@ -87,7 +87,7 @@ export default function Navbar() {
           <SheetContent side="right" className="w-72 flex flex-col px-6 py-6">
             <Link href="/" className="flex items-center gap-2 font-bold text-[1.375rem] tracking-tight">
               <Image src="/favicons/noBGpropus1024.png" alt="Propus logo" width={32} height={32} />
-              <span className="bg-gradient-to-r from-teal-400 to-lime-400 bg-clip-text text-transparent">PROPUS</span>
+              <span className="bg-gradient-to-r from-brand-teal to-brand-lime bg-clip-text text-transparent">PROPUS</span>
             </Link>
             <nav className="flex flex-col gap-5 mt-8">
               {navLinks.map((link) => (
@@ -118,7 +118,7 @@ export default function Navbar() {
             <div className="mt-auto">
               <SheetClose asChild>
                 <Button
-                  className="w-full bg-violet-600 hover:bg-violet-700 text-white"
+                  className="w-full bg-brand-emerald hover:bg-brand-teal text-background font-semibold"
                   asChild
                 >
                   <Link href="/#contacto">Agendar llamada</Link>

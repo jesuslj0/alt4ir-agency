@@ -9,7 +9,7 @@ export default function CTABanner() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="relative rounded-3xl bg-neutral-950 overflow-hidden px-8 py-16 md:px-16 text-center border border-white/10">
           <EtheralShadow
-            color="rgba(109, 40, 217, 0.85)"
+            color="rgba(0, 180, 130, 0.8)"
             animation={{ scale: 80, speed: 70 }}
             noise={{ opacity: 0.6, scale: 1.2 }}
             sizing="fill"
@@ -18,7 +18,7 @@ export default function CTABanner() {
           <div className="relative">
             <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
               ¿Listo para automatizar{" "}
-              <span className="bg-gradient-to-r from-fuchsia-300 to-cyan-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-spring to-brand-teal bg-clip-text text-transparent">
                 tu negocio?
               </span>
             </h2>
@@ -28,7 +28,7 @@ export default function CTABanner() {
 
             <div className="mt-10 flex justify-center">
               <Button
-                className="bg-gradient-to-r from-violet-600 to-fuchsia-500 hover:from-violet-500 hover:to-fuchsia-400 text-white gap-2 h-11 px-8 font-semibold text-base"
+                className="bg-gradient-to-r from-brand-emerald to-brand-green hover:from-brand-teal hover:to-brand-spring text-background gap-2 h-11 px-8 font-semibold text-base"
                 asChild
               >
                 <Link href="https://calendar.app.google/nheqxfUw8Q8sP4cF7" target="_blank" rel="noopener noreferrer">

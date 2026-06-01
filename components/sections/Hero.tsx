@@ -37,7 +37,7 @@ function DraggableMockup() {
 
   return (
     <div
-      className="w-full max-w-lg 2xl:max-w-xl rounded-2xl border border-border/60 bg-card shadow-2xl shadow-violet-500/10 ring-1 ring-foreground/5 overflow-hidden flex flex-col"
+      className="w-full max-w-lg 2xl:max-w-xl rounded-2xl border border-border/60 bg-card shadow-2xl shadow-brand-teal/10 ring-1 ring-foreground/5 overflow-hidden flex flex-col"
       style={{
         transform: `translate(${offset.x}px, ${offset.y}px)`,
         transition: isDragging ? "none" : "transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)",
@@ -73,8 +73,8 @@ function DraggableMockup() {
         <div className="relative z-10 flex items-center justify-center gap-3 md:gap-4 w-full">
           {/* Agente IA */}
           <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-border px-4 py-5 md:px-6 md:py-6 shadow-sm flex-1">
-            <div className="size-11 md:size-13 rounded-xl bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center">
-              <BotIcon className="size-5 md:size-6 text-violet-600 dark:text-violet-400" />
+            <div className="size-11 md:size-13 rounded-xl bg-brand-emerald/15 flex items-center justify-center">
+              <BotIcon className="size-5 md:size-6 text-brand-emerald" />
             </div>
             <span className="text-xs md:text-sm font-semibold text-center leading-tight">Agente IA</span>
           </div>
@@ -83,8 +83,8 @@ function DraggableMockup() {
 
           {/* Aplicación Web */}
           <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-border px-4 py-5 md:px-6 md:py-6 shadow-sm flex-1">
-            <div className="size-11 md:size-13 rounded-xl bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center">
-              <MonitorIcon className="size-5 md:size-6 text-violet-600 dark:text-violet-400" />
+            <div className="size-11 md:size-13 rounded-xl bg-brand-emerald/15 flex items-center justify-center">
+              <MonitorIcon className="size-5 md:size-6 text-brand-emerald" />
             </div>
             <span className="text-xs md:text-sm font-semibold text-center leading-tight">Aplicación Web</span>
           </div>
@@ -92,11 +92,11 @@ function DraggableMockup() {
           <span className="text-xl md:text-2xl font-light text-muted-foreground/60 shrink-0">=</span>
 
           {/* Resultados */}
-          <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-violet-400/50 px-4 py-5 md:px-6 md:py-6 shadow-sm shadow-violet-500/10 flex-1 ring-1 ring-violet-500/20">
-            <div className="size-11 md:size-13 rounded-xl bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center">
-              <TrendingUpIcon className="size-5 md:size-6 text-violet-600 dark:text-violet-400" />
+          <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-brand-teal/50 px-4 py-5 md:px-6 md:py-6 shadow-sm shadow-brand-teal/10 flex-1 ring-1 ring-brand-teal/20">
+            <div className="size-11 md:size-13 rounded-xl bg-brand-teal/15 flex items-center justify-center">
+              <TrendingUpIcon className="size-5 md:size-6 text-brand-teal" />
             </div>
-            <span className="text-xs md:text-sm font-semibold text-center leading-tight text-violet-700 dark:text-violet-400">Resultados</span>
+            <span className="text-xs md:text-sm font-semibold text-center leading-tight text-brand-teal">Resultados</span>
           </div>
         </div>
 
@@ -111,8 +111,8 @@ function DraggableMockup() {
         <div className="relative z-10 flex items-center justify-center gap-3 md:gap-4 w-full">
           {/* Identificación */}
           <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-border px-4 py-5 md:px-6 md:py-6 shadow-sm flex-1">
-            <div className="size-11 md:size-13 rounded-xl bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center">
-              <SearchIcon className="size-5 md:size-6 text-blue-600 dark:text-blue-400" />
+            <div className="size-11 md:size-13 rounded-xl bg-brand-sky/15 flex items-center justify-center">
+              <SearchIcon className="size-5 md:size-6 text-brand-sky" />
             </div>
             <span className="text-xs md:text-sm font-semibold text-center leading-tight">Identificar problema</span>
           </div>
@@ -121,8 +121,8 @@ function DraggableMockup() {
 
           {/* Solución */}
           <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-border px-4 py-5 md:px-6 md:py-6 shadow-sm flex-1">
-            <div className="size-11 md:size-13 rounded-xl bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center">
-              <LightbulbIcon className="size-5 md:size-6 text-blue-600 dark:text-blue-400" />
+            <div className="size-11 md:size-13 rounded-xl bg-brand-sky/15 flex items-center justify-center">
+              <LightbulbIcon className="size-5 md:size-6 text-brand-sky" />
             </div>
             <span className="text-xs md:text-sm font-semibold text-center leading-tight">Crear solución</span>
           </div>
@@ -130,11 +130,11 @@ function DraggableMockup() {
           <span className="text-xl md:text-2xl font-light text-muted-foreground/60 shrink-0">→</span>
 
           {/* Implementación */}
-          <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-blue-400/50 px-4 py-5 md:px-6 md:py-6 shadow-sm shadow-blue-500/10 flex-1 ring-1 ring-blue-500/20">
-            <div className="size-11 md:size-13 rounded-xl bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center">
-              <RocketIcon className="size-5 md:size-6 text-blue-600 dark:text-blue-400" />
+          <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-brand-sky/50 px-4 py-5 md:px-6 md:py-6 shadow-sm shadow-brand-sky/10 flex-1 ring-1 ring-brand-sky/20">
+            <div className="size-11 md:size-13 rounded-xl bg-brand-sky/15 flex items-center justify-center">
+              <RocketIcon className="size-5 md:size-6 text-brand-sky" />
             </div>
-            <span className="text-xs md:text-sm font-semibold text-center leading-tight text-blue-700 dark:text-blue-400">Implementación rápida</span>
+            <span className="text-xs md:text-sm font-semibold text-center leading-tight text-brand-sky">Implementación rápida</span>
           </div>
         </div>
       </div>
@@ -153,7 +153,7 @@ export default function Hero() {
           <div className="flex flex-col items-center md:items-start md:flex-1">
             <Badge
               variant="outline"
-              className="mb-6 gap-1.5 border-violet-300 text-violet-700 dark:border-violet-700 dark:text-violet-400 py-1 px-3 h-auto rounded-full"
+              className="mb-6 gap-1.5 border-brand-teal/40 text-brand-teal dark:border-brand-teal/40 dark:text-brand-teal py-1 px-3 h-auto rounded-full"
             >
               <SparklesIcon className="size-3" />
               Agencia de IA &amp; Consultoría
@@ -163,7 +163,7 @@ export default function Hero() {
               <span className="block text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-semibold tracking-tight text-foreground/75 leading-snug">
                 Recupera el control <br />de tu negocio
               </span>
-              <span className="block text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-bold tracking-tight leading-[1.1] bg-gradient-to-r from-blue-500 via-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
+              <span className="block text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-bold tracking-tight leading-[1.1] bg-gradient-to-r from-brand-sky via-brand-teal to-brand-green bg-clip-text text-transparent">
                 con sistemas inteligentes
               </span>
             </h1>
@@ -175,7 +175,7 @@ export default function Hero() {
             <div className="mt-10 flex flex-col sm:flex-row items-center md:items-start gap-4">
               <Button
                 size="lg"
-                className="bg-violet-600 hover:bg-violet-700 text-white dark:bg-violet-500 dark:hover:bg-violet-600 gap-2 h-11 px-6"
+                className="bg-brand-emerald hover:bg-brand-teal text-background font-semibold gap-2 h-11 px-6"
                 asChild
               >
                 <Link href="#contacto">

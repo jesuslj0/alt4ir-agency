@@ -47,7 +47,7 @@ export default function Features() {
         <div className="text-center mb-14">
           <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
             Todo lo que necesitas{" "}
-            <span className="bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-teal to-brand-green bg-clip-text text-transparent">
               para automatizar
             </span>
           </h2>
@@ -61,8 +61,8 @@ export default function Features() {
             const Icon = feature.icon
             return (
               <GlowCard key={feature.title} className="p-6 flex flex-col gap-4">
-                <div className="size-10 rounded-xl bg-violet-100 dark:bg-violet-900/40 flex items-center justify-center">
-                  <Icon className="size-5 text-violet-600 dark:text-violet-400" />
+                <div className="size-10 rounded-xl bg-brand-teal/15 flex items-center justify-center">
+                  <Icon className="size-5 text-brand-teal" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">{feature.title}</h3>

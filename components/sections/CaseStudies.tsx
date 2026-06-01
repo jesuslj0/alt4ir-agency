@@ -44,12 +44,12 @@ export default function CaseStudies() {
 
         {/* Cabecera */}
         <div className="text-center mb-14 flex flex-col items-center gap-5">
-          <span className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-1.5 text-xs font-medium text-violet-400">
+          <span className="inline-flex items-center gap-2 rounded-full border border-brand-teal/30 bg-brand-teal/10 px-4 py-1.5 text-xs font-medium text-brand-teal">
             Resultados
           </span>
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl text-white">
             Números que hablan{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-violet-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-sky to-brand-teal bg-clip-text text-transparent">
               por nosotros.
             </span>
           </h2>
@@ -69,10 +69,10 @@ export default function CaseStudies() {
                 className="p-6 flex flex-col gap-3 bg-slate-900/80 sm:items-center sm:text-center sm:p-8"
               >
                 <div className="flex items-center justify-center gap-3 sm:flex-col sm:gap-4 md:flex-row md:mb-4">
-                  <div className="size-12 shrink-0 rounded-xl bg-violet-500/10 flex items-center justify-center">
-                    <Icon className="size-6 text-violet-400" />
+                  <div className="size-12 shrink-0 rounded-xl bg-brand-teal/10 flex items-center justify-center">
+                    <Icon className="size-6 text-brand-teal" />
                   </div>
-                  <span className="text-3xl font-bold bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent sm:text-4xl">
+                  <span className="text-3xl font-bold bg-gradient-to-r from-brand-teal to-brand-sky bg-clip-text text-transparent sm:text-4xl">
                     {metric.value}
                   </span>
                 </div>
@@ -90,7 +90,7 @@ export default function CaseStudies() {
                             className="p-8 flex flex-col gap-6 bg-slate-900/80"
             >
               {/* Badge sector */}
-              <span className="self-start inline-flex items-center rounded-full border border-violet-500/40 bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-400">
+              <span className="self-start inline-flex items-center rounded-full border border-brand-teal/40 bg-brand-teal/10 px-3 py-1 text-xs font-medium text-brand-teal">
                 {c.sector}
               </span>
 
@@ -102,12 +102,12 @@ export default function CaseStudies() {
                 </div>
 
                 <div className="flex flex-col gap-1.5 rounded-lg bg-slate-800/50 p-3 sm:p-4">
-                  <span className="text-xs font-semibold uppercase tracking-wide text-blue-400">Solución</span>
+                  <span className="text-xs font-semibold uppercase tracking-wide text-brand-sky">Solución</span>
                   <p className="text-sm text-slate-300 leading-relaxed">{c.solucion}</p>
                 </div>
 
-                <div className="flex flex-col gap-1.5 rounded-lg bg-violet-500/10 border border-violet-500/20 p-3 sm:p-4">
-                  <span className="text-xs font-semibold uppercase tracking-wide text-violet-400">Resultado</span>
+                <div className="flex flex-col gap-1.5 rounded-lg bg-brand-teal/10 border border-brand-teal/20 p-3 sm:p-4">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-brand-teal">Resultado</span>
                   <p className="text-sm font-bold text-white leading-relaxed">{c.resultado}</p>
                 </div>
               </div>

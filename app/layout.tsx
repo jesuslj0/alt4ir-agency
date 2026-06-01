@@ -3,7 +3,7 @@ import { Bricolage_Grotesque, Space_Grotesk } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "next-themes"
-import ParticleBackground from "@/components/ui/particle-background"
+import AuroraBackground from "@/components/ui/aurora-background"
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-sans",
@@ -44,7 +44,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-sans">
         <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
-          <ParticleBackground />
+          <AuroraBackground />
           {children}
         </ThemeProvider>
       </body>

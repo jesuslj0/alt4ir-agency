@@ -25,7 +25,7 @@ export default function Movement() {
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
             Esto no es el futuro.
           </h2>
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight bg-gradient-to-r from-brand-teal to-brand-green bg-clip-text text-transparent">
             Es el PRESENTE.
           </h2>
         </div>
@@ -41,14 +41,14 @@ export default function Movement() {
         <div className="flex flex-col sm:flex-row items-center gap-4">
           {stats.map((stat, i) => (
             <Fragment key={stat.value}>
-              <div className="flex flex-col items-center gap-1.5 rounded-xl border border-violet-500/20 bg-violet-500/5 backdrop-blur-sm px-6 py-4 transition-colors duration-200 hover:bg-violet-500/10 hover:border-violet-500/40">
+              <div className="flex flex-col items-center gap-1.5 rounded-xl border border-brand-teal/20 bg-brand-teal/5 backdrop-blur-sm px-6 py-4 transition-colors duration-200 hover:bg-brand-teal/10 hover:border-brand-teal/40">
                 <span className="text-3xl font-bold text-white">{stat.value}</span>
                 <span className="text-sm text-slate-400 max-w-[150px] text-center leading-snug">
                   {stat.label}
                 </span>
               </div>
               {i < stats.length - 1 && (
-                <div className="hidden sm:block w-px h-10 bg-violet-800/50" />
+                <div className="hidden sm:block w-px h-10 bg-brand-teal/30" />
               )}
             </Fragment>
           ))}
@@ -58,7 +58,7 @@ export default function Movement() {
         <div className="flex flex-col items-center gap-3">
           <Button
             size="lg"
-            className="bg-violet-600 hover:bg-violet-700 text-white px-8 gap-2"
+            className="bg-brand-emerald hover:bg-brand-teal text-background font-semibold px-8 gap-2"
             asChild
           >
             <Link href="#contacto">

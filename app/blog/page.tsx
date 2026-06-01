@@ -39,7 +39,7 @@ export default function BlogPage() {
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
               Blog de{" "}
-              <span className="bg-gradient-to-r from-teal-400 to-lime-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-teal to-brand-lime bg-clip-text text-transparent">
                 Propus
               </span>
             </h1>
@@ -87,7 +87,7 @@ export default function BlogPage() {
                           </time>
                           <span>{post.readingTime}</span>
                         </div>
-                        <span className="mt-4 text-sm font-medium text-violet-400">
+                        <span className="mt-4 text-sm font-medium text-brand-teal">
                           Leer más →
                         </span>
                       </CardContent>

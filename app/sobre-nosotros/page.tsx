@@ -80,7 +80,7 @@ export default function SobreNosotrosPage() {
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
               La agencia de IA que impulsa negocios en{" "}
-              <span className="bg-gradient-to-r from-blue-400 to-violet-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-sky to-brand-emerald bg-clip-text text-transparent">
                 Albacete y Castilla-La Mancha
               </span>
             </h1>
@@ -99,7 +99,7 @@ export default function SobreNosotrosPage() {
             <div>
               <h2 className="mb-6 text-2xl font-bold tracking-tight md:text-3xl">
                 Nuestra{" "}
-                <span className="bg-gradient-to-r from-fuchsia-500 to-cyan-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-brand-green to-brand-teal bg-clip-text text-transparent">
                   misión
                 </span>
               </h2>
@@ -128,7 +128,7 @@ export default function SobreNosotrosPage() {
                 {[Brain, Cpu, Workflow, Zap].map((Icon, i) => (
                   <GlowCard key={i} className="size-24">
                     <div className="flex h-full items-center justify-center">
-                      <Icon className="size-10 text-violet-400" />
+                      <Icon className="size-10 text-brand-teal" />
                     </div>
                   </GlowCard>
                 ))}
@@ -142,7 +142,7 @@ export default function SobreNosotrosPage() {
           <div className="mx-auto max-w-6xl">
             <h2 className="mb-12 text-center text-3xl font-bold tracking-tight md:text-4xl">
               Qué nos{" "}
-              <span className="bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-teal to-brand-green bg-clip-text text-transparent">
                 diferencia
               </span>
             </h2>
@@ -150,10 +150,10 @@ export default function SobreNosotrosPage() {
               {differentiators.map((item) => (
                 <Card
                   key={item.title}
-                  className="group border-border bg-card transition-all duration-300 hover:scale-105 hover:border-violet-500/60 hover:bg-gradient-to-br hover:from-violet-500/20 hover:to-fuchsia-500/20"
+                  className="group border-border bg-card transition-all duration-300 hover:scale-105 hover:border-brand-teal/60 hover:bg-gradient-to-br hover:from-brand-teal/20 hover:to-brand-green/20"
                 >
                   <CardContent className="pt-6">
-                    <item.icon className="mb-4 size-8 text-violet-400 transition-colors duration-300 group-hover:text-white" />
+                    <item.icon className="mb-4 size-8 text-brand-teal transition-colors duration-300 group-hover:text-white" />
                     <h3 className="mb-2 text-lg font-semibold">
                       {item.title}
                     </h3>
@@ -173,7 +173,7 @@ export default function SobreNosotrosPage() {
             <div className="mb-12 text-center">
               <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
                 El equipo detrás{" "}
-                <span className="bg-gradient-to-r from-blue-400 to-violet-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-brand-sky to-brand-teal bg-clip-text text-transparent">
                   de Propus
                 </span>
               </h2>
@@ -188,13 +188,13 @@ export default function SobreNosotrosPage() {
             {/* Panel único */}
             <div className="rounded-3xl border border-border bg-card/60 backdrop-blur-sm overflow-hidden">
               {/* Header del panel */}
-              <div className="border-b border-border bg-violet-600/5 px-6 py-8 text-center md:px-10">
+              <div className="border-b border-border bg-brand-teal/5 px-6 py-8 text-center md:px-10">
                 <div className="mx-auto mb-4 flex items-center justify-center gap-3">
-                  <Users className="size-6 text-violet-400" />
+                  <Users className="size-6 text-brand-teal" />
                   <span className="text-2xl font-bold tracking-tight">2 cofundadores</span>
                 </div>
                 <div className="mx-auto flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                  <Rocket className="size-4 text-violet-400" />
+                  <Rocket className="size-4 text-brand-teal" />
                   <span>De Albacete para toda España — construyendo el futuro de tu negocio</span>
                 </div>
               </div>
@@ -204,12 +204,12 @@ export default function SobreNosotrosPage() {
                 {teamSquads.map((squad) => (
                   <div key={squad.label} className="p-6 md:p-10">
                     <div className="mb-5 flex items-center gap-3">
-                      <div className="flex size-12 items-center justify-center rounded-xl bg-violet-600/10">
-                        <squad.icon className="size-6 text-violet-400" />
+                      <div className="flex size-12 items-center justify-center rounded-xl bg-brand-teal/10">
+                        <squad.icon className="size-6 text-brand-teal" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-lg">{squad.label}</h3>
-                        <p className="text-sm text-violet-400">{squad.members} cofundadores</p>
+                        <p className="text-sm text-brand-teal">{squad.members} cofundadores</p>
                       </div>
                     </div>
 
@@ -221,7 +221,7 @@ export default function SobreNosotrosPage() {
                       {squad.skills.map((skill) => (
                         <span
                           key={skill}
-                          className="rounded-full border border-violet-500/20 bg-violet-600/5 px-3 py-1 text-xs text-violet-300"
+                          className="rounded-full border border-brand-teal/20 bg-brand-teal/5 px-3 py-1 text-xs text-brand-teal/80"
                         >
                           {skill}
                         </span>
@@ -246,7 +246,7 @@ export default function SobreNosotrosPage() {
               permite ofrecer un servicio cercano y personalizado.
             </p>
             <div className="mb-8 inline-flex items-center gap-2 text-muted-foreground">
-              <MapPin className="size-5 text-violet-400" />
+              <MapPin className="size-5 text-brand-teal" />
               <span>Albacete, Castilla-La Mancha, España</span>
             </div>
             <p className="mb-8 text-muted-foreground">
@@ -254,7 +254,7 @@ export default function SobreNosotrosPage() {
             </p>
             <Button
               size="lg"
-              className="bg-violet-600 text-white hover:bg-violet-700 dark:bg-violet-500 dark:hover:bg-violet-600"
+              className="bg-brand-emerald text-background font-semibold hover:bg-brand-teal"
               asChild
             >
               <Link href="/#contacto">Agendar llamada</Link>

@@ -31,7 +31,7 @@ export default function HowItWorks() {
         <div className="text-center mb-14">
           <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
             Cómo{" "}
-            <span className="bg-gradient-to-r from-fuchsia-500 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-green to-brand-teal bg-clip-text text-transparent">
               trabajamos
             </span>
           </h2>
@@ -45,12 +45,12 @@ export default function HowItWorks() {
             const Icon = step.icon
             return (
               <div key={step.number} className="relative">
-                <div className="flex flex-col gap-4 rounded-2xl border border-violet-500/20 bg-violet-500/5 backdrop-blur-sm px-6 py-6 transition-colors duration-200 hover:bg-violet-500/10 hover:border-violet-500/40 h-full">
+                <div className="flex flex-col gap-4 rounded-2xl border border-brand-teal/20 bg-brand-teal/5 backdrop-blur-sm px-6 py-6 transition-colors duration-200 hover:bg-brand-teal/10 hover:border-brand-teal/40 h-full">
                   <div className="flex items-center gap-4">
-                    <div className="size-14 rounded-2xl bg-violet-600 dark:bg-violet-500 flex items-center justify-center shrink-0 shadow-lg shadow-violet-500/20">
-                      <Icon className="size-6 text-white" />
+                    <div className="size-14 rounded-2xl bg-brand-emerald flex items-center justify-center shrink-0 shadow-lg shadow-brand-emerald/30">
+                      <Icon className="size-6 text-background" />
                     </div>
-                    <span className="text-3xl font-bold text-violet-200 dark:text-violet-800 select-none">
+                    <span className="text-3xl font-bold text-brand-teal/25 select-none">
                       {step.number}
                     </span>
                   </div>

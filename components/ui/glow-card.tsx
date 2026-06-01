@@ -29,8 +29,8 @@ const beforeAfterStyles = `
     background-image: radial-gradient(
       calc(var(--spotlight-size) * 0.75) calc(var(--spotlight-size) * 0.75) at
       calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px),
-      hsl(var(--hue, 285) 100% 55% / 1),
-      hsl(var(--hue-secondary, 260) 100% 45% / 0.6),
+      hsl(var(--hue, 165) 100% 55% / 1),
+      hsl(var(--hue-secondary, 185) 100% 45% / 0.6),
       transparent 100%
     );
     filter: brightness(2.5) saturate(1.8);
@@ -40,7 +40,7 @@ const beforeAfterStyles = `
     background-image: radial-gradient(
       calc(var(--spotlight-size) * 0.5) calc(var(--spotlight-size) * 0.5) at
       calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px),
-      hsl(var(--hue, 285) 100% 65% / 0.5),
+      hsl(var(--hue, 165) 100% 65% / 0.5),
       transparent 100%
     );
   }
@@ -72,8 +72,9 @@ export function GlowCard({ children, className }: GlowCardProps) {
       if (e.pointerType === "touch") return;
       if (cardRef.current) {
         const xp = e.clientX / window.innerWidth;
-        const hue = 320 - xp * 105;
-        const hueSecondary = hue - 25;
+        // Espectro corporativo: cyan/azul (190) → verde (135) según posición del puntero
+        const hue = 195 - xp * 60;
+        const hueSecondary = hue + 20;
         cardRef.current.style.setProperty("--x", e.clientX.toFixed(2));
         cardRef.current.style.setProperty("--y", e.clientY.toFixed(2));
         cardRef.current.style.setProperty("--hue", hue.toFixed(1));
@@ -102,15 +103,15 @@ export function GlowCard({ children, className }: GlowCardProps) {
             backgroundImage: `radial-gradient(
               380px 380px at
               calc(var(--x, 0) * 1px) calc(var(--y, 0) * 1px),
-              hsl(var(--hue, 285) 90% 50% / 0.12),
-              hsl(var(--hue-secondary, 260) 100% 55% / 0.06),
+              hsl(var(--hue, 165) 90% 50% / 0.12),
+              hsl(var(--hue-secondary, 185) 100% 55% / 0.06),
               transparent
             )`,
             backgroundColor: "hsl(0 0% 60% / 0.08)",
             backgroundSize: "calc(100% + (2 * var(--border-size))) calc(100% + (2 * var(--border-size)))",
             backgroundPosition: "50% 50%",
             backgroundAttachment: "fixed",
-            border: "var(--border-size) solid hsl(270 50% 40% / 0.25)",
+            border: "var(--border-size) solid hsl(168 60% 45% / 0.25)",
           } as React.CSSProperties
         }
       >

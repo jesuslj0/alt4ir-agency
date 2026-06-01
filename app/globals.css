@@ -7,6 +7,13 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  /* Paleta corporativa Propus */
+  --color-brand-lime: #e9f700;
+  --color-brand-green: #74ce12;
+  --color-brand-spring: #00fd70;
+  --color-brand-emerald: #00fda0;
+  --color-brand-teal: #00fdca;
+  --color-brand-sky: #00acfd;
   --font-sans: var(--font-sans);
   --font-mono: var(--font-sans);
   --font-heading: var(--font-heading);
@@ -53,8 +60,8 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.558 0.288 302.321);
-  --primary-foreground: oklch(1 0 0);
+  --primary: oklch(0.72 0.17 168);
+  --primary-foreground: oklch(0.2 0.02 175);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
@@ -84,24 +91,24 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(0.18 0.012 175);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
+  --card: oklch(0.22 0.012 178);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
+  --popover: oklch(0.21 0.012 178);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.702 0.183 293.541);
-  --primary-foreground: oklch(0.1 0 0);
-  --secondary: oklch(0.269 0 0);
+  --primary: oklch(0.86 0.19 168);
+  --primary-foreground: oklch(0.2 0.02 175);
+  --secondary: oklch(0.27 0.01 180);
   --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
+  --muted: oklch(0.27 0.01 180);
+  --muted-foreground: oklch(0.72 0.015 180);
+  --accent: oklch(0.27 0.012 180);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
+  --ring: oklch(0.8 0.15 180);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -143,7 +150,7 @@
   inset: 0;
   border-radius: inherit;
   padding: 2px;
-  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+  background: linear-gradient(45deg, #00acfd, #00fdca, #00fda0, #00fd70, #74ce12, #e9f700, #00fda0, #00acfd, #00fdca, #74ce12);
   background-size: 400%;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -156,7 +163,7 @@
   position: absolute;
   inset: -2px;
   border-radius: inherit;
-  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+  background: linear-gradient(45deg, #00acfd, #00fdca, #00fda0, #00fd70, #74ce12, #e9f700, #00fda0, #00acfd, #00fdca, #74ce12);
   background-size: 400%;
   z-index: -1;
   filter: blur(8px);
@@ -168,6 +175,27 @@
   50%  { background-position: 400% 0; }
   100% { background-position: 0 0; }
 }
+/* Glows aurora del fondo — deriva lenta y suave, sin interacción */
+@keyframes aurora-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(6%, 4%) scale(1.12); }
+}
+@keyframes aurora-2 {
+  0%, 100% { transform: translate(0, 0) scale(1.05); }
+  50%      { transform: translate(-5%, 6%) scale(0.95); }
+}
+@keyframes aurora-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(4%, -5%) scale(1.1); }
+}
+.animate-aurora-1 { animation: aurora-1 22s ease-in-out infinite; }
+.animate-aurora-2 { animation: aurora-2 26s ease-in-out infinite; }
+.animate-aurora-3 { animation: aurora-3 30s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-aurora-1, .animate-aurora-2, .animate-aurora-3 { animation: none; }
+}
+
 @keyframes orbit-spin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }

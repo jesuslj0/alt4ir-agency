@@ -206,7 +206,7 @@ export default function PrivacidadPage() {
         utilizamos y cómo gestionarlas, consulta nuestra{" "}
         <Link
           href="/legal/cookies"
-          className="text-foreground underline underline-offset-4 transition-colors hover:text-violet-400"
+          className="text-foreground underline underline-offset-4 transition-colors hover:text-brand-teal"
         >
           Política de Cookies
         </Link>
