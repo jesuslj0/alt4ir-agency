@@ -3,12 +3,13 @@ import { InfiniteSlider } from "@/components/ui/infinite-slider";
 const stack = [
   { name: "N8N",          domain: "n8n.io" },
   { name: "Make",         domain: "make.com" },
+  { name: "Python",       domain: "python.org" },
   { name: "Django",       domain: "djangoproject.com" },
+  { name: "PostgreSQL",   domain: "postgresql.org" },
+  { name: "TypeScript",   domain: "typescriptlang.org" },
   { name: "Next.js",      domain: "nextjs.org" },
   { name: "Coolify",      domain: "coolify.io" },
   { name: "DigitalOcean", domain: "digitalocean.com" },
-  { name: "Python",       domain: "python.org" },
-  { name: "JavaScript",   domain: "javascript.info" },
   { name: "Tailwind",     domain: "tailwindcss.com" },
   { name: "Shadcn",       domain: "ui.shadcn.com" },
 ];
@@ -16,6 +17,7 @@ const stack = [
 const allItems = [...stack, ...stack];
 
 export default function LogoBar() {
+
   return (
     <section id="logo-bar" className="py-12 border-y border-border/50 overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 mb-8">
@@ -30,7 +32,7 @@ export default function LogoBar() {
           {allItems.map((tech, i) => (
             <div
               key={`${tech.name}-${i}`}
-              className="flex items-center gap-2.5 rounded-full border border-border/60 bg-muted/40 px-5 py-2.5 whitespace-nowrap select-none"
+              className="flex items-center gap-2.5 rounded-full border border-border/60 bg-muted/40 px-5 py-2.5 whitespace-nowrap select-none transition-transform duration-300 ease-out hover:scale-130 cursor-default"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
