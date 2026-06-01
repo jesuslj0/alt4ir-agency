@@ -2,10 +2,10 @@ export default function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Alt4ir AI Solutions",
+    name: "Propus",
     description:
       "Agencia de inteligencia artificial y automatización en Albacete",
-    url: "https://alt4ir.com",
+    url: "https://propus.ink",
     email: "salesteam@alt4ir.com",
     address: {
       "@type": "PostalAddress",

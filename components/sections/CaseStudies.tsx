@@ -63,7 +63,7 @@ export default function CaseStudies() {
             </span>
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto">
-            Casos reales de empresas que automatizaron con Alt4ir y transformaron
+            Casos reales de empresas que automatizaron con Propus y transformaron
             su operación en semanas.
           </p>
         </div>

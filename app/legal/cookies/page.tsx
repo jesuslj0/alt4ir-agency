@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Política de Cookies | Alt4ir AI Solutions",
+  title: "Política de Cookies | Propus",
   description:
-    "Política de cookies de Alt4ir AI Solutions. Información sobre las cookies que utilizamos y cómo gestionarlas.",
+    "Política de cookies de Propus. Información sobre las cookies que utilizamos y cómo gestionarlas.",
 }
 
 export default function CookiesPage() {
@@ -14,7 +14,7 @@ export default function CookiesPage() {
       </h1>
 
       <p className="mb-4 leading-relaxed text-muted-foreground">
-        En Alt4ir AI Solutions utilizamos cookies y tecnologías similares para
+        En Propus utilizamos cookies y tecnologías similares para
         mejorar tu experiencia de navegación. Esta política explica qué son las
         cookies, qué tipos utilizamos y cómo puedes gestionarlas.
       </p>

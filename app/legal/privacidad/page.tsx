@@ -2,9 +2,9 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Política de Privacidad | Alt4ir AI Solutions",
+  title: "Política de Privacidad | Propus",
   description:
-    "Política de privacidad de Alt4ir AI Solutions. Información sobre el tratamiento de datos personales conforme al RGPD.",
+    "Política de privacidad de Propus. Información sobre el tratamiento de datos personales conforme al RGPD.",
 }
 
 export default function PrivacidadPage() {
@@ -15,7 +15,7 @@ export default function PrivacidadPage() {
       </h1>
 
       <p className="mb-4 leading-relaxed text-muted-foreground">
-        En Alt4ir AI Solutions nos comprometemos a proteger la privacidad de
+        En Propus nos comprometemos a proteger la privacidad de
         nuestros usuarios. Esta política describe cómo recopilamos, utilizamos y
         protegemos tus datos personales de conformidad con el Reglamento General
         de Protección de Datos (RGPD) y la Ley Orgánica 3/2018, de 5 de
@@ -28,8 +28,7 @@ export default function PrivacidadPage() {
       </h2>
       <ul className="mb-4 list-disc space-y-2 pl-6 text-muted-foreground">
         <li>
-          <strong className="text-foreground">Identidad:</strong> Alt4ir AI
-          Solutions
+          <strong className="text-foreground">Identidad:</strong> Propus
         </li>
         <li>
           <strong className="text-foreground">Domicilio:</strong> Albacete,

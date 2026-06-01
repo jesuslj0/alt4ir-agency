@@ -17,7 +17,7 @@ export async function generateMetadata({
   const post = getPostBySlug(slug)
   if (!post) return { title: "Artículo no encontrado" }
   return {
-    title: `${post.title} — Alt4ir Blog`,
+    title: `${post.title} — Propus Blog`,
     description: post.description,
     openGraph: {
       title: post.title,
@@ -59,7 +59,7 @@ export default async function BlogPostPage({
     datePublished: post.date,
     author: {
       "@type": "Organization",
-      name: "Alt4ir AI Solutions",
+      name: "Propus",
     },
   }
 

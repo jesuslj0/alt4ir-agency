@@ -9,19 +9,19 @@ import Footer from "@/components/layout/Footer"
 import LocalBusinessSchema from "@/components/seo/LocalBusinessSchema"
 
 export const metadata: Metadata = {
-  title: "Sobre Nosotros — Alt4ir | Agencia de IA en Albacete",
+  title: "Sobre Nosotros — Propus | Agencia de IA en Albacete",
   description:
-    "Alt4ir es una agencia de inteligencia artificial y automatización en Albacete, Castilla-La Mancha. Desarrollamos aplicaciones con IA, automatizamos procesos y creamos agentes inteligentes para empresas.",
+    "Propus es una agencia de inteligencia artificial y automatización en Albacete, Castilla-La Mancha. Desarrollamos aplicaciones con IA, automatizamos procesos y creamos agentes inteligentes para empresas.",
   keywords: [
     "agencia IA Albacete",
     "automatización Albacete",
     "inteligencia artificial Castilla-La Mancha",
     "desarrollo IA",
-    "Alt4ir",
+    "Propus",
     "agentes inteligentes Albacete",
   ],
   openGraph: {
-    title: "Sobre Nosotros — Alt4ir | Agencia de IA en Albacete",
+    title: "Sobre Nosotros — Propus | Agencia de IA en Albacete",
     description:
       "Agencia de inteligencia artificial y automatización en Albacete. Desarrollo de apps con IA, automatización de procesos y agentes inteligentes.",
     type: "website",
@@ -53,19 +53,19 @@ const differentiators = [
 const teamSquads = [
   {
     icon: Code,
-    label: "Equipo Dev",
-    members: 2,
+    label: "Desarrollo e IA",
+    members: 1,
     skills: ["Python & Django", "JavaScript & React", "Sistemas de IA", "Automatización inteligente", "n8n", "Make"],
     description:
-      "Un desarrollador de software especializado en Python, Django y JavaScript, y un experto en sistemas de inteligencia artificial. Juntos, convierten cualquier idea en una solución técnica real.",
+      "Especialista en desarrollo de software e inteligencia artificial aplicada. Convierte cualquier idea en una solución técnica real, desde la arquitectura hasta el despliegue en producción.",
   },
   {
     icon: Handshake,
-    label: "Equipo Comercial",
-    members: 2,
-    skills: ["Estrategia de ventas", "Consultoría de negocio", "Closing", "Formados en Ideal Sales"],
+    label: "Estrategia y Negocio",
+    members: 1,
+    skills: ["Estrategia de negocio", "Consultoría", "Automatización de procesos", "Gestión de proyectos"],
     description:
-      "Dos closers formados en la academia de ventas más grande de España. Entienden tu negocio, detectan oportunidades y te acompañan de principio a fin.",
+      "Responsable de entender tu negocio y diseñar la solución adecuada. Acompaña al cliente desde la primera consulta hasta que los resultados son tangibles.",
   },
 ]
 
@@ -85,7 +85,7 @@ export default function SobreNosotrosPage() {
               </span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Alt4ir es una agencia de inteligencia artificial y automatización
+              Propus es una agencia de inteligencia artificial y automatización
               con sede en Albacete. Ayudamos a empresas locales y nacionales a
               integrar IA en sus procesos para ser más eficientes, competitivas
               y rentables.
@@ -174,11 +174,11 @@ export default function SobreNosotrosPage() {
               <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
                 El equipo detrás{" "}
                 <span className="bg-gradient-to-r from-blue-400 to-violet-500 bg-clip-text text-transparent">
-                  de Alt4ir
+                  de Propus
                 </span>
               </h2>
               <p className="mx-auto max-w-2xl text-muted-foreground leading-relaxed">
-                Somos 4 emprendedores unidos por una misma misión: traer el
+                Somos 2 emprendedores unidos por una misma misión: traer el
                 poder de la IA a las empresas de nuestro país. Nacimos del hambre
                 de ayudar a negocios a escalar, crecer y liberarse de cargas que,
                 a día de hoy, son innecesarias.
@@ -191,7 +191,7 @@ export default function SobreNosotrosPage() {
               <div className="border-b border-border bg-violet-600/5 px-6 py-8 text-center md:px-10">
                 <div className="mx-auto mb-4 flex items-center justify-center gap-3">
                   <Users className="size-6 text-violet-400" />
-                  <span className="text-2xl font-bold tracking-tight">4 fundadores</span>
+                  <span className="text-2xl font-bold tracking-tight">2 cofundadores</span>
                 </div>
                 <div className="mx-auto flex items-center justify-center gap-2 text-sm text-muted-foreground">
                   <Rocket className="size-4 text-violet-400" />

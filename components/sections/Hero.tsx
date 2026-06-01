@@ -58,7 +58,7 @@ export default function Hero() {
                 <div className="size-3 rounded-full bg-red-400/70" />
                 <div className="size-3 rounded-full bg-yellow-400/70" />
                 <div className="size-3 rounded-full bg-green-400/70" />
-                <span className="ml-2 text-xs text-muted-foreground font-mono">alt4ir — workflow.ai</span>
+                <span className="ml-2 text-xs text-muted-foreground font-mono">propus — workflow.ai</span>
               </div>
               <div className="relative flex-1 flex items-center justify-center p-6 md:p-10 overflow-hidden">
                 <GradientDots duration={20} className="rounded-b-2xl" />

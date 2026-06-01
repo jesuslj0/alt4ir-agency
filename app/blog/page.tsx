@@ -7,11 +7,11 @@ import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 
 export const metadata: Metadata = {
-  title: "Blog — Alt4ir | IA y Automatización en Albacete",
+  title: "Blog — Propus | IA y Automatización en Albacete",
   description:
     "Artículos sobre inteligencia artificial, automatización de procesos y transformación digital para empresas en Albacete y Castilla-La Mancha.",
   openGraph: {
-    title: "Blog — Alt4ir | IA y Automatización en Albacete",
+    title: "Blog — Propus | IA y Automatización en Albacete",
     description:
       "Artículos sobre inteligencia artificial, automatización de procesos y transformación digital para empresas en Albacete y Castilla-La Mancha.",
     type: "website",
@@ -39,8 +39,8 @@ export default function BlogPage() {
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
               Blog de{" "}
-              <span className="bg-gradient-to-r from-blue-400 to-violet-600 bg-clip-text text-transparent">
-                Alt4ir
+              <span className="bg-gradient-to-r from-teal-400 to-lime-400 bg-clip-text text-transparent">
+                Propus
               </span>
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">

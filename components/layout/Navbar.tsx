@@ -35,8 +35,8 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-md">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-bold text-[1.375rem] tracking-tight">
-          <Image src="/favicons/favicon-32x32.png" alt="Alt4ir logo" width={22} height={22} />
-          <span>ALT<span className="bg-gradient-to-br from-blue-400 to-violet-600 bg-clip-text text-transparent">4</span>IR</span>
+          <Image src="/favicons/noBGpropus1024.png" alt="Propus logo" width={32} height={32} />
+          <span className="bg-gradient-to-r from-teal-400 to-lime-400 bg-clip-text text-transparent">PROPUS</span>
         </Link>
 
         {/* Desktop nav */}
@@ -86,8 +86,8 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent side="right" className="w-72 flex flex-col px-6 py-6">
             <Link href="/" className="flex items-center gap-2 font-bold text-[1.375rem] tracking-tight">
-              <Image src="/favicons/favicon-32x32.png" alt="Alt4ir logo" width={22} height={22} />
-              <span>ALT<span className="bg-gradient-to-br from-blue-400 to-violet-600 bg-clip-text text-transparent">4</span>IR</span>
+              <Image src="/favicons/noBGpropus1024.png" alt="Propus logo" width={32} height={32} />
+              <span className="bg-gradient-to-r from-teal-400 to-lime-400 bg-clip-text text-transparent">PROPUS</span>
             </Link>
             <nav className="flex flex-col gap-5 mt-8">
               {navLinks.map((link) => (

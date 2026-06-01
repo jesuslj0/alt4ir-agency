@@ -57,9 +57,9 @@ export const blogPosts: BlogPost[] = [
         <strong class="text-foreground font-medium">3. Análisis de datos de ventas.</strong> Un comercio local quiere entender qué productos se venden más en cada temporada, cuáles tienen mejor margen y dónde se pierden ventas. Un sistema de IA analiza los datos históricos, genera informes visuales y sugiere acciones concretas como ajustar stock o lanzar promociones en el momento óptimo.
       </p>
 
-      <h2 class="text-xl md:text-2xl font-semibold mt-10 mb-4 text-foreground">¿Por qué elegir Alt4ir?</h2>
+      <h2 class="text-xl md:text-2xl font-semibold mt-10 mb-4 text-foreground">¿Por qué elegir Propus?</h2>
       <p class="text-muted-foreground leading-relaxed mb-4">
-        En Alt4ir no somos una consultora genérica que aplica plantillas iguales a todos los clientes. Somos un equipo de emprendedores con raíces en Albacete que entiende las particularidades del tejido empresarial de Castilla-La Mancha. Conocemos los retos de las pymes locales porque los hemos vivido de cerca: la competencia con grandes plataformas, la necesidad de optimizar cada euro invertido y las ganas de crecer sin perder la cercanía con los clientes.
+        En Propus no somos una consultora genérica que aplica plantillas iguales a todos los clientes. Somos un equipo de emprendedores con raíces en Albacete que entiende las particularidades del tejido empresarial de Castilla-La Mancha. Conocemos los retos de las pymes locales porque los hemos vivido de cerca: la competencia con grandes plataformas, la necesidad de optimizar cada euro invertido y las ganas de crecer sin perder la cercanía con los clientes.
       </p>
       <p class="text-muted-foreground leading-relaxed mb-4">
         Nuestro enfoque combina expertise técnico en inteligencia artificial con un trato cercano y personalizado. Diseñamos soluciones a medida, acompañamos la implementación y nos aseguramos de que la IA genere resultados reales y medibles para tu negocio.

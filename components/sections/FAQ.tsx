@@ -12,7 +12,7 @@ const faqs = [
       "Depende de la complejidad del proceso. Una automatización estándar (como procesamiento de documentos o integración de datos) puede estar en producción en 2 a 4 semanas. Proyectos más complejos con múltiples sistemas pueden tomar de 4 a 8 semanas.",
   },
   {
-    question: "¿Necesito conocimientos técnicos para trabajar con Alt4ir?",
+    question: "¿Necesito conocimientos técnicos para trabajar con Propus?",
     answer:
       "No. Nuestro proceso está diseñado para que puedas participar sin conocimientos técnicos. Nos encargamos de toda la parte tecnológica. Solo necesitas conocer bien tu negocio y tus procesos, que es lo más valioso.",
   },
@@ -50,7 +50,7 @@ export default function FAQ() {
             </span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-            Todo lo que necesitas saber antes de automatizar con Alt4ir.
+            Todo lo que necesitas saber antes de automatizar con Propus.
           </p>
         </div>
 

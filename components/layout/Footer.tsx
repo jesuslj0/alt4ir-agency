@@ -60,13 +60,13 @@ export default function Footer() {
         {/* Brand */}
         <AnimatedContainer className="space-y-4">
           <Link href="/" className="font-bold text-xl tracking-tight w-fit block">
-            <span className="text-violet-400">Alt</span>4ir
+            <span className="bg-gradient-to-r from-teal-400 to-lime-400 bg-clip-text text-transparent">Propus</span>
           </Link>
           <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
             Automatizamos procesos y desarrollamos aplicaciones con IA para que tu negocio escale más rápido.
           </p>
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Alt4ir AI Solutions. Todos los derechos reservados.
+            © {new Date().getFullYear()} Propus. Todos los derechos reservados.
           </p>
         </AnimatedContainer>
 

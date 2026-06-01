@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Alt4ir AI Solutions — Automatización e IA para tu negocio",
+  title: "Propus — Automatización e IA para tu negocio",
   description:
     "Automatizamos tareas repetitivas y damos valor a los negocios con la ayuda de la IA. Desarrollo de aplicaciones, automatización de procesos e integración de agentes inteligentes.",
   icons: {
