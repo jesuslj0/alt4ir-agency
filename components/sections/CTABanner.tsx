@@ -31,7 +31,7 @@ export default function CTABanner() {
                 className="bg-gradient-to-r from-brand-emerald to-brand-green hover:from-brand-teal hover:to-brand-spring text-background gap-2 h-11 px-8 font-semibold text-base"
                 asChild
               >
-                <Link href="https://calendar.app.google/nheqxfUw8Q8sP4cF7" target="_blank" rel="noopener noreferrer">
+                <Link href="https://calendar.app.google/CNBch8s1Q8iqoqdE9" target="_blank" rel="noopener noreferrer">
                   Agendar llamada
                   <ArrowRightIcon className="size-4" />
                 </Link>

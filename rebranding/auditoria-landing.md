@@ -207,8 +207,6 @@ Los 3 pasos están bien estructurados. Ajustar el tono:
 ### FAQ (`components/sections/FAQ.tsx`)
 **Estado: corrección urgente + reescribir tono**
 
-**Bug:** Pregunta 2 dice *"para trabajar con Propus"* — nombre antiguo. Cambiar a Alt4ir.
-
 **Preguntas propuestas más orientadas al target:**
 
 1. ¿Necesito saber de tecnología para trabajar con vosotros?

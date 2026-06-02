@@ -3,7 +3,9 @@ import Footer from "@/components/layout/Footer"
 import Hero from "@/components/sections/Hero"
 import LogoBar from "@/components/sections/LogoBar"
 import Movement from "@/components/sections/Movement"
-import Features from "@/components/sections/Features"
+import ServiceWhatsapp from "@/components/sections/ServiceWhatsapp"
+import ServiceWeb from "@/components/sections/ServiceWeb"
+import ServiceDocs from "@/components/sections/ServiceDocs"
 import HowItWorks from "@/components/sections/HowItWorks"
 import Pricing from "@/components/sections/Pricing"
 import CaseStudies from "@/components/sections/CaseStudies"
@@ -22,7 +24,9 @@ export default function Home() {
           <div className="absolute inset-x-1/4 top-0 h-px bg-gradient-to-r from-transparent via-brand-teal/40 to-transparent" />
         </div>
         <Movement />
-        <Features />
+        <ServiceWhatsapp />
+        <ServiceWeb />
+        <ServiceDocs />
         <HowItWorks />
         <LogoBar />
         <Pricing />

@@ -122,7 +122,7 @@ export default async function BlogPostPage({
               className="bg-brand-emerald text-background font-semibold hover:bg-brand-teal"
               asChild
             >
-              <Link href="/#contacto">Agendar llamada</Link>
+              <Link href="https://calendar.app.google/CNBch8s1Q8iqoqdE9" target="_blank" rel="noopener noreferrer">Agendar llamada</Link>
             </Button>
           </div>
         </article>

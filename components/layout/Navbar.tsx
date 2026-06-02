@@ -72,7 +72,7 @@ export default function Navbar() {
             className="bg-brand-emerald hover:bg-brand-teal text-background font-semibold"
             asChild
           >
-            <Link href="/#contacto">Agendar llamada</Link>
+            <Link href="https://calendar.app.google/CNBch8s1Q8iqoqdE9" target="_blank" rel="noopener noreferrer">Agendar llamada</Link>
           </Button>
         </div>
 
@@ -121,7 +121,7 @@ export default function Navbar() {
                   className="w-full bg-brand-emerald hover:bg-brand-teal text-background font-semibold"
                   asChild
                 >
-                  <Link href="/#contacto">Agendar llamada</Link>
+                  <Link href="https://calendar.app.google/CNBch8s1Q8iqoqdE9" target="_blank" rel="noopener noreferrer">Agendar llamada</Link>
                 </Button>
               </SheetClose>
             </div>

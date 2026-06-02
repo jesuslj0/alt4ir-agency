@@ -1,39 +1,17 @@
 "use client"
 
 import { GlowCard } from "@/components/ui/glow-card"
-import { ClockIcon, TrendingUpIcon, FileTextIcon, SmileIcon } from "lucide-react"
-
-const metrics = [
-  {
-    icon: ClockIcon,
-    value: "20h+",
-    label: "Horas ahorradas por semana de media",
-  },
-  {
-    icon: TrendingUpIcon,
-    value: "40%",
-    label: "Mejora en eficiencia operativa",
-  },
-  {
-    icon: FileTextIcon,
-    value: "1.000+",
-    label: "Documentos procesados automáticamente",
-  },
-  {
-    icon: SmileIcon,
-    value: "100%",
-    label: "Clientes satisfechos",
-  },
-]
 
 const cases = [
   {
-    sector: "Clínica dental y fisioterapia",
-    problema: "Perdían leads por no responder mensajes fuera de horario.",
+    sector: "Restaurante · El Rincón de Héctor",
+    url: "elrincondehector.com",
+    problema:
+      "Contaba con una web obsoleta construida en Wix que únicamente mostraba la carta, sin actualizar y con una imagen que no hacía justicia al nivel real del restaurante.",
     solucion:
-      "Agente de IA conversacional 24/7 en WhatsApp con envío de recordatorios, soporte al cliente y agenda de citas.",
+      "Página web diseñada completamente a medida, con una estética elegante y diferenciadora, carta renovada y arquitectura preparada para escalar a una web app de pedidos.",
     resultado:
-      "35% más citas agendadas. Respuesta inmediata a cada consulta.",
+      "Los clientes perciben el restaurante como un local de alto standing. Gracias al SEO integrado, los visitantes extranjeros encuentran la web en las primeras posiciones del buscador.",
   },
 ]
 
@@ -48,65 +26,45 @@ export default function CaseStudies() {
             Resultados
           </span>
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl text-white">
-            Números que hablan{" "}
+            Clientes que ya{" "}
             <span className="bg-gradient-to-r from-brand-sky to-brand-teal bg-clip-text text-transparent">
-              por nosotros.
+              confían en nosotros
             </span>
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto">
-            Casos reales de empresas que automatizaron con Propus y transformaron
-            su operación en semanas.
+            Empresas que ya trabajan con Propus y han transformado
+            su presencia digital en semanas.
           </p>
         </div>
 
-        {/* Grid de 4 métricas */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-10">
-          {metrics.map((metric) => {
-            const Icon = metric.icon
-            return (
-              <GlowCard
-                key={metric.value}
-                className="p-6 flex flex-col gap-3 bg-slate-900/80 sm:items-center sm:text-center sm:p-8"
-              >
-                <div className="flex items-center justify-center gap-3 sm:flex-col sm:gap-4 md:flex-row md:mb-4">
-                  <div className="size-12 shrink-0 rounded-xl bg-brand-teal/10 flex items-center justify-center">
-                    <Icon className="size-6 text-brand-teal" />
-                  </div>
-                  <span className="text-3xl font-bold bg-gradient-to-r from-brand-teal to-brand-sky bg-clip-text text-transparent sm:text-4xl">
-                    {metric.value}
-                  </span>
-                </div>
-                <p className="text-sm text-slate-400 leading-snug text-center">{metric.label}</p>
-              </GlowCard>
-            )
-          })}
-        </div>
-
-        {/* Grid de casos */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {/* Caso único centrado */}
+        <div className="max-w-3xl mx-auto">
           {cases.map((c) => (
             <GlowCard
               key={c.sector}
-                            className="p-8 flex flex-col gap-6 bg-slate-900/80"
+              className="p-8 flex flex-col gap-6 bg-slate-900/80"
             >
-              {/* Badge sector */}
-              <span className="self-start inline-flex items-center rounded-full border border-brand-teal/40 bg-brand-teal/10 px-3 py-1 text-xs font-medium text-brand-teal">
-                {c.sector}
-              </span>
+              {/* Badge sector + URL */}
+              <div className="flex items-center justify-between flex-wrap gap-3">
+                <span className="inline-flex items-center rounded-full border border-brand-teal/40 bg-brand-teal/10 px-3 py-1 text-xs font-medium text-brand-teal">
+                  {c.sector}
+                </span>
+                <span className="text-xs text-slate-500 font-mono">{c.url}</span>
+              </div>
 
               {/* Bloques Problema / Solución / Resultado */}
-              <div className="grid grid-cols-1 gap-4 mt-2 sm:grid-cols-3 sm:gap-3">
-                <div className="flex flex-col gap-1.5 rounded-lg bg-slate-800/50 p-3 sm:p-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-3">
+                <div className="flex flex-col gap-1.5 rounded-lg bg-slate-800/50 p-4">
                   <span className="text-xs font-semibold uppercase tracking-wide text-red-400">Problema</span>
                   <p className="text-sm text-slate-300 leading-relaxed">{c.problema}</p>
                 </div>
 
-                <div className="flex flex-col gap-1.5 rounded-lg bg-slate-800/50 p-3 sm:p-4">
+                <div className="flex flex-col gap-1.5 rounded-lg bg-slate-800/50 p-4">
                   <span className="text-xs font-semibold uppercase tracking-wide text-brand-sky">Solución</span>
                   <p className="text-sm text-slate-300 leading-relaxed">{c.solucion}</p>
                 </div>
 
-                <div className="flex flex-col gap-1.5 rounded-lg bg-brand-teal/10 border border-brand-teal/20 p-3 sm:p-4">
+                <div className="flex flex-col gap-1.5 rounded-lg bg-brand-teal/10 border border-brand-teal/20 p-4">
                   <span className="text-xs font-semibold uppercase tracking-wide text-brand-teal">Resultado</span>
                   <p className="text-sm font-bold text-white leading-relaxed">{c.resultado}</p>
                 </div>

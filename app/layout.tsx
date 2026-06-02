@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Bricolage_Grotesque, Space_Grotesk } from "next/font/google"
+import { Bricolage_Grotesque, Space_Grotesk, Instrument_Serif } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "next-themes"
@@ -15,6 +15,14 @@ const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--font-heading",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
+})
+
+// Display serif para mockups cinematográficos (sección de diseño web)
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-display-serif",
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
 })
 
 export const metadata: Metadata = {
@@ -40,7 +48,7 @@ export default function RootLayout({
     <html
       lang="es"
       suppressHydrationWarning
-      className={cn("h-full antialiased", spaceGrotesk.variable, bricolageGrotesque.variable)}
+      className={cn("h-full antialiased", spaceGrotesk.variable, bricolageGrotesque.variable, instrumentSerif.variable)}
     >
       <body className="min-h-full flex flex-col font-sans">
         <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>

@@ -2,14 +2,21 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { GlowCard } from "@/components/ui/glow-card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { CheckIcon } from "lucide-react"
+import { CheckIcon, GlobeIcon, FileTextIcon, MessageCircleIcon } from "lucide-react"
+import type { LucideIcon } from "lucide-react"
 import Link from "next/link"
+
+type Module = {
+  icon: LucideIcon
+  label: string
+}
 
 type Plan = {
   name: string
   price: string
   priceNote?: string
   description: string
+  modules?: Module[]
   features: string[]
   cta: string
   href: string
@@ -19,48 +26,50 @@ type Plan = {
 
 const plans: Plan[] = [
   {
-    name: "Consultoría",
+    name: "Diagnóstico",
     price: "Gratis",
-    description: "Descubre el potencial de automatización de tu negocio sin compromiso.",
+    description: "Una sesión seria para entender tu negocio y ver qué se puede automatizar — trabajes o no con nosotros.",
     features: [
-      "Auditoría de procesos (1 área)",
-      "Reporte de oportunidades de IA",
-      "Llamada de estrategia 30 min",
-      "Estudiamos tu caso paso por paso",
+      "Sesión de 30 min, sin tecnicismos",
+      "Analizamos cómo trabajas hoy",
+      "Detectamos dónde pierdes tiempo y dinero",
+      "Te llevas una hoja de ruta clara",
     ],
-    cta: "Agendar consultoría",
-    href: "#contacto",
+    cta: "Reservar diagnóstico",
+    href: "https://calendar.app.google/CNBch8s1Q8iqoqdE9",
     highlighted: false,
   },
   {
-    name: "Automatización",
-    price: "",
-    description: "Implementación completa de automatizaciones con soporte y seguimiento.",
-    features: [
-      "Todos los sistemas que necesites",
-      "Integración con tus herramientas",
-      "Dashboard de métricas",
-      "Soporte prioritario 1 mes",
-      "Sesiones de revisión mensuales",
+    name: "Tu solución a medida",
+    price: "Sin compromiso",
+    description: "Coge solo lo que necesitas: un servicio, dos o los que te hagan falta. Pagas por lo que te aporta valor.",
+    modules: [
+      { icon: GlobeIcon, label: "Diseño web" },
+      { icon: FileTextIcon, label: "Gestión documental" },
+      { icon: MessageCircleIcon, label: "Agente WhatsApp" },
     ],
-    cta: "Comenzar proyecto",
-    href: "#contacto",
+    features: [
+      "Nos encargamos de todo, de principio a fin",
+      "Integración con tus herramientas",
+      "1 mes de soporte y ajustes incluido",
+    ],
+    cta: "Pedir presupuesto",
+    href: "https://calendar.app.google/CNBch8s1Q8iqoqdE9",
     highlighted: true,
-    badge: "Más popular",
+    badge: "Más elegido",
   },
   {
-    name: "Transformación Digital",
-    price: "A medida",
-    description: "Para emprendedores que buscan ser referentes tecnológicos en su nicho.",
+    name: "Partner tecnológico",
+    price: "Cuota mensual",
+    description: "Una vez en marcha, seguimos a tu lado para que todo mejore mes a mes y tu negocio no se quede atrás.",
     features: [
-      "Todo en Automatización",
-      "Agentes IA personalizados",
-      "Integraciones enterprise",
-      "SLA garantizado",
-      "Equipo dedicado",
+      "Soporte prioritario",
+      "Mejoras y mantenimiento continuo",
+      "Nuevas automatizaciones cuando las necesites",
+      "Métricas y revisión mensual",
     ],
-    cta: "Hablar con un profesional",
-    href: "#contacto",
+    cta: "Quiero ser partner",
+    href: "https://calendar.app.google/CNBch8s1Q8iqoqdE9",
     highlighted: false,
   },
 ]
@@ -77,7 +86,7 @@ export default function Pricing() {
             </span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-            Desde un diagnóstico gratuito hasta transformación digital completa. Empieza donde tenga más sentido para tu empresa.
+            Empieza con un diagnóstico gratis y monta solo lo que tu negocio necesita. Sin paquetes cerrados ni letra pequeña.
           </p>
         </div>
 
@@ -108,6 +117,22 @@ export default function Pricing() {
               </CardHeader>
 
               <CardContent>
+                {plan.modules && (
+                  <div className="grid grid-cols-3 gap-2 mb-5">
+                    {plan.modules.map((mod) => {
+                      const ModIcon = mod.icon
+                      return (
+                        <div
+                          key={mod.label}
+                          className="flex flex-col items-center gap-1.5 rounded-lg border border-brand-teal/25 bg-brand-teal/5 px-2 py-3 text-center"
+                        >
+                          <ModIcon className="size-4 text-brand-teal" />
+                          <span className="text-[11px] font-medium leading-tight">{mod.label}</span>
+                        </div>
+                      )
+                    })}
+                  </div>
+                )}
                 <ul className="flex flex-col gap-2.5">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2 text-sm">
@@ -128,7 +153,7 @@ export default function Pricing() {
                   variant={plan.highlighted ? "default" : "outline"}
                   asChild
                 >
-                  <Link href={plan.href}>{plan.cta}</Link>
+                  <Link href={plan.href} target="_blank" rel="noopener noreferrer">{plan.cta}</Link>
                 </Button>
               </CardFooter>
             </Card>

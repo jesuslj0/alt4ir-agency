@@ -4,23 +4,26 @@ const steps = [
   {
     number: "01",
     icon: SearchIcon,
-    title: "Diagnóstico",
+    title: "Entendemos tu negocio",
+    badge: "30 minutos · sin tecnicismos",
     description:
-      "Analizamos tus flujos actuales e identificamos las oportunidades de automatización con mayor impacto en tiempo y costos.",
+      "Nos cuentas cómo trabajas hoy y dónde pierdes más tiempo. Detectamos juntos qué tareas se pueden automatizar para que notes el impacto desde el primer mes.",
   },
   {
     number: "02",
     icon: PenToolIcon,
-    title: "Diseño de solución",
+    title: "Diseñamos tu solución",
+    badge: "Tú no tocas nada técnico",
     description:
-      "Creamos la arquitectura ideal con las herramientas de IA correctas para tu caso: agentes, modelos, integraciones y flujos.",
+      "Nos encargamos de toda la parte técnica: elegimos las herramientas, montamos los flujos y lo conectamos con lo que ya usas. Tú solo validas que encaja con tu día a día.",
   },
   {
     number: "03",
     icon: RocketIcon,
-    title: "Implementación y escala",
+    title: "Lo ponemos en marcha",
+    badge: "En producción en 2-4 semanas",
     description:
-      "Desplegamos en producción, medimos resultados y optimizamos continuamente para maximizar el retorno de inversión.",
+      "Lanzamos, medimos resultados reales y seguimos afinando. Te acompañamos para que la solución crezca contigo y siga ahorrándote tiempo y dinero.",
   },
 ]
 
@@ -36,7 +39,7 @@ export default function HowItWorks() {
             </span>
           </h2>
           <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
-            Un proceso claro y probado para llevar tu negocio de procesos manuales a automatización inteligente en semanas.
+            Sin reuniones interminables ni lenguaje técnico. Tres pasos claros para pasar de hacerlo todo a mano a tenerlo automatizado en semanas.
           </p>
         </div>
 
@@ -56,6 +59,9 @@ export default function HowItWorks() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
+                    <span className="inline-flex items-center rounded-full border border-brand-teal/30 bg-brand-teal/10 px-2.5 py-0.5 text-[11px] font-semibold text-brand-teal mb-3">
+                      {step.badge}
+                    </span>
                     <p className="text-muted-foreground text-sm leading-relaxed">
                       {step.description}
                     </p>

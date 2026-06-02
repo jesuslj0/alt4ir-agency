@@ -7,34 +7,34 @@ import {
 
 const faqs = [
   {
-    question: "¿Cuánto tardamos en implementar y desplegar los sistemas inteligentes?",
+    question: "¿Necesito saber de tecnología para trabajar con vosotros?",
     answer:
-      "Depende de la complejidad del proceso. Una automatización estándar (como procesamiento de documentos o integración de datos) puede estar en producción en 2 a 4 semanas. Proyectos más complejos con múltiples sistemas pueden tomar de 4 a 8 semanas.",
+      "Para nada. Tú nos cuentas cómo funciona tu negocio y nosotros nos encargamos de todo lo técnico. No necesitas saber qué es una API ni cómo funciona la IA — solo conocer tu día a día, que es lo que realmente importa.",
   },
   {
-    question: "¿Necesito conocimientos técnicos para trabajar con Propus?",
+    question: "¿Cuánto tiempo tarda en estar funcionando el agente de WhatsApp?",
     answer:
-      "No. Nuestro proceso está diseñado para que puedas participar sin conocimientos técnicos. Nos encargamos de toda la parte tecnológica. Solo necesitas conocer bien tu negocio y tus procesos, que es lo más valioso.",
+      "En la mayoría de clínicas lo dejamos operativo en 2 a 3 semanas desde la primera reunión. Ese tiempo incluye configurar el agente con la información de tu clínica, conectarlo a tu sistema de citas y hacer pruebas reales antes de que lo vean tus pacientes.",
   },
   {
-    question: "¿Pueden integrarse con mis sistemas actuales?",
+    question: "¿Podéis diseñar mi web aunque no tenga contenido preparado?",
     answer:
-      "Sí. Trabajamos con todo tipo de sistemas comunes siempre y cuando dispongan de clave API y nos permita realizar las funciones requeridas.",
+      "Sí, y es lo más habitual. En el diagnóstico inicial te ayudamos a definir qué contar y cómo contarlo. Nosotros nos encargamos de los textos, el diseño y la estructura — tú solo apruebas y nos das el visto bueno.",
   },
   {
-    question: "¿Cómo garantizan la seguridad de mis datos?",
+    question: "¿Funciona con los sistemas que ya uso (FacturaDirecta, Holded, etc.)?",
     answer:
-      "Implementamos cifrado en tránsito y en reposo, control de accesos por roles, y nunca almacenamos datos sensibles sin necesidad. Podemos firmar NDAs y adaptarnos a los requisitos de compliance de tu industria.",
+      "En la mayoría de casos, sí. Trabajamos con las herramientas más habituales en pymes españolas. Si usas algo menos común, lo comprobamos en el diagnóstico gratuito antes de comprometerte a nada.",
   },
   {
-    question: "¿Qué pasa si la automatización no funciona como esperaba?",
+    question: "¿Qué pasa si el agente no sabe responder a una pregunta del paciente?",
     answer:
-      "Todos nuestros proyectos incluyen un período de ajuste post-implementación. Si algo no rinde como esperábamos, lo corregimos sin costo adicional. Nuestro compromiso es con el resultado, no solo con la entrega.",
+      "El agente está configurado para derivar a tu equipo cuando no tiene una respuesta clara. Nunca deja a un paciente sin atención: avisa a la recepcionista o deja el mensaje pendiente para que lo gestione una persona. Tú decides cómo quieres que actúe en esos casos.",
   },
   {
-    question: "¿Ofrecen soporte después de la implementación?",
+    question: "¿Cómo sé si esto me va a funcionar a mí?",
     answer:
-      "Sí. Todos los planes incluyen soporte post-implementación. El plan de Automatización incluye 1 mes de soporte prioritario. Para proyectos enterprise ofrecemos SLA garantizado con tiempo de respuesta definido.",
+      "Por eso ofrecemos el diagnóstico gratuito: en 30 minutos analizamos tu caso concreto y te decimos con honestidad si tiene sentido o no. Si no vemos un impacto real para tu negocio, te lo decimos — no te vamos a vender algo que no necesitas.",
   },
 ]
 
