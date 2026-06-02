@@ -156,20 +156,20 @@ export default function Hero() {
               className="mb-6 gap-1.5 border-brand-teal/40 text-brand-teal dark:border-brand-teal/40 dark:text-brand-teal py-1 px-3 h-auto rounded-full"
             >
               <SparklesIcon className="size-3" />
-              Agencia de IA &amp; Consultoría
+              Más tiempo para lo que importa
             </Badge>
 
             <h1 className="max-w-4xl 2xl:max-w-5xl">
-              <span className="block text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-semibold tracking-tight text-foreground/75 leading-snug">
-                Recupera el control <br />de tu negocio
+              <span className="block text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-semibold tracking-tight text-foreground/75 leading-snug">
+                Tu tiempo es demasiado valioso
               </span>
               <span className="block text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-bold tracking-tight leading-[1.1] bg-gradient-to-r from-brand-sky via-brand-teal to-brand-green bg-clip-text text-transparent">
-                con sistemas inteligentes
+                para gastarlo en esto.
               </span>
             </h1>
 
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl md:text-xl 2xl:text-2xl 2xl:max-w-2xl leading-relaxed">
-              Personalizamos aplicaciones en base a tus necesidades y automatizamos procesos repetitivos para que tu equipo se enfoque en lo que realmente importa.
+            <p className="mt-6 text-base text-muted-foreground max-w-xl md:text-lg 2xl:text-xl 2xl:max-w-2xl leading-loose">
+              Automatizamos tus citas, tus documentos y mejoramos tu presencia online para que dejes de hacer en horas lo que puede hacerse solo.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center md:items-start gap-4">
@@ -178,13 +178,13 @@ export default function Hero() {
                 className="bg-brand-emerald hover:bg-brand-teal text-background font-semibold gap-2 h-11 px-6"
                 asChild
               >
-                <Link href="#contacto">
-                  Hablar con un experto
+                <Link href="#servicios">
+                  Ver cómo funciona
                   <ArrowRightIcon className="size-4" />
                 </Link>
               </Button>
               <Button variant="outline" size="lg" className="h-11 px-6" asChild>
-                <Link href="#servicios">Ver casos de uso</Link>
+                <Link href="#contacto">Habla con nosotros</Link>
               </Button>
             </div>
           </div>

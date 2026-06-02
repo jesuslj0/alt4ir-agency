@@ -1,12 +1,12 @@
 import { Fragment } from "react"
 import Link from "next/link"
-import { TrendingUpIcon, ArrowDownIcon } from "lucide-react"
+import { TrendingUpIcon, ArrowRightIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const stats = [
-  { value: "77%", label: "de empresas Fortune 500 ya operan con IA" },
-  { value: "3.5x", label: "Los sistemas inteligentes escalan tu negocio mucho más rápido" },
-  { value: "2025", label: "el año en que la IA se volvió requisito" },
+  { value: "+15h", label: "recuperadas al mes de media automatizando tareas repetitivas" },
+  { value: "68%", label: "de pymes que automatizan recuperan la inversión en menos de 4 meses" },
+  { value: "9 de cada 10", label: "clínicas pierden citas por no responder fuera de horario" },
 ]
 
 export default function Movement() {
@@ -23,18 +23,18 @@ export default function Movement() {
         {/* Título */}
         <div className="flex flex-col gap-1">
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
-            Esto no es el futuro.
+            No es magia.
           </h2>
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight bg-gradient-to-r from-brand-teal to-brand-green bg-clip-text text-transparent">
-            Es el PRESENTE.
+            Es simplemente trabajar mejor.
           </h2>
         </div>
 
         {/* Subtítulo */}
         <p className="text-lg text-slate-400 leading-relaxed max-w-2xl">
-          Cada semana que pasa, más empresas automatizan sus procesos con IA y amplían su ventaja
-          competitiva. Subirse a la ola ahora no es una opción — es la diferencia entre liderar tu
-          sector o quedarse atrás.
+          Facturas que se procesan solas. Citas que se confirman automáticamente.
+          Webs que convierten mientras duermes. No es ciencia ficción —
+          es lo que ya tienen tus competidores.
         </p>
 
         {/* Micro-stats */}
@@ -61,9 +61,9 @@ export default function Movement() {
             className="bg-brand-emerald hover:bg-brand-teal text-background font-semibold px-8 gap-2"
             asChild
           >
-            <Link href="#contacto">
-              Quiero saber más
-              <ArrowDownIcon className="size-4" />
+            <Link href="#servicios">
+              Descubrir mis opciones
+              <ArrowRightIcon className="size-4" />
             </Link>
           </Button>
           <span className="text-xs text-slate-500">Sin compromiso · Consultoría gratuita</span>
