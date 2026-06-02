@@ -91,7 +91,7 @@ export default function ServiceWeb() {
               className="self-start bg-brand-sky hover:bg-brand-teal text-background font-semibold px-7 gap-2"
               asChild
             >
-              <Link href="#contacto">
+              <Link href="/proyectos/web-design">
                 Ver ejemplos de webs
                 <ArrowRightIcon className="size-4" />
               </Link>
