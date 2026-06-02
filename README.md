@@ -1,6 +1,6 @@
-# Alt4ir Agency
+# Propus Agency
 
-Landing page de **Alt4ir**, agencia especializada en desarrollo de aplicaciones con IA, automatización de procesos de negocio e integración de agentes conversacionales inteligentes. Construida con Next.js 16, TailwindCSS 4 y shadcn.
+Landing page de **Propus**, agencia especializada en desarrollo de aplicaciones con IA, automatización de procesos de negocio e integración de agentes conversacionales inteligentes. Construida con Next.js 16, TailwindCSS 4 y shadcn.
 
 ---
 
