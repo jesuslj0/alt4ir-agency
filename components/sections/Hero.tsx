@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRightIcon, SparklesIcon, BotIcon, MonitorIcon, TrendingUpIcon, SearchIcon, LightbulbIcon, RocketIcon } from "lucide-react"
 import { GradientDots } from "@/components/ui/gradient-dots"
+import { SplineScene } from "@/components/ui/spline-scene"
 
 function DraggableMockup() {
   const [offset, setOffset] = useState({ x: 0, y: 0 })
@@ -146,7 +147,15 @@ export default function Hero() {
   return (
     <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 2xl:pt-56 2xl:pb-36 overflow-hidden bg-transparent">
 
-      <div className="max-w-6xl mx-auto px-4 2xl:max-w-7xl">
+      {/* Spline background */}
+      <div className="absolute inset-0 z-0">
+        <SplineScene
+          scene="https://prod.spline.design/Xup3h6IBrMohCZ2d/scene.splinecode"
+          className="w-full h-full"
+        />
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto px-4 2xl:max-w-7xl">
         <div className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left md:gap-12">
 
           {/* Left: badge + title + subtitle + buttons */}
@@ -188,12 +197,6 @@ export default function Hero() {
               </Button>
             </div>
           </div>
-
-          {/* Right: mockup draggable */}
-          <div className="mt-16 md:mt-0 md:flex-1 flex items-center justify-center w-full max-w-3xl md:max-w-none">
-            <DraggableMockup />
-          </div>
-
         </div>
       </div>
     </section>
