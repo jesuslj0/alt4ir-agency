@@ -187,13 +187,13 @@ export default function Hero() {
                 className="bg-brand-emerald hover:bg-brand-teal text-background font-semibold gap-2 h-11 px-6"
                 asChild
               >
-                <Link href="#servicios">
+                <Link href="/#servicios">
                   Ver cómo funciona
                   <ArrowRightIcon className="size-4" />
                 </Link>
               </Button>
               <Button variant="outline" size="lg" className="h-11 px-6" asChild>
-                <Link href="#contacto">Habla con nosotros</Link>
+                <Link href="/#contacto">Habla con nosotros</Link>
               </Button>
             </div>
           </div>
