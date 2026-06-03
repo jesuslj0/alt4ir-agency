@@ -74,26 +74,14 @@ export default function FacturiaHero() {
 
 function DashboardFrame() {
   return (
-    <div className="w-full max-w-md overflow-hidden rounded-2xl border border-white/10 bg-facturia-card shadow-2xl shadow-black/60">
-      {/* Chrome navegador */}
-      <div className="flex items-center gap-2 border-b border-white/8 bg-facturia-bg px-4 py-3">
-        <div className="flex items-center gap-1.5">
-          <span className="size-3 rounded-full bg-[#ff5f57]" />
-          <span className="size-3 rounded-full bg-[#febc2e]" />
-          <span className="size-3 rounded-full bg-[#28c840]" />
-        </div>
-        <div className="ml-2 flex-1 truncate rounded-md bg-facturia-card px-3 py-1 text-center font-mono text-[11px] text-facturia-muted">
-          facturia.xyz/dashboard
-        </div>
-      </div>
-
+    <div className="w-full max-w-xl overflow-hidden rounded-2xl border border-white/10 bg-facturia-bg shadow-2xl shadow-black/60">
       {/* Captura real del dashboard */}
-      <div className="relative aspect-16/10 bg-facturia-bg">
+      <div className="relative aspect-16/10">
         <Image
           src="/img/facturia/dashboard.png"
           alt="Dashboard de métricas de FacturIA"
           fill
-          sizes="(max-width: 1024px) 100vw, 28rem"
+          sizes="(max-width: 1024px) 100vw, 36rem"
           className="object-cover object-top"
         />
       </div>

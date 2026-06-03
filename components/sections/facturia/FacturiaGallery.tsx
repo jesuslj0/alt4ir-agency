@@ -2,24 +2,19 @@ import Image from "next/image"
 
 const shots = [
   {
-    src: "/img/facturia/factura-ocr.png",
-    title: "Captura OCR con IA",
-    description: "Cada dato extraído con su nivel de confianza, para saber qué revisar.",
+    src: "/img/facturia/dashboard.png",
+    title: "Panel de inicio",
+    description: "Documentos por revisar, resumen financiero del mes y últimos movimientos de un vistazo.",
   },
   {
-    src: "/img/facturia/aprobaciones.png",
-    title: "Revisión y aprobación",
-    description: "Cola de documentos con estados claros y trazabilidad completa.",
+    src: "/img/facturia/metrics.png",
+    title: "Métricas e IVA",
+    description: "Ingresos, gastos, beneficio y control de IVA repercutido y soportado por periodo.",
   },
   {
-    src: "/img/facturia/movimientos.png",
-    title: "Movimientos financieros",
-    description: "Ingresos y gastos con categorías, recibos y conciliación.",
-  },
-  {
-    src: "/img/facturia/export.png",
-    title: "Exportaciones e informes",
-    description: "Vista previa y exportación en Excel, CSV y PDF para tu gestoría.",
+    src: "/img/facturia/documents.png",
+    title: "Listado de documentos",
+    description: "Todas tus facturas y albaranes con estado, nivel de revisión y confianza del OCR.",
   },
 ]
 
@@ -43,11 +38,11 @@ export default function FacturiaGallery() {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:gap-8">
+        <div className="grid gap-6 sm:grid-cols-2 lg:flex lg:items-start lg:gap-8">
           {shots.map((shot) => (
             <figure
               key={shot.src}
-              className="group overflow-hidden rounded-2xl border border-white/8 bg-facturia-card/60 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-facturia/40 hover:shadow-xl hover:shadow-facturia/5"
+              className="group overflow-hidden rounded-2xl border border-white/8 bg-facturia-card/60 backdrop-blur-sm transition-all duration-500 ease-out hover:border-facturia/40 hover:shadow-xl hover:shadow-facturia/5 lg:flex-1 lg:hover:flex-[2]"
             >
               {/* Barra del navegador */}
               <div className="flex items-center gap-1.5 border-b border-white/8 bg-facturia-bg px-4 py-3">
@@ -75,6 +70,36 @@ export default function FacturiaGallery() {
             </figure>
           ))}
         </div>
+
+        {/* Segunda fila — detalle de factura */}
+        <figure className="group mx-auto mt-6 max-w-3xl overflow-hidden rounded-2xl border border-white/8 bg-facturia-card/60 backdrop-blur-sm transition-all duration-300 hover:border-facturia/40 hover:shadow-xl hover:shadow-facturia/5 lg:mt-8">
+          {/* Barra del navegador */}
+          <div className="flex items-center gap-1.5 border-b border-white/8 bg-facturia-bg px-4 py-3">
+            <span className="size-3 rounded-full bg-[#ff5f57]" />
+            <span className="size-3 rounded-full bg-[#febc2e]" />
+            <span className="size-3 rounded-full bg-[#28c840]" />
+          </div>
+
+          {/* Captura */}
+          <div className="relative aspect-16/10 overflow-hidden bg-facturia-bg">
+            <Image
+              src="/img/facturia/detalle-factura.png"
+              alt="Detalle de factura con datos extraídos por OCR"
+              fill
+              sizes="(max-width: 768px) 100vw, 48rem"
+              className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+            />
+          </div>
+
+          {/* Pie */}
+          <figcaption className="flex flex-col gap-1.5 px-6 py-5">
+            <h3 className="text-base font-semibold text-facturia-fg">Detalle de factura</h3>
+            <p className="text-sm leading-relaxed text-slate-400">
+              Cada documento con sus datos extraídos por el OCR —base, IVA, total y emisor— y su
+              nivel de confianza, listo para aprobar o editar.
+            </p>
+          </figcaption>
+        </figure>
       </div>
     </section>
   )
