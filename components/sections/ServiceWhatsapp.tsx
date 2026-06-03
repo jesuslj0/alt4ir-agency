@@ -134,7 +134,7 @@ export default function ServiceWhatsapp() {
               className="self-start bg-brand-spring hover:bg-brand-teal text-background font-semibold px-7 gap-2"
               asChild
             >
-              <Link href="#contacto">
+              <Link href="/proyectos/agente-whatsapp">
                 Ver demo del agente
                 <ArrowRightIcon className="size-4" />
               </Link>

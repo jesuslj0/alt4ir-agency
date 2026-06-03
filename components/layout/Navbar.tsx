@@ -27,6 +27,7 @@ const navLinks = [
 const projectLinks = [
   { href: "/proyectos/web-design", label: "Web Design" },
   { href: "/proyectos/facturia", label: "FacturIA" },
+  { href: "/proyectos/agente-whatsapp", label: "AutoClinic" },
 ]
 
 const infoLinks = [

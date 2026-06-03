@@ -21,6 +21,14 @@
   --color-facturia-fg: #f8fafc;
   --color-facturia-card: #0f172a;
   --color-facturia-muted: #7c8b9d;
+  /* Paleta de marca Agente WhatsApp (producto) */
+  --color-wha: #f472b6;
+  --color-wha-alt: #60a5fa;
+  --color-wha-teal: #2dd4bf;
+  --color-wha-bg: #07101d;
+  --color-wha-card: #0d1a2e;
+  --color-wha-fg: #f0f6ff;
+  --color-wha-muted: #7e97b8;
   --font-sans: var(--font-sans);
   --font-mono: var(--font-sans);
   --font-heading: var(--font-heading);
