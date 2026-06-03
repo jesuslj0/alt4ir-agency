@@ -81,13 +81,13 @@ export default function FacturiaGallery() {
           </div>
 
           {/* Captura */}
-          <div className="relative aspect-16/10 overflow-hidden bg-facturia-bg">
+          <div className="relative aspect-4/3 overflow-hidden bg-facturia-bg">
             <Image
               src="/img/facturia/detalle-factura.png"
               alt="Detalle de factura con datos extraídos por OCR"
               fill
               sizes="(max-width: 768px) 100vw, 48rem"
-              className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+              className="object-contain object-top transition-transform duration-500 group-hover:scale-[1.02]"
             />
           </div>
 

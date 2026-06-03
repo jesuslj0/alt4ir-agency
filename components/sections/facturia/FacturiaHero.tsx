@@ -16,16 +16,6 @@ export default function FacturiaHero() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* Columna texto */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            {/* Logo FacturIA */}
-            <Image
-              src="/img/facturia/logo.png"
-              alt="FacturIA"
-              width={200}
-              height={52}
-              priority
-              className="mb-6 h-11 w-auto"
-            />
-
             <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-facturia/30 bg-facturia/10 px-4 py-1.5 text-xs font-semibold text-facturia">
               <ScanLineIcon className="size-3.5" />
               Gestión inteligente de facturas
@@ -62,9 +52,9 @@ export default function FacturiaHero() {
             </div>
           </div>
 
-          {/* Columna captura del dashboard */}
+          {/* Columna imagen del logo */}
           <div className="flex justify-center lg:justify-end">
-            <DashboardFrame />
+            <LogoHero />
           </div>
         </div>
       </div>
@@ -72,19 +62,18 @@ export default function FacturiaHero() {
   )
 }
 
-function DashboardFrame() {
+function LogoHero() {
   return (
-    <div className="w-full max-w-xl overflow-hidden rounded-2xl border border-white/10 bg-facturia-bg shadow-2xl shadow-black/60">
-      {/* Captura real del dashboard */}
-      <div className="relative aspect-16/10">
-        <Image
-          src="/img/facturia/dashboard.png"
-          alt="Dashboard de métricas de FacturIA"
-          fill
-          sizes="(max-width: 1024px) 100vw, 36rem"
-          className="object-cover object-top"
-        />
-      </div>
+    <div className="group w-full max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-facturia-card shadow-2xl shadow-black/60 transition-shadow duration-500 hover:border-facturia/40 hover:shadow-facturia/50">
+      <Image
+        src="/img/facturia/logo-grande.png"
+        alt="FacturIA"
+        width={500}
+        height={500}
+        priority
+        sizes="(max-width: 1024px) 100vw, 36rem"
+        className="h-auto w-full transition-transform duration-500 ease-out group-hover:scale-105"
+      />
     </div>
   )
 }
