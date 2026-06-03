@@ -1,0 +1,45 @@
+import type { Metadata } from "next"
+import Navbar from "@/components/layout/Navbar"
+import Footer from "@/components/layout/Footer"
+import FacturiaHero from "@/components/sections/facturia/FacturiaHero"
+import FacturiaProblem from "@/components/sections/facturia/FacturiaProblem"
+import FacturiaFeatures from "@/components/sections/facturia/FacturiaFeatures"
+import FacturiaGallery from "@/components/sections/facturia/FacturiaGallery"
+import FacturiaFlow from "@/components/sections/facturia/FacturiaFlow"
+import FacturiaTrust from "@/components/sections/facturia/FacturiaTrust"
+import FacturiaIntegrations from "@/components/sections/facturia/FacturiaIntegrations"
+import FacturiaUseCases from "@/components/sections/facturia/FacturiaUseCases"
+import FacturiaCTA from "@/components/sections/facturia/FacturiaCTA"
+
+export const metadata: Metadata = {
+  title: "FacturIA — Gestión inteligente de facturas con IA | Propus",
+  description:
+    "FacturIA automatiza el ciclo completo de tus facturas: captura con OCR e IA, revisión y aprobación automática, dashboard de métricas en tiempo real y exportación de informes listos para tu gestoría. Multiempresa y seguro.",
+  openGraph: {
+    title: "FacturIA — Gestión inteligente de facturas con IA",
+    description:
+      "De la foto de tu factura al informe contable, sin teclear ni una cifra. Captura OCR + IA, aprobación automática y exportaciones profesionales.",
+    type: "website",
+    locale: "es_ES",
+  },
+}
+
+export default function FacturiaPage() {
+  return (
+    <>
+      <Navbar />
+      <main>
+        <FacturiaHero />
+        <FacturiaProblem />
+        <FacturiaFeatures />
+        <FacturiaGallery />
+        <FacturiaFlow />
+        <FacturiaIntegrations />
+        <FacturiaTrust />
+        <FacturiaUseCases />
+        <FacturiaCTA />
+      </main>
+      <Footer />
+    </>
+  )
+}

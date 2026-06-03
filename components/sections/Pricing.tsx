@@ -81,7 +81,7 @@ export default function Pricing() {
         <div className="text-center mb-14">
           <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
             Planes que se adaptan{" "}
-            <span className="bg-gradient-to-r from-brand-sky to-brand-emerald bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-brand-sky to-brand-emerald bg-clip-text text-transparent">
               a tu negocio
             </span>
           </h2>

@@ -27,7 +27,7 @@ export default function ServiceWeb() {
 
       {/* Glow de fondo */}
       <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden>
-        <div className="absolute right-0 top-1/4 w-[500px] h-[500px] rounded-full bg-brand-sky/6 blur-[120px]" />
+        <div className="absolute right-0 top-1/4 w-125 h-125 rounded-full bg-brand-sky/6 blur-[120px]" />
       </div>
 
       <div className="max-w-6xl mx-auto px-4">
@@ -40,7 +40,7 @@ export default function ServiceWeb() {
           </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight text-white">
             Tu web actual te está{" "}
-            <span className="bg-gradient-to-r from-brand-sky to-brand-teal bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-brand-sky to-brand-teal bg-clip-text text-transparent">
               costando clientes
             </span>
           </h2>
@@ -160,7 +160,7 @@ function BrowserMockup() {
         </div>
 
         {/* Horizonte planetario inferior */}
-        <div className="absolute -bottom-[55%] left-1/2 -translate-x-1/2 w-[140%] aspect-square rounded-full bg-gradient-to-t from-[#0b1a2e] to-transparent border-t border-brand-teal/30 shadow-[0_-20px_60px_-10px_rgba(0,253,202,0.3)]" />
+        <div className="absolute -bottom-[55%] left-1/2 -translate-x-1/2 w-[140%] aspect-square rounded-full bg-linear-to-t from-[#0b1a2e] to-transparent border-t border-brand-teal/30 shadow-[0_-20px_60px_-10px_rgba(0,253,202,0.3)]" />
 
         {/* ── Contenido ── */}
         <div className="relative z-10 h-full flex flex-col px-4 py-3">
@@ -190,12 +190,12 @@ function BrowserMockup() {
             </div>
 
             {/* Titular serif italic */}
-            <h1 className="font-display-serif italic text-white text-[26px] leading-[0.85] tracking-tight max-w-[230px]">
+            <h1 className="font-display-serif italic text-white text-[26px] leading-[0.85] tracking-tight max-w-57.5">
               Viaja más allá de nuestro cielo, a través del universo
             </h1>
 
             {/* Subtítulo */}
-            <p className="text-[6.5px] font-light text-white/80 leading-snug max-w-[200px]">
+            <p className="text-[6.5px] font-light text-white/80 leading-snug max-w-50">
               Descubre el cosmos de formas antes inimaginables. Naves pioneras
               e ingeniería revolucionaria ponen la exploración del espacio
               profundo a tu alcance — segura y extraordinaria.
@@ -221,7 +221,7 @@ function BrowserMockup() {
                 { value: "34,5 min", label: "Tiempo medio de visionado" },
                 { value: "2,8 B+", label: "Viajeros en todo el mundo" },
               ].map((s) => (
-                <div key={s.label} className="liquid-glass rounded-xl px-3 py-2 w-[90px] flex flex-col items-start gap-0.5">
+                <div key={s.label} className="liquid-glass rounded-xl px-3 py-2 w-22.5 flex flex-col items-start gap-0.5">
                   <span className="font-display-serif italic text-white text-base leading-none">{s.value}</span>
                   <span className="text-[5.5px] font-light text-white/80 leading-tight">{s.label}</span>
                 </div>

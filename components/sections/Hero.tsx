@@ -172,7 +172,7 @@ export default function Hero() {
               <span className="block text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-semibold tracking-tight text-foreground/75 leading-snug">
                 Tu tiempo es demasiado valioso
               </span>
-              <span className="block text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-bold tracking-tight leading-[1.1] bg-gradient-to-r from-brand-sky via-brand-teal to-brand-green bg-clip-text text-transparent">
+              <span className="block text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-bold tracking-tight leading-[1.1] bg-linear-to-r from-brand-sky via-brand-teal to-brand-green bg-clip-text text-transparent">
                 para gastarlo en esto.
               </span>
             </h1>

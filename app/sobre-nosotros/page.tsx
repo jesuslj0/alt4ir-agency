@@ -80,7 +80,7 @@ export default function SobreNosotrosPage() {
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
               La agencia de IA que impulsa negocios en{" "}
-              <span className="bg-gradient-to-r from-brand-sky to-brand-emerald bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-brand-sky to-brand-emerald bg-clip-text text-transparent">
                 Albacete y Castilla-La Mancha
               </span>
             </h1>
@@ -99,7 +99,7 @@ export default function SobreNosotrosPage() {
             <div>
               <h2 className="mb-6 text-2xl font-bold tracking-tight md:text-3xl">
                 Nuestra{" "}
-                <span className="bg-gradient-to-r from-brand-green to-brand-teal bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-brand-green to-brand-teal bg-clip-text text-transparent">
                   misión
                 </span>
               </h2>
@@ -142,7 +142,7 @@ export default function SobreNosotrosPage() {
           <div className="mx-auto max-w-6xl">
             <h2 className="mb-12 text-center text-3xl font-bold tracking-tight md:text-4xl">
               Qué nos{" "}
-              <span className="bg-gradient-to-r from-brand-teal to-brand-green bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-brand-teal to-brand-green bg-clip-text text-transparent">
                 diferencia
               </span>
             </h2>
@@ -150,7 +150,7 @@ export default function SobreNosotrosPage() {
               {differentiators.map((item) => (
                 <Card
                   key={item.title}
-                  className="group border-border bg-card transition-all duration-300 hover:scale-105 hover:border-brand-teal/60 hover:bg-gradient-to-br hover:from-brand-teal/20 hover:to-brand-green/20"
+                  className="group border-border bg-card transition-all duration-300 hover:scale-105 hover:border-brand-teal/60 hover:bg-linear-to-br hover:from-brand-teal/20 hover:to-brand-green/20"
                 >
                   <CardContent className="pt-6">
                     <item.icon className="mb-4 size-8 text-brand-teal transition-colors duration-300 group-hover:text-white" />
@@ -173,7 +173,7 @@ export default function SobreNosotrosPage() {
             <div className="mb-12 text-center">
               <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
                 El equipo detrás{" "}
-                <span className="bg-gradient-to-r from-brand-sky to-brand-teal bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-brand-sky to-brand-teal bg-clip-text text-transparent">
                   de Propus
                 </span>
               </h2>

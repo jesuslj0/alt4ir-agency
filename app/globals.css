@@ -14,6 +14,13 @@
   --color-brand-emerald: #00fda0;
   --color-brand-teal: #00fdca;
   --color-brand-sky: #00acfd;
+  /* Paleta de marca FacturIA (producto) */
+  --color-facturia: #38bdf8;
+  --color-facturia-dark: #0a7bb0;
+  --color-facturia-bg: #020617;
+  --color-facturia-fg: #f8fafc;
+  --color-facturia-card: #0f172a;
+  --color-facturia-muted: #7c8b9d;
   --font-sans: var(--font-sans);
   --font-mono: var(--font-sans);
   --font-heading: var(--font-heading);

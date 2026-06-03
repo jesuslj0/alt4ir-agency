@@ -37,19 +37,19 @@ export default function ServiceDocs() {
     <section id="gestion-documental" className="py-20 md:py-28 relative overflow-hidden">
 
       <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden>
-        <div className="absolute left-0 bottom-0 w-[500px] h-[500px] rounded-full bg-brand-lime/5 blur-[130px]" />
+        <div className="absolute left-0 bottom-0 w-125 h-125 rounded-full bg-facturia/8 blur-[130px]" />
       </div>
 
       <div className="max-w-6xl mx-auto px-4">
 
         <div className="mb-14 max-w-2xl">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-lime/30 bg-brand-lime/10 px-3 py-1 text-xs font-semibold text-brand-lime mb-4">
-            <span className="size-1.5 rounded-full bg-brand-lime animate-pulse" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-facturia/30 bg-facturia/10 px-3 py-1 text-xs font-semibold text-facturia mb-4">
+            <span className="size-1.5 rounded-full bg-facturia animate-pulse" />
             Gestión Documental & Contabilidad
           </span>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight text-white">
             Deja de perder horas{" "}
-            <span className="bg-gradient-to-r from-brand-lime to-brand-green bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-facturia to-facturia-dark bg-clip-text text-transparent">
               en facturas y documentos
             </span>
           </h2>
@@ -85,8 +85,8 @@ export default function ServiceDocs() {
               })}
             </ul>
 
-            <div className="rounded-xl border border-brand-lime/25 bg-brand-lime/8 px-5 py-4 flex items-start gap-3">
-              <CheckCircle2Icon className="size-5 text-brand-lime shrink-0 mt-0.5" />
+            <div className="rounded-xl border border-facturia/25 bg-facturia/8 px-5 py-4 flex items-start gap-3">
+              <CheckCircle2Icon className="size-5 text-facturia shrink-0 mt-0.5" />
               <p className="text-sm text-slate-200 leading-relaxed">
                 Tu equipo deja de tocar documentos manualmente.{" "}
                 <strong className="text-white">Todo entra, se clasifica y se archiva solo</strong> —
@@ -96,10 +96,10 @@ export default function ServiceDocs() {
 
             <Button
               size="lg"
-              className="self-start bg-brand-lime hover:bg-brand-green text-background font-semibold px-7 gap-2"
+              className="self-start bg-facturia hover:bg-facturia-dark text-white font-semibold px-7 gap-2"
               asChild
             >
-              <Link href="#contacto">
+              <Link href="/proyectos/facturia">
                 Quiero ahorrar tiempo en gestión
                 <ArrowRightIcon className="size-4" />
               </Link>
@@ -281,7 +281,7 @@ function FacturaDashboard() {
             <div className="flex flex-col gap-1 w-full">
               {donutSegments.map((s) => (
                 <div key={s.label} className="flex items-center gap-1.5">
-                  <span className="size-2 rounded-[2px] shrink-0" style={{ backgroundColor: s.color }} />
+                  <span className="size-2 rounded-xs shrink-0" style={{ backgroundColor: s.color }} />
                   <span className="text-[6.5px] text-slate-400">{s.label}</span>
                 </div>
               ))}
@@ -291,15 +291,15 @@ function FacturaDashboard() {
           {/* Stat cards */}
           <div className="flex flex-col gap-2">
             {[
-              { label: "CONFIANZA MEDIA DE EXTRACCIÓN", value: "96,9 %", color: "text-brand-green" },
-              { label: "TASA APROBACIÓN AUTOMÁTICA",    value: "75,0 %", color: "text-brand-green" },
-              { label: "TASA REVISIÓN MANUAL",          value: "12,5 %", color: "text-brand-green" },
+              { label: "CONFIANZA MEDIA DE EXTRACCIÓN", value: "96,9 %", color: "text-facturia" },
+              { label: "TASA APROBACIÓN AUTOMÁTICA",    value: "75,0 %", color: "text-facturia" },
+              { label: "TASA REVISIÓN MANUAL",          value: "12,5 %", color: "text-facturia" },
             ].map((stat) => (
               <div
                 key={stat.label}
                 className="rounded-xl bg-[#111927] border border-white/6 px-3 py-2.5 flex flex-col gap-1"
               >
-                <p className="text-[6.5px] font-semibold text-brand-sky uppercase tracking-wider leading-tight">
+                <p className="text-[6.5px] font-semibold text-facturia uppercase tracking-wider leading-tight">
                   {stat.label}
                 </p>
                 <p className={`text-[18px] font-bold leading-none ${stat.color}`}>

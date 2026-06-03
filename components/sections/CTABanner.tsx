@@ -18,7 +18,7 @@ export default function CTABanner() {
           <div className="relative">
             <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
               ¿Listo para automatizar{" "}
-              <span className="bg-gradient-to-r from-brand-spring to-brand-teal bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-brand-spring to-brand-teal bg-clip-text text-transparent">
                 tu negocio?
               </span>
             </h2>
@@ -28,7 +28,7 @@ export default function CTABanner() {
 
             <div className="mt-10 flex justify-center">
               <Button
-                className="bg-gradient-to-r from-brand-emerald to-brand-green hover:from-brand-teal hover:to-brand-spring text-background gap-2 h-11 px-8 font-semibold text-base"
+                className="bg-linear-to-r from-brand-emerald to-brand-green hover:from-brand-teal hover:to-brand-spring text-background gap-2 h-11 px-8 font-semibold text-base"
                 asChild
               >
                 <Link href="https://calendar.app.google/CNBch8s1Q8iqoqdE9" target="_blank" rel="noopener noreferrer">

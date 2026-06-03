@@ -27,7 +27,7 @@ export default function LogoBar() {
       </div>
 
       {/* Máscara de fade en los bordes */}
-      <div className="[mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
+      <div className="mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)">
         <InfiniteSlider gap={40} duration={40} durationOnHover={90} reverse={false}>
           {allItems.map((tech, i) => (
             <div

@@ -34,7 +34,7 @@ export default function HowItWorks() {
         <div className="text-center mb-14">
           <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
             Cómo{" "}
-            <span className="bg-gradient-to-r from-brand-green to-brand-teal bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-brand-green to-brand-teal bg-clip-text text-transparent">
               trabajamos
             </span>
           </h2>

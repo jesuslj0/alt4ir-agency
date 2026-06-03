@@ -60,7 +60,7 @@ export default function ProjectsShowcase({
           </span>
           <h1 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
             {title}{" "}
-            <span className="bg-gradient-to-r from-brand-sky via-brand-teal to-brand-green bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-brand-sky via-brand-teal to-brand-green bg-clip-text text-transparent">
               {highlight}
             </span>
           </h1>
@@ -125,7 +125,7 @@ function ProjectCard({ project, index }: { project: ShowcaseProject; index: numb
         </div>
 
         {/* Preview */}
-        <div className="relative aspect-[16/10] overflow-hidden">
+        <div className="relative aspect-16/10 overflow-hidden">
           {project.image ? (
             <Image
               src={project.image}
@@ -135,9 +135,9 @@ function ProjectCard({ project, index }: { project: ShowcaseProject; index: numb
               className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
             />
           ) : (
-            <div className="absolute inset-0 flex items-center justify-center overflow-hidden bg-gradient-to-br from-background to-muted/40">
+            <div className="absolute inset-0 flex items-center justify-center overflow-hidden bg-linear-to-br from-background to-muted/40">
               <GradientDots duration={24} />
-              <span className="relative z-10 bg-gradient-to-r from-brand-sky via-brand-teal to-brand-green bg-clip-text font-heading text-3xl font-bold text-transparent md:text-4xl">
+              <span className="relative z-10 bg-linear-to-r from-brand-sky via-brand-teal to-brand-green bg-clip-text font-heading text-3xl font-bold text-transparent md:text-4xl">
                 {project.title}
               </span>
             </div>

@@ -25,7 +25,7 @@ export default function Movement() {
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
             No es magia.
           </h2>
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight bg-gradient-to-r from-brand-teal to-brand-green bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight bg-linear-to-r from-brand-teal to-brand-green bg-clip-text text-transparent">
             Es simplemente trabajar mejor.
           </h2>
         </div>
@@ -43,7 +43,7 @@ export default function Movement() {
             <Fragment key={stat.value}>
               <div className="flex flex-col items-center gap-1.5 rounded-xl border border-brand-teal/20 bg-brand-teal/5 backdrop-blur-sm px-6 py-4 transition-colors duration-200 hover:bg-brand-teal/10 hover:border-brand-teal/40">
                 <span className="text-3xl font-bold text-white">{stat.value}</span>
-                <span className="text-sm text-slate-400 max-w-[150px] text-center leading-snug">
+                <span className="text-sm text-slate-400 max-w-37.5 text-center leading-snug">
                   {stat.label}
                 </span>
               </div>

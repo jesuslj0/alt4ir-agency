@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d1117;color:#e6edf3;font-family:'Segoe UI',Arial,sans-serif;width:1280px}
+nav{background:#161b22;border-bottom:1px solid #21262d;padding:0 24px;display:flex;align-items:center;height:56px;gap:32px}
+.logo{display:flex;align-items:center;gap:8px;margin-right:auto}
+.logo-box{width:36px;height:36px;background:#1a3a5c;border:1px solid #2a5a8c;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#58a6ff}
+.logo-text{font-size:13px;font-weight:600;color:#58a6ff}
+nav a{color:#8b949e;font-size:13px;text-decoration:none}
+nav a.active{color:#e6edf3}
+.btn-salir{border:1px solid #30363d;border-radius:6px;padding:4px 14px;color:#e6edf3;font-size:13px;background:transparent}
+.content{padding:24px 40px}
+.page-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.page-title{font-size:20px;font-weight:600;color:#e6edf3}
+.page-title span{color:#58a6ff}
+.page-sub{font-size:13px;color:#8b949e}
+.status-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
+.scard{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:16px 20px}
+.scard-label{font-size:11px;font-weight:600;color:#8b949e;letter-spacing:.05em;margin-bottom:8px}
+.scard-val{font-size:28px;font-weight:700}
+.scard-val.white{color:#e6edf3}
+.scard-val.yellow{color:#e3b341}
+.scard-val.red{color:#f85149}
+.box{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:20px;margin-bottom:16px}
+.box-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+.box-title{font-size:14px;font-weight:600;color:#e6edf3}
+.box-link{font-size:13px;color:#58a6ff}
+.box-period{font-size:12px;color:#8b949e;margin-bottom:16px}
+.fin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.fin-card{background:#0d1117;border:1px solid #21262d;border-radius:6px;padding:12px 14px}
+.fin-label{font-size:10px;font-weight:600;color:#8b949e;letter-spacing:.05em;margin-bottom:6px}
+.fin-val{font-size:20px;font-weight:600}
+.fin-val.green{color:#3fb950}
+.fin-val.red{color:#f85149}
+.fin-val.white{color:#e6edf3}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;padding:8px 12px;font-size:11px;font-weight:600;color:#8b949e;background:#0d1117;letter-spacing:.04em}
+td{padding:9px 12px;border-top:1px solid #21262d;color:#e6edf3}
+td.muted{color:#8b949e}
+td.green{color:#3fb950}
+td.red{color:#f85149}
+td.cat{color:#58a6ff}
+.gastos-section{margin-top:14px}
+.gastos-title{font-size:13px;font-weight:600;color:#e6edf3;margin-bottom:10px}
+.gasto-row{display:flex;justify-content:space-between;padding:6px 0;border-top:1px solid #21262d;font-size:13px}
+.gasto-label{color:#8b949e}
+.gasto-amt{color:#f85149;font-weight:500}
+.badge-apro{background:#1a3a1a;color:#3fb950;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:600}
+.badge-rev{background:#2a1a1a;color:#f85149;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:600}
+.badge-rec{background:#2a2a1a;color:#e3b341;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:600}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">
+    <div class="logo-box">F</div>
+    <span class="logo-text">FacturIA</span>
+  </div>
+  <a href="#" class="active">&#127968; Inicio</a>
+  <a href="#">&#128196; Documentos</a>
+  <a href="#">&#128176; Finanzas</a>
+  <a href="#">&#128202; Métricas</a>
+  <a href="#">&#128100; Perfil</a>
+  <button class="btn-salir">Salir</button>
+</nav>
+<div class="content">
+  <div class="page-header">
+    <div class="page-title">&#127968; Inicio · <span>Equipo Propus</span></div>
+    <span class="page-sub">Tienes 3 documentos por revisar</span>
+  </div>
+  <div class="status-cards">
+    <div class="scard"><div class="scard-label">PENDIENTES</div><div class="scard-val white">4</div></div>
+    <div class="scard"><div class="scard-label">RECOMENDADOS</div><div class="scard-val yellow">3</div></div>
+    <div class="scard"><div class="scard-label">REVISIÓN OBLIGATORIA</div><div class="scard-val red">2</div></div>
+  </div>
+  <div class="box">
+    <div class="box-header">
+      <span class="box-title">&#128202; Resumen financiero mensual</span>
+      <span class="box-link">Ver movimientos</span>
+    </div>
+    <div class="box-period">Periodo: 01/06/2026 – 03/06/2026</div>
+    <div class="fin-grid">
+      <div class="fin-card"><div class="fin-label">INGRESOS</div><div class="fin-val green">4.820,00 €</div></div>
+      <div class="fin-card"><div class="fin-label">GASTOS</div><div class="fin-val red">1.347,60 €</div></div>
+      <div class="fin-card"><div class="fin-label">BALANCE</div><div class="fin-val green">3.472,40 €</div></div>
+      <div class="fin-card"><div class="fin-label">SIN CONCILIAR</div><div class="fin-val white">2</div></div>
+    </div>
+    <table>
+      <thead><tr><th>Fecha</th><th>Categoría</th><th>Concepto</th><th>Importe</th></tr></thead>
+      <tbody>
+        <tr><td class="muted">02/06/2026</td><td class="cat">Servicios</td><td>Factura servicio mantenimiento · NEXUM TECH S.L.</td><td class="green">+3.200,00 €</td></tr>
+        <tr><td class="muted">01/06/2026</td><td class="cat">Suministros</td><td>Compra material oficina · PAPELERÍA VIDAL</td><td class="red">–287,40 €</td></tr>
+        <tr><td class="muted">01/06/2026</td><td class="cat">Consultoría</td><td>Asesoría fiscal mensual · GESTORÍA ALTAMIRA</td><td class="red">–480,00 €</td></tr>
+        <tr><td class="muted">01/06/2026</td><td class="cat">Ventas</td><td>Cobro proyecto web · DISTRIBUCIONES ARCO</td><td class="green">+1.620,00 €</td></tr>
+      </tbody>
+    </table>
+    <div class="gastos-section">
+      <div class="gastos-title">Top gastos por categoría</div>
+      <div class="gasto-row"><span class="gasto-label">Telecomunicaciones</span><span class="gasto-amt">580,20 €</span></div>
+      <div class="gasto-row"><span class="gasto-label">Consultoría</span><span class="gasto-amt">480,00 €</span></div>
+      <div class="gasto-row"><span class="gasto-label">Suministros</span><span class="gasto-amt">287,40 €</span></div>
+    </div>
+  </div>
+  <div class="box">
+    <div class="box-title" style="margin-bottom:14px">Documentos pendientes</div>
+    <table>
+      <thead><tr><th>N.º Factura</th><th>Empresa</th><th>Tipo</th><th>Importe</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>FAC2026/51</td><td>NEXUM TECH S.L.</td><td class="muted">Factura</td><td class="green">3.200,00 €</td><td><span class="badge-apro">PENDIENTE</span></td></tr>
+        <tr><td>W2026004</td><td>SUMINISTROS ALBA</td><td class="muted">Albarán</td><td class="muted">94,50 €</td><td><span class="badge-rev">REVISIÓN</span></td></tr>
+        <tr><td>FCR/887</td><td>MATERIALES ROCA S.A.</td><td class="muted">Factura</td><td class="muted">1.128,00 €</td><td><span class="badge-rec">RECOMEND.</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>

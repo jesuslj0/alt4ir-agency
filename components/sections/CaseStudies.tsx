@@ -27,7 +27,7 @@ export default function CaseStudies() {
           </span>
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl text-white">
             Clientes que ya{" "}
-            <span className="bg-gradient-to-r from-brand-sky to-brand-teal bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-brand-sky to-brand-teal bg-clip-text text-transparent">
               confían en nosotros
             </span>
           </h2>

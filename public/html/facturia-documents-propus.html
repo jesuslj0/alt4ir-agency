@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d1117;color:#e6edf3;font-family:'Segoe UI',Arial,sans-serif;width:1280px}
+nav{background:#161b22;border-bottom:1px solid #21262d;padding:0 24px;display:flex;align-items:center;height:56px;gap:32px}
+.logo{display:flex;align-items:center;gap:8px;margin-right:auto}
+.logo-box{width:36px;height:36px;background:#1a3a5c;border:1px solid #2a5a8c;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#58a6ff}
+.logo-text{font-size:13px;font-weight:600;color:#58a6ff}
+nav a{color:#8b949e;font-size:13px;text-decoration:none}
+nav a.active{color:#e6edf3}
+.btn-salir{border:1px solid #30363d;border-radius:6px;padding:4px 14px;color:#e6edf3;font-size:13px;background:transparent}
+.content{padding:24px 40px}
+.page-title{font-size:20px;font-weight:600;color:#e6edf3;margin-bottom:16px}
+.filters{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:16px 20px;margin-bottom:16px}
+.filter-row{display:flex;gap:10px;margin-bottom:10px;align-items:center;flex-wrap:wrap}
+.filter-row:last-child{margin-bottom:0}
+.finput{background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:6px 12px;color:#8b949e;font-size:12px;flex:1;min-width:130px}
+.btn-filtrar{background:#1a3a5c;border:1px solid #2a5a8c;border-radius:6px;padding:6px 18px;color:#58a6ff;font-size:13px}
+.toolbar{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.btn-tool{background:#161b22;border:1px solid #30363d;border-radius:6px;padding:6px 14px;color:#e6edf3;font-size:12px}
+.pager{display:flex;align-items:center;gap:6px;font-size:13px;color:#8b949e}
+.pager-btn{background:#161b22;border:1px solid #30363d;border-radius:4px;padding:3px 8px;color:#e6edf3;font-size:12px}
+.count{font-size:13px;color:#8b949e;margin-left:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;padding:9px 12px;font-size:11px;font-weight:600;color:#8b949e;background:#161b22;border-bottom:1px solid #21262d;letter-spacing:.04em}
+th.sort{color:#58a6ff}
+td{padding:10px 12px;border-top:1px solid #21262d;color:#e6edf3;vertical-align:middle}
+td.muted{color:#8b949e}
+td.link{color:#58a6ff}
+.badge-apro{background:#1a3a1a;color:#3fb950;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:600}
+.rev-auto{color:#3fb950;font-size:12px}
+.rev-yellow{color:#e3b341;font-size:12px}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">
+    <div class="logo-box">F</div>
+    <span class="logo-text">FacturIA</span>
+  </div>
+  <a href="#">&#127968; Inicio</a>
+  <a href="#" class="active">&#128196; Documentos</a>
+  <a href="#">&#128176; Finanzas</a>
+  <a href="#">&#128202; Métricas</a>
+  <a href="#">&#128100; Perfil</a>
+  <button class="btn-salir">Salir</button>
+</nav>
+<div class="content">
+  <div class="page-title">&#128196; Tus documentos</div>
+  <div class="filters">
+    <div class="filter-row">
+      <div class="finput">&#128269; Buscar por nombre o empresa</div>
+      <select class="finput"><option>Empresa</option></select>
+      <div class="finput">Desde dd/mm/aaaa</div>
+      <div class="finput">Hasta dd/mm/aaaa</div>
+    </div>
+    <div class="filter-row">
+      <select class="finput"><option>Tipo de documento</option></select>
+      <select class="finput"><option>Flujo</option></select>
+      <select class="finput"><option>Estado</option></select>
+      <select class="finput"><option>Revisión</option></select>
+      <button class="btn-filtrar">Filtrar &#9660;</button>
+    </div>
+    <div class="filter-row">
+      <select class="finput" style="max-width:160px"><option>Activos</option></select>
+    </div>
+  </div>
+  <div class="toolbar">
+    <button class="btn-tool">Exportar CSV &#8595;</button>
+    <button class="btn-tool">Vista previa &#128065;</button>
+    <div class="pager">
+      <span>1 / 11</span>
+      <button class="pager-btn">&#8250;</button>
+      <button class="pager-btn">&#187;</button>
+    </div>
+    <span class="count">1–20 de 212 documentos</span>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>N.º FACTURA</th><th>NOMBRE</th><th>EMPRESA</th>
+        <th>TOTAL (€)</th><th class="sort">FECHA &#8595;</th>
+        <th>TIPO</th><th>ESTADO</th><th>REVISIÓN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="muted">19.588.157/1/1</td><td class="link">2026-09-11_albaran.jpg</td><td>RECAMBIOS VELOZ</td><td class="muted">25,22</td><td class="muted">11/09/2026</td><td class="muted">Albarán</td><td><span class="badge-apro">APROBADO</span></td><td class="rev-yellow">Manual (0,89)</td></tr>
+      <tr><td class="muted">2.072.439</td><td class="link">2026-06-25_abono.jpg</td><td>RECAMBIOS VELOZ</td><td class="muted">20,99</td><td class="muted">25/06/2026</td><td class="muted">Abono de albarán</td><td><span class="badge-apro">APROBADO</span></td><td class="rev-auto">Manual (0,51)</td></tr>
+      <tr><td class="muted">FAC2026/46</td><td class="link">2026-04-07_factura.jpg</td><td>TALLERES DURÁN C.B.</td><td class="muted">271,28</td><td class="muted">07/04/2026</td><td class="muted">Factura</td><td><span class="badge-apro">APROBADO</span></td><td class="rev-yellow">Manual (0,87)</td></tr>
+      <tr><td class="muted">FAC2026/45</td><td class="link">2026-04-07_factura.jpg</td><td>MARTA PUIG LLOPIS</td><td class="muted">7.552,67</td><td class="muted">07/04/2026</td><td class="muted">Factura</td><td><span class="badge-apro">APROBADO</span></td><td class="rev-auto">Auto (1,00)</td></tr>
+      <tr><td class="muted">W2645002</td><td class="link">2026-04-02_factura.jpg</td><td>INFORMÁTICA NEXATEL</td><td class="muted">35,80</td><td class="muted">02/04/2026</td><td class="muted">Factura</td><td><span class="badge-apro">APROBADO</span></td><td class="rev-auto">Auto (0,90)</td></tr>
+      <tr><td class="muted">FC/4063</td><td class="link">2026-04-01_factura.jpg</td><td>GESTIÓN Y CONTROL ASOCIADOS</td><td class="muted">119,79</td><td class="muted">01/04/2026</td><td class="muted">Factura</td><td><span class="badge-apro">APROBADO</span></td><td class="rev-yellow">Manual (0,86)</td></tr>
+      <tr><td class="muted">M/260142</td><td class="link">2026-03-31_factura.jpg</td><td>AGROSERVICIOS LAMADRID</td><td class="muted">297,47</td><td class="muted">31/03/2026</td><td class="muted">Factura</td><td><span class="badge-apro">APROBADO</span></td><td class="rev-auto">Auto (1,00)</td></tr>
+      <tr><td class="muted">FCR1-2026000000011808</td><td class="link">2026-03-31_factura.jpg</td><td>RECAMBIOS DEL NORTE S.L.</td><td class="muted">864,38</td><td class="muted">31/03/2026</td><td class="muted">Factura</td><td><span class="badge-apro">APROBADO</span></td><td class="rev-auto">Auto (1,00)</td></tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
