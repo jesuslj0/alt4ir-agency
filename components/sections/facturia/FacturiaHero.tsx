@@ -64,7 +64,7 @@ export default function FacturiaHero() {
 
 function LogoHero() {
   return (
-    <div className="group w-full max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-facturia-card shadow-2xl shadow-black/60 transition-shadow duration-500 hover:border-facturia/40 hover:shadow-facturia/50">
+    <div className="group w-full max-w-48 md:max-w-64 lg:max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-facturia-card shadow-2xl shadow-black/60 transition-shadow duration-500 hover:border-facturia/40 hover:shadow-facturia/50">
       <Image
         src="/img/facturia/logo-grande.png"
         alt="FacturIA"

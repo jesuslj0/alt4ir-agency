@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import ProceduralGroundBackground from "@/components/ui/procedural-ground-background"
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import FacturiaHero from "@/components/sections/facturia/FacturiaHero"
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
 export default function FacturiaPage() {
   return (
     <>
+      <ProceduralGroundBackground />
       <Navbar />
       <main>
         <FacturiaHero />

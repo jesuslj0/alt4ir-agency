@@ -93,7 +93,7 @@ export default function FacturiaFeatures() {
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
             Todo lo que necesitas para{" "}
             <span className="bg-linear-to-r from-facturia to-facturia-dark bg-clip-text text-transparent">
-              dejar de teclear
+              reducir trabajo manual
             </span>
           </h2>
           <p className="mt-4 text-muted-foreground">

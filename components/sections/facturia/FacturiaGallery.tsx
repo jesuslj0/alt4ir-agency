@@ -42,7 +42,7 @@ export default function FacturiaGallery() {
           {shots.map((shot) => (
             <figure
               key={shot.src}
-              className="group overflow-hidden rounded-2xl border border-white/8 bg-facturia-card/60 backdrop-blur-sm transition-all duration-500 ease-out hover:border-facturia/40 hover:shadow-xl hover:shadow-facturia/5 lg:flex-1 lg:hover:flex-[2]"
+              className="group overflow-hidden rounded-2xl border border-white/8 bg-facturia-card/60 backdrop-blur-sm transition-all duration-500 ease-out hover:border-facturia/40 hover:shadow-xl hover:shadow-facturia/5 lg:flex-1 lg:hover:flex-[3]"
             >
               {/* Barra del navegador */}
               <div className="flex items-center gap-1.5 border-b border-white/8 bg-facturia-bg px-4 py-3">
@@ -52,13 +52,13 @@ export default function FacturiaGallery() {
               </div>
 
               {/* Captura */}
-              <div className="relative aspect-16/10 overflow-hidden bg-facturia-bg">
+              <div className="relative aspect-4/3 overflow-hidden bg-facturia-bg">
                 <Image
                   src={shot.src}
                   alt={shot.title}
                   fill
                   sizes="(max-width: 640px) 100vw, 50vw"
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="object-cover object-top transition-all duration-500 group-hover:object-contain group-hover:object-center"
                 />
               </div>
 
@@ -96,10 +96,104 @@ export default function FacturiaGallery() {
             <h3 className="text-base font-semibold text-facturia-fg">Detalle de factura</h3>
             <p className="text-sm leading-relaxed text-slate-400">
               Cada documento con sus datos extraídos por el OCR —base, IVA, total y emisor— y su
-              nivel de confianza, listo para aprobar o editar.
+              nivel de confianza, listo para aprobar o rectificar.
             </p>
           </figcaption>
         </figure>
+
+        {/* Tercera fila — exportación y gráficos */}
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:mt-8 lg:flex lg:items-start lg:gap-8">
+          {[
+            {
+              src: "/img/facturia/export.png",
+              title: "Exportación de documentos",
+              description:
+                "Descarga tus facturas y datos contables en el formato que necesites, listos para tu gestoría o tu software.",
+            },
+            {
+              src: "/img/facturia/graphics.png",
+              title: "Gráficos y automatización",
+              description:
+                "Evolución de gastos, ingresos y beneficio junto a las estadísticas de automatización del procesado.",
+            },
+          ].map((shot) => (
+            <figure
+              key={shot.src}
+              className="group overflow-hidden rounded-2xl border border-white/8 bg-facturia-card/60 backdrop-blur-sm transition-all duration-500 ease-out hover:border-facturia/40 hover:shadow-xl hover:shadow-facturia/5 lg:flex-1 lg:hover:flex-[3]"
+            >
+              {/* Barra del navegador */}
+              <div className="flex items-center gap-1.5 border-b border-white/8 bg-facturia-bg px-4 py-3">
+                <span className="size-3 rounded-full bg-[#ff5f57]" />
+                <span className="size-3 rounded-full bg-[#febc2e]" />
+                <span className="size-3 rounded-full bg-[#28c840]" />
+              </div>
+
+              {/* Captura */}
+              <div className="relative aspect-4/3 overflow-hidden bg-facturia-bg">
+                <Image
+                  src={shot.src}
+                  alt={shot.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="object-cover object-top transition-all duration-500 group-hover:object-contain group-hover:object-center"
+                />
+              </div>
+
+              {/* Pie */}
+              <figcaption className="flex flex-col gap-1.5 px-6 py-5">
+                <h3 className="text-base font-semibold text-facturia-fg">{shot.title}</h3>
+                <p className="text-sm leading-relaxed text-slate-400">{shot.description}</p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+
+        {/* Cuarta fila — finanzas */}
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:mt-8 lg:flex lg:items-start lg:gap-8">
+          {[
+            {
+              src: "/img/facturia/finance-categories.png",
+              title: "Gastos por categoría",
+              description:
+                "Amplia variedad de categorías por defecto para separar todos tus movimientos de forma ordenada.",
+            },
+            {
+              src: "/img/facturia/finance-movements.png",
+              title: "Movimientos financieros",
+              description:
+                "Historial completo de movimientos con su importe, método de pago, fecha y categoría, conciliado con tu recibo.",
+            },
+          ].map((shot) => (
+            <figure
+              key={shot.src}
+              className="group overflow-hidden rounded-2xl border border-white/8 bg-facturia-card/60 backdrop-blur-sm transition-all duration-500 ease-out hover:border-facturia/40 hover:shadow-xl hover:shadow-facturia/5 lg:flex-1 lg:hover:flex-[3]"
+            >
+              {/* Barra del navegador */}
+              <div className="flex items-center gap-1.5 border-b border-white/8 bg-facturia-bg px-4 py-3">
+                <span className="size-3 rounded-full bg-[#ff5f57]" />
+                <span className="size-3 rounded-full bg-[#febc2e]" />
+                <span className="size-3 rounded-full bg-[#28c840]" />
+              </div>
+
+              {/* Captura */}
+              <div className="relative aspect-4/3 overflow-hidden bg-facturia-bg">
+                <Image
+                  src={shot.src}
+                  alt={shot.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="object-cover object-top transition-all duration-500 group-hover:object-contain group-hover:object-center"
+                />
+              </div>
+
+              {/* Pie */}
+              <figcaption className="flex flex-col gap-1.5 px-6 py-5">
+                <h3 className="text-base font-semibold text-facturia-fg">{shot.title}</h3>
+                <p className="text-sm leading-relaxed text-slate-400">{shot.description}</p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
       </div>
     </section>
   )

@@ -1,4 +1,5 @@
-import { FolderTreeIcon, TableIcon, WorkflowIcon, ArrowRightIcon, CheckIcon } from "lucide-react"
+import Image from "next/image"
+import { WorkflowIcon, ArrowRightIcon, CheckIcon } from "lucide-react"
 
 const benefits = [
   "Cada factura procesada se archiva ordenada en tu Google Drive, por empresa y periodo.",
@@ -43,11 +44,11 @@ export default function FacturiaIntegrations() {
 
             {/* Diagrama de integración */}
             <div className="flex flex-col items-center gap-4">
-              <IntegrationNode icon={<WorkflowIcon className="size-6 text-facturia" />} label="OCR · n8n" sub="Automatización" />
+              <IntegrationNode icon={<Image src="/img/integrations/n8n.svg" alt="n8n" width={28} height={28} className="size-7" />} label="OCR · n8n" sub="Automatización" />
               <ArrowRightIcon className="size-5 rotate-90 text-facturia/50" />
               <div className="grid w-full grid-cols-2 gap-4">
-                <IntegrationNode icon={<FolderTreeIcon className="size-6 text-facturia" />} label="Google Drive" sub="Archivado ordenado" />
-                <IntegrationNode icon={<TableIcon className="size-6 text-facturia" />} label="Google Sheets" sub="Datos volcados" />
+                <IntegrationNode icon={<Image src="/img/integrations/googledrive.svg" alt="Google Drive" width={24} height={24} className="size-6" />} label="Google Drive" sub="Archivado ordenado" />
+                <IntegrationNode icon={<Image src="/img/integrations/googlesheets.svg" alt="Google Sheets" width={24} height={24} className="size-6" />} label="Google Sheets" sub="Datos volcados" />
               </div>
             </div>
           </div>
