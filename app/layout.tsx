@@ -1,9 +1,10 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Bricolage_Grotesque, Space_Grotesk, Instrument_Serif } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "next-themes"
 import AuroraBackground from "@/components/ui/aurora-background"
+import ServiceWorkerRegister from "@/components/pwa/service-worker-register"
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-sans",
@@ -29,6 +30,14 @@ export const metadata: Metadata = {
   title: "Propus — Automatización e IA para tu negocio",
   description:
     "Automatizamos tareas repetitivas y damos valor a los negocios con la ayuda de la IA. Desarrollo de aplicaciones, automatización de procesos e integración de agentes inteligentes.",
+  applicationName: "Propus",
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Propus",
+  },
+  formatDetection: { telephone: false },
   icons: {
     icon: "/favicons/favicon.ico",
     apple: "/favicons/apple-touch-icon.png",
@@ -37,6 +46,13 @@ export const metadata: Metadata = {
       { rel: "icon", url: "/favicons/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
     ],
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: "#0a0b0f",
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 }
 
 export default function RootLayout({
@@ -54,6 +70,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
           <AuroraBackground />
           {children}
+          <ServiceWorkerRegister />
         </ThemeProvider>
       </body>
     </html>
