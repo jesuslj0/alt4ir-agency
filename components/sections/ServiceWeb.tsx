@@ -38,7 +38,7 @@ export default function ServiceWeb() {
             <span className="size-1.5 rounded-full bg-brand-sky animate-pulse" />
             Diseño Web & Desarrollo
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight text-white">
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight leading-tight text-white">
             Tu web actual te está{" "}
             <span className="bg-linear-to-r from-brand-sky to-brand-teal bg-clip-text text-transparent">
               costando clientes

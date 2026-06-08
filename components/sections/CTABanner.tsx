@@ -16,7 +16,7 @@ export default function CTABanner() {
           />
 
           <div className="relative">
-            <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
               ¿Listo para automatizar{" "}
               <span className="bg-linear-to-r from-brand-spring to-brand-teal bg-clip-text text-transparent">
                 tu negocio?

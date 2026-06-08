@@ -78,7 +78,7 @@ export default function SobreNosotrosPage() {
         {/* Hero */}
         <section className="px-4 pt-28 pb-20 md:pt-36 md:pb-28">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+            <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
               La agencia de IA que impulsa negocios en{" "}
               <span className="bg-linear-to-r from-brand-sky to-brand-emerald bg-clip-text text-transparent">
                 Albacete y Castilla-La Mancha
@@ -97,7 +97,7 @@ export default function SobreNosotrosPage() {
         <section className="px-4 py-20 md:py-28">
           <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
             <div>
-              <h2 className="mb-6 text-2xl font-bold tracking-tight md:text-3xl">
+              <h2 className="mb-6 text-2xl font-semibold tracking-tight md:text-3xl">
                 Nuestra{" "}
                 <span className="bg-linear-to-r from-brand-green to-brand-teal bg-clip-text text-transparent">
                   misión
@@ -140,7 +140,7 @@ export default function SobreNosotrosPage() {
         {/* Qué nos diferencia */}
         <section className="px-4 py-20 md:py-28">
           <div className="mx-auto max-w-6xl">
-            <h2 className="mb-12 text-center text-3xl font-bold tracking-tight md:text-4xl">
+            <h2 className="mb-12 text-center text-3xl font-semibold tracking-tight md:text-4xl">
               Qué nos{" "}
               <span className="bg-linear-to-r from-brand-teal to-brand-green bg-clip-text text-transparent">
                 diferencia
@@ -171,7 +171,7 @@ export default function SobreNosotrosPage() {
         <section id="equipo" className="px-4 py-20 md:py-28">
           <div className="mx-auto max-w-5xl">
             <div className="mb-12 text-center">
-              <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
+              <h2 className="mb-4 text-3xl font-semibold tracking-tight md:text-4xl">
                 El equipo detrás{" "}
                 <span className="bg-linear-to-r from-brand-sky to-brand-teal bg-clip-text text-transparent">
                   de Propus
@@ -237,7 +237,7 @@ export default function SobreNosotrosPage() {
         {/* Dónde estamos */}
         <section className="px-4 py-20 md:py-28">
           <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mb-6 text-2xl font-bold tracking-tight md:text-3xl">
+            <h2 className="mb-6 text-2xl font-semibold tracking-tight md:text-3xl">
               Con base en Albacete, impacto global
             </h2>
             <p className="mx-auto mb-8 max-w-2xl leading-relaxed text-muted-foreground">

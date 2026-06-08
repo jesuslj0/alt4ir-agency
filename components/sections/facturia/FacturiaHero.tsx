@@ -21,7 +21,7 @@ export default function FacturiaHero() {
               Gestión inteligente de facturas
             </span>
 
-            <h1 className="text-4xl font-bold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-semibold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl">
               De la foto de tu factura al{" "}
               <span className="bg-linear-to-r from-facturia to-facturia-dark bg-clip-text text-transparent">
                 informe contable,

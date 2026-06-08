@@ -30,7 +30,7 @@ export default function WhaGallery() {
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-wha-alt/30 bg-wha-alt/10 px-4 py-1.5 text-xs font-semibold text-wha-alt">
             El agente en acción
           </span>
-          <h2 className="text-3xl font-bold tracking-tight text-wha-fg md:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-wha-fg md:text-4xl">
             Tú controlas,{" "}
             <span className="bg-linear-to-r from-wha-alt to-wha-teal bg-clip-text text-transparent">
               el agente ejecuta

@@ -79,7 +79,7 @@ export default function Pricing() {
     <section id="precios" className="py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
-          <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
+          <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
             Planes que se adaptan{" "}
             <span className="bg-linear-to-r from-brand-sky to-brand-emerald bg-clip-text text-transparent">
               a tu negocio

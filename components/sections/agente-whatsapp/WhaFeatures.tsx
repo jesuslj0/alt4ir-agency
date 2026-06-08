@@ -72,7 +72,7 @@ export default function WhaFeatures() {
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-wha/30 bg-wha/10 px-4 py-1.5 text-xs font-semibold text-wha">
             Funcionalidades
           </span>
-          <h2 className="text-3xl font-bold tracking-tight text-wha-fg md:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-wha-fg md:text-4xl">
             Todo lo que hace el agente{" "}
             <span className="bg-linear-to-r from-wha via-wha-alt to-wha-teal bg-clip-text text-transparent">
               sin descanso

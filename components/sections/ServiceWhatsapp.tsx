@@ -80,7 +80,7 @@ export default function ServiceWhatsapp() {
             <span className="size-1.5 rounded-full bg-brand-spring animate-pulse" />
             Para clínicas dentales
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight text-white">
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight leading-tight text-white">
             Nunca más pierdas una cita{" "}
             <span className="bg-gradient-to-r from-brand-spring to-brand-teal bg-clip-text text-transparent">
               por no coger el teléfono

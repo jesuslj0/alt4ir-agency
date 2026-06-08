@@ -19,7 +19,7 @@ export default function FacturiaIntegrations() {
                 <WorkflowIcon className="size-3.5" />
                 Integración & automatización
               </span>
-              <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
+              <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
                 Lo complementamos con{" "}
                 <span className="bg-linear-to-r from-facturia to-facturia-dark bg-clip-text text-transparent">
                   Google Drive y Sheets

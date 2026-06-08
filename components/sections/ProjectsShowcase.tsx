@@ -58,7 +58,7 @@ export default function ProjectsShowcase({
             {icon}
             {eyebrow}
           </span>
-          <h1 className="max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
+          <h1 className="max-w-3xl text-4xl font-semibold tracking-tight md:text-5xl">
             {title}{" "}
             <span className="bg-linear-to-r from-brand-sky via-brand-teal to-brand-green bg-clip-text text-transparent">
               {highlight}

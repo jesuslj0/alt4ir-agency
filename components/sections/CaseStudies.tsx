@@ -25,7 +25,7 @@ export default function CaseStudies() {
           <span className="inline-flex items-center gap-2 rounded-full border border-brand-teal/30 bg-brand-teal/10 px-4 py-1.5 text-xs font-medium text-brand-teal">
             Resultados
           </span>
-          <h2 className="text-3xl font-bold tracking-tight md:text-4xl text-white">
+          <h2 className="text-3xl font-semibold tracking-tight md:text-4xl text-white">
             Clientes que ya{" "}
             <span className="bg-linear-to-r from-brand-sky to-brand-teal bg-clip-text text-transparent">
               confían en nosotros

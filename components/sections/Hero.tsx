@@ -1,165 +1,29 @@
 "use client"
 
 import Link from "next/link"
-import { useRef, useState, useCallback } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRightIcon, SparklesIcon, BotIcon, MonitorIcon, TrendingUpIcon, SearchIcon, LightbulbIcon, RocketIcon } from "lucide-react"
-import { GradientDots } from "@/components/ui/gradient-dots"
 import { SplineScene } from "@/components/ui/spline-scene"
-
-function DraggableMockup() {
-  const [offset, setOffset] = useState({ x: 0, y: 0 })
-  const [isDragging, setIsDragging] = useState(false)
-  const dragStart = useRef<{ mx: number; my: number; ox: number; oy: number } | null>(null)
-
-  const onMouseDown = useCallback((e: React.MouseEvent) => {
-    e.preventDefault()
-    setIsDragging(true)
-    dragStart.current = { mx: e.clientX, my: e.clientY, ox: offset.x, oy: offset.y }
-
-    const onMove = (ev: MouseEvent) => {
-      if (!dragStart.current) return
-      setOffset({
-        x: dragStart.current.ox + ev.clientX - dragStart.current.mx,
-        y: dragStart.current.oy + ev.clientY - dragStart.current.my,
-      })
-    }
-    const onUp = () => {
-      setIsDragging(false)
-      dragStart.current = null
-      setOffset({ x: 0, y: 0 })
-      window.removeEventListener("mousemove", onMove)
-      window.removeEventListener("mouseup", onUp)
-    }
-    window.addEventListener("mousemove", onMove)
-    window.addEventListener("mouseup", onUp)
-  }, [offset])
-
-  return (
-    <div
-      className="w-full max-w-lg 2xl:max-w-xl rounded-2xl border border-border/60 bg-card shadow-2xl shadow-brand-teal/10 ring-1 ring-foreground/5 overflow-hidden flex flex-col"
-      style={{
-        transform: `translate(${offset.x}px, ${offset.y}px)`,
-        transition: isDragging ? "none" : "transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)",
-        zIndex: isDragging ? 50 : "auto",
-        position: "relative",
-      }}
-    >
-      {/* Barra superior — zona de drag */}
-      <div
-        onMouseDown={onMouseDown}
-        className={`flex items-center gap-1.5 px-4 py-3 border-b border-border/60 bg-muted/30 select-none ${isDragging ? "cursor-grabbing" : "cursor-grab"}`}
-      >
-        {/* Botones iOS */}
-        <div className="group/ios flex items-center gap-1.5">
-          <div className="size-3 rounded-full bg-red-400/70 flex items-center justify-center overflow-hidden group-hover/ios:bg-red-500 transition-colors">
-            <span className="text-[7px] leading-none text-red-900 opacity-0 group-hover/ios:opacity-100 font-bold">✕</span>
-          </div>
-          <div className="size-3 rounded-full bg-yellow-400/70 flex items-center justify-center overflow-hidden group-hover/ios:bg-yellow-500 transition-colors">
-            <span className="text-[7px] leading-none text-yellow-900 opacity-0 group-hover/ios:opacity-100 font-bold">–</span>
-          </div>
-          <div className="size-3 rounded-full bg-green-400/70 flex items-center justify-center overflow-hidden group-hover/ios:bg-green-500 transition-colors">
-            <span className="text-[7px] leading-none text-green-900 opacity-0 group-hover/ios:opacity-100 font-bold">+</span>
-          </div>
-        </div>
-        <span className="ml-2 text-xs text-muted-foreground font-mono">Fórmula de éxito - Propus</span>
-      </div>
-
-      {/* Contenido */}
-      <div className="relative flex flex-col gap-4 px-8 py-8 md:px-10 md:py-10 overflow-hidden">
-        <GradientDots duration={20} className="rounded-b-2xl" />
-
-        {/* Fila 1: fórmula */}
-        <div className="relative z-10 flex items-center justify-center gap-3 md:gap-4 w-full">
-          {/* Agente IA */}
-          <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-border px-4 py-5 md:px-6 md:py-6 shadow-sm flex-1">
-            <div className="size-11 md:size-13 rounded-xl bg-brand-emerald/15 flex items-center justify-center">
-              <BotIcon className="size-5 md:size-6 text-brand-emerald" />
-            </div>
-            <span className="text-xs md:text-sm font-semibold text-center leading-tight">Agente IA</span>
-          </div>
-
-          <span className="text-xl md:text-2xl font-light text-muted-foreground/60 shrink-0">+</span>
-
-          {/* Aplicación Web */}
-          <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-border px-4 py-5 md:px-6 md:py-6 shadow-sm flex-1">
-            <div className="size-11 md:size-13 rounded-xl bg-brand-emerald/15 flex items-center justify-center">
-              <MonitorIcon className="size-5 md:size-6 text-brand-emerald" />
-            </div>
-            <span className="text-xs md:text-sm font-semibold text-center leading-tight">Aplicación Web</span>
-          </div>
-
-          <span className="text-xl md:text-2xl font-light text-muted-foreground/60 shrink-0">=</span>
-
-          {/* Resultados */}
-          <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-brand-teal/50 px-4 py-5 md:px-6 md:py-6 shadow-sm shadow-brand-teal/10 flex-1 ring-1 ring-brand-teal/20">
-            <div className="size-11 md:size-13 rounded-xl bg-brand-teal/15 flex items-center justify-center">
-              <TrendingUpIcon className="size-5 md:size-6 text-brand-teal" />
-            </div>
-            <span className="text-xs md:text-sm font-semibold text-center leading-tight text-brand-teal">Resultados</span>
-          </div>
-        </div>
-
-        {/* Divisor */}
-        <div className="relative z-10 flex items-center gap-3">
-          <div className="flex-1 h-px bg-border/60" />
-          <span className="text-[10px] uppercase tracking-widest text-muted-foreground/50 font-medium">Nuestro proceso</span>
-          <div className="flex-1 h-px bg-border/60" />
-        </div>
-
-        {/* Fila 2: proceso */}
-        <div className="relative z-10 flex items-center justify-center gap-3 md:gap-4 w-full">
-          {/* Identificación */}
-          <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-border px-4 py-5 md:px-6 md:py-6 shadow-sm flex-1">
-            <div className="size-11 md:size-13 rounded-xl bg-brand-sky/15 flex items-center justify-center">
-              <SearchIcon className="size-5 md:size-6 text-brand-sky" />
-            </div>
-            <span className="text-xs md:text-sm font-semibold text-center leading-tight">Identificar problema</span>
-          </div>
-
-          <span className="text-xl md:text-2xl font-light text-muted-foreground/60 shrink-0">→</span>
-
-          {/* Solución */}
-          <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-border px-4 py-5 md:px-6 md:py-6 shadow-sm flex-1">
-            <div className="size-11 md:size-13 rounded-xl bg-brand-sky/15 flex items-center justify-center">
-              <LightbulbIcon className="size-5 md:size-6 text-brand-sky" />
-            </div>
-            <span className="text-xs md:text-sm font-semibold text-center leading-tight">Crear solución</span>
-          </div>
-
-          <span className="text-xl md:text-2xl font-light text-muted-foreground/60 shrink-0">→</span>
-
-          {/* Implementación */}
-          <div className="flex flex-col items-center gap-3 rounded-xl bg-background border border-brand-sky/50 px-4 py-5 md:px-6 md:py-6 shadow-sm shadow-brand-sky/10 flex-1 ring-1 ring-brand-sky/20">
-            <div className="size-11 md:size-13 rounded-xl bg-brand-sky/15 flex items-center justify-center">
-              <RocketIcon className="size-5 md:size-6 text-brand-sky" />
-            </div>
-            <span className="text-xs md:text-sm font-semibold text-center leading-tight text-brand-sky">Implementación rápida</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 2xl:pt-56 2xl:pb-36 overflow-hidden bg-transparent">
+    <section className="relative flex min-h-svh items-stretch pt-24 pb-16 md:block md:min-h-0 md:pt-44 md:pb-28 2xl:pt-56 2xl:pb-36 overflow-hidden bg-transparent">
 
-      {/* Spline background */}
-      <div className="absolute inset-0 z-0">
+      {/* Spline background — en móvil el canvas se ensancha y se desplaza para
+          correr la escena a la izquierda sin dejar bordes vacíos */}
+      <div className="absolute inset-y-0 left-0 z-0 w-[180%] -translate-x-[40%] md:w-full md:translate-x-0">
         <SplineScene
           scene="https://prod.spline.design/Xup3h6IBrMohCZ2d/scene.splinecode"
           className="w-full h-full"
         />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 2xl:max-w-7xl">
-        <div className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left md:gap-12">
+      <div className="relative z-10 flex w-full max-w-6xl mx-auto px-4 2xl:max-w-7xl">
+        <div className="flex flex-1 flex-col items-center justify-between text-center md:flex-initial md:items-start md:justify-start md:text-left">
 
-          {/* Left: badge + title + subtitle + buttons */}
-          <div className="flex flex-col items-center md:items-start md:flex-1">
+          {/* Grupo superior: eyebrow + título */}
+          <div className="flex flex-col items-center md:items-start mt-6">
             <Badge
               variant="outline"
               className="mb-6 gap-1.5 border-brand-teal/40 text-brand-teal dark:border-brand-teal/40 dark:text-brand-teal py-1 px-3 h-auto rounded-full"
@@ -168,15 +32,18 @@ export default function Hero() {
               Más tiempo para lo que importa
             </Badge>
 
-            <h1 className="max-w-4xl 2xl:max-w-5xl">
+            <h1 className="max-w-4xl 2xl:max-w-5xl flex flex-col">
               <span className="block text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-semibold tracking-tight text-foreground/75 leading-snug">
                 Tu tiempo es demasiado valioso
               </span>
-              <span className="block text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-bold tracking-tight leading-[1.1] bg-linear-to-r from-brand-sky via-brand-teal to-brand-green bg-clip-text text-transparent">
-                para gastarlo en esto.
+              <span className="block text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-semibold tracking-tight leading-[1.1] bg-linear-to-r from-brand-sky via-brand-teal to-brand-green bg-clip-text text-transparent">
+                para gastarlo<br/> en esto.
               </span>
             </h1>
+          </div>
 
+          {/* Grupo inferior: párrafo + botones */}
+          <div className="flex flex-col items-center md:items-start">
             <p className="mt-6 text-base text-muted-foreground max-w-xl md:text-lg 2xl:text-xl 2xl:max-w-2xl leading-loose">
               Automatizamos tus citas, tus documentos y mejoramos tu presencia online para que dejes de hacer en horas lo que puede hacerse solo.
             </p>

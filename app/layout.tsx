@@ -1,21 +1,34 @@
 import type { Metadata, Viewport } from "next"
-import { Bricolage_Grotesque, Space_Grotesk, Instrument_Serif } from "next/font/google"
+import { Instrument_Serif } from "next/font/google"
+import localFont from "next/font/local"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "next-themes"
 import AuroraBackground from "@/components/ui/aurora-background"
 import ServiceWorkerRegister from "@/components/pwa/service-worker-register"
 
-const spaceGrotesk = Space_Grotesk({
+// Cuerpo de texto — Satoshi (Fontshare, auto-hospedada)
+const satoshi = localFont({
   variable: "--font-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+  src: [
+    { path: "../public/fonts/Satoshi-Light.woff2", weight: "300", style: "normal" },
+    { path: "../public/fonts/Satoshi-Regular.woff2", weight: "400", style: "normal" },
+    { path: "../public/fonts/Satoshi-Medium.woff2", weight: "500", style: "normal" },
+    { path: "../public/fonts/Satoshi-Bold.woff2", weight: "700", style: "normal" },
+  ],
 })
 
-const bricolageGrotesque = Bricolage_Grotesque({
+// Logo y títulos — Clash Display (Fontshare, auto-hospedada)
+const clashDisplay = localFont({
   variable: "--font-heading",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  src: [
+    { path: "../public/fonts/ClashDisplay-Regular.woff2", weight: "400", style: "normal" },
+    { path: "../public/fonts/ClashDisplay-Medium.woff2", weight: "500", style: "normal" },
+    { path: "../public/fonts/ClashDisplay-Semibold.woff2", weight: "600", style: "normal" },
+    { path: "../public/fonts/ClashDisplay-Bold.woff2", weight: "700", style: "normal" },
+  ],
 })
 
 // Display serif para mockups cinematográficos (sección de diseño web)
@@ -64,7 +77,7 @@ export default function RootLayout({
     <html
       lang="es"
       suppressHydrationWarning
-      className={cn("h-full antialiased", spaceGrotesk.variable, bricolageGrotesque.variable, instrumentSerif.variable)}
+      className={cn("h-full antialiased", satoshi.variable, clashDisplay.variable, instrumentSerif.variable)}
     >
       <body className="min-h-full flex flex-col font-sans">
         <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>

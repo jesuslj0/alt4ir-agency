@@ -14,7 +14,7 @@ export default function OfflinePage() {
         <WifiOffIcon className="size-7 text-muted-foreground" />
       </span>
       <div className="flex flex-col gap-2">
-        <h1 className="text-2xl font-bold tracking-tight md:text-3xl">Estás sin conexión</h1>
+        <h1 className="text-2xl font-semibold tracking-tight md:text-3xl">Estás sin conexión</h1>
         <p className="max-w-md text-muted-foreground">
           No hemos podido cargar esta página. Comprueba tu conexión a internet e inténtalo de
           nuevo.

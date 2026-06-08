@@ -43,7 +43,7 @@ export default function FAQ() {
     <section id="faq" className="py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
+          <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
             Preguntas{" "}
             <span className="bg-gradient-to-r from-brand-green to-brand-teal bg-clip-text text-transparent">
               frecuentes

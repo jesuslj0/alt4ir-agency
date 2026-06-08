@@ -37,7 +37,7 @@ export default function BlogPage() {
         {/* Hero */}
         <section className="px-4 pt-28 pb-16 md:pt-36 md:pb-20">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight md:text-5xl">
+            <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
               Blog de{" "}
               <span className="bg-gradient-to-r from-brand-teal to-brand-lime bg-clip-text text-transparent">
                 Propus

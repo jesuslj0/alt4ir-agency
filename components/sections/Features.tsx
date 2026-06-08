@@ -45,7 +45,7 @@ export default function Features() {
     <section id="servicios" className="py-20 md:py-28">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
-          <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
+          <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
             Todo lo que necesitas{" "}
             <span className="bg-gradient-to-r from-brand-teal to-brand-green bg-clip-text text-transparent">
               para automatizar

@@ -85,7 +85,7 @@ export default async function BlogPostPage({
           </nav>
 
           {/* Header */}
-          <h1 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
+          <h1 className="mb-4 text-3xl font-semibold tracking-tight md:text-4xl">
             {post.title}
           </h1>
 

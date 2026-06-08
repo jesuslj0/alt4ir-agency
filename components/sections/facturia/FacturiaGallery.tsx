@@ -26,7 +26,7 @@ export default function FacturiaGallery() {
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-facturia/30 bg-facturia/10 px-4 py-1.5 text-xs font-semibold text-facturia">
             La plataforma por dentro
           </span>
-          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
             Así se ve{" "}
             <span className="bg-linear-to-r from-facturia to-facturia-dark bg-clip-text text-transparent">
               FacturIA

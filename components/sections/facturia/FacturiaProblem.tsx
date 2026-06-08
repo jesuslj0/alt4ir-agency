@@ -34,7 +34,7 @@ export default function FacturiaProblem() {
     <section className="py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mx-auto mb-14 max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
             Deja de perder horas{" "}
             <span className="bg-linear-to-r from-facturia to-facturia-dark bg-clip-text text-transparent">
               tecleando facturas

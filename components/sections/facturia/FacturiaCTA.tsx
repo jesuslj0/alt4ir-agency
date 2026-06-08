@@ -14,7 +14,7 @@ export default function FacturiaCTA() {
           </div>
 
           <div className="relative">
-            <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
               ¿Listo para dejar de teclear y{" "}
               <span className="bg-linear-to-r from-facturia to-facturia-dark bg-clip-text text-transparent">
                 empezar a controlar?

@@ -28,7 +28,7 @@ export default function WhaProblem() {
     <section className="py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mx-auto mb-14 max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-wha-fg md:text-4xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-wha-fg md:text-4xl">
             Citas que se pierden antes de{" "}
             <span className="bg-linear-to-r from-wha to-wha-teal bg-clip-text text-transparent">
               llegar al calendario

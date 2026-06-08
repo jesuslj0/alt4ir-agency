@@ -15,7 +15,7 @@ export default function WhaCTA() {
           </div>
 
           <div className="relative">
-            <h2 className="text-3xl font-bold tracking-tight text-wha-fg md:text-4xl">
+            <h2 className="text-3xl font-semibold tracking-tight text-wha-fg md:text-4xl">
               ¿Listo para no perder una sola cita{" "}
               <span className="bg-linear-to-r from-wha via-wha-alt to-wha-teal bg-clip-text text-transparent">
                 mientras duermes?

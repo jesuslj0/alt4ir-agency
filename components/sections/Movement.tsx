@@ -22,10 +22,10 @@ export default function Movement() {
 
         {/* Título */}
         <div className="flex flex-col gap-1">
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
+          <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-white leading-tight">
             No es magia.
           </h2>
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight bg-linear-to-r from-brand-teal to-brand-green bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-semibold tracking-tight leading-tight bg-linear-to-r from-brand-teal to-brand-green bg-clip-text text-transparent">
             Es simplemente trabajar mejor.
           </h2>
         </div>

@@ -47,7 +47,7 @@ export default function ServiceDocs() {
             <span className="size-1.5 rounded-full bg-facturia animate-pulse" />
             Gestión Documental & Contabilidad
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight text-white">
+          <h2 className="text-3xl md:text-5xl font-semibold tracking-tight leading-tight text-white">
             Deja de perder horas{" "}
             <span className="bg-linear-to-r from-facturia to-facturia-dark bg-clip-text text-transparent">
               en facturas y documentos

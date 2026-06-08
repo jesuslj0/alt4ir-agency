@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function TerminosPage() {
   return (
     <article>
-      <h1 className="mb-6 text-3xl font-bold md:text-4xl">
+      <h1 className="mb-6 text-3xl font-semibold md:text-4xl">
         Términos y Condiciones
       </h1>
 

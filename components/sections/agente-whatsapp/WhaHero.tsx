@@ -21,7 +21,7 @@ export default function WhaHero() {
               Agente recepcionista · WhatsApp
             </span>
 
-            <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-wha-fg md:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-semibold leading-[1.1] tracking-tight text-wha-fg md:text-5xl lg:text-6xl">
               Tu consulta nunca{" "}
               <span className="bg-linear-to-r from-wha via-wha-alt to-wha-teal bg-clip-text text-transparent">
                 pierde una cita.
