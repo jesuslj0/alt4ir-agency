@@ -60,7 +60,7 @@ export default function Footer() {
         {/* Brand */}
         <AnimatedContainer className="space-y-4">
           <Link href="/" className="font-bold text-xl tracking-tight w-fit block">
-            <span className="bg-gradient-to-r from-brand-teal to-brand-lime bg-clip-text text-transparent">Propus</span>
+            <span className="font-heading font-semibold bg-linear-to-r from-brand-teal to-brand-lime bg-clip-text text-transparent">PROPUS</span>
           </Link>
           <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
             Automatizamos procesos y desarrollamos aplicaciones con IA para que tu negocio escale más rápido.

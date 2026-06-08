@@ -42,7 +42,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-bold text-[1.375rem] tracking-tight">
           <Image src="/favicons/noBGpropus1024.png" alt="Propus logo" width={32} height={32} />
-          <span className="font-heading font-semibold bg-linear-to-r from-brand-teal to-brand-lime bg-clip-text text-transparent">PROPUS</span>
+          <span className="hidden md:inline font-heading font-semibold bg-linear-to-r from-brand-teal to-brand-lime bg-clip-text text-transparent">PROPUS</span>
         </Link>
 
         {/* Desktop nav */}

@@ -54,7 +54,7 @@ export default function Hero() {
                 className="bg-brand-emerald hover:bg-brand-teal text-background font-semibold gap-2 h-11 px-6"
                 asChild
               >
-                <Link href="/#servicios">
+                <Link href="/#proceso">
                   Ver cómo funciona
                   <ArrowRightIcon className="size-4" />
                 </Link>
